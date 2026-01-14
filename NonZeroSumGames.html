@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Non-Zero Sum Games</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Game Theory - An Inquiry Approach">
+<meta property="book:author" content="Adam Blumenthal">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.9';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.991c135ccf182bf5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1c010553c35c544c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.677a75a9120449ff.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="GameTheory-Inquiry.html"><span class="title">Game Theory - An Inquiry Approach</span> <span class="subtitle">Introduction to Combinatorial and Classical Games for Mathematics Majors</span></a></h1>
+<p class="byline">Adam Blumenthal, Jennifer Firkins Nordstrom</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ZeroSumGames.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Part-2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="GeneralClassicalGames.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 parts focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="CombinatorialGames.html" class="internal"><span class="codenumber">I</span> <span class="title">Part 1: Combinatorial Game Theory</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="DefiningGames.html" class="internal"><span class="codenumber">1</span> <span class="title">Defining Games</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="CombGames.html" class="internal"><span class="codenumber">2</span> <span class="title">Combinatorial Games</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="NormalPlayGames.html" class="internal"><span class="codenumber">3</span> <span class="title">Normal Play Games</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ImpartialGames.html" class="internal"><span class="codenumber">4</span> <span class="title">Impartial Combinatorial Games</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-part contains-active">
+<div class="toc-title-box"><a href="Part-2.html" class="internal"><span class="codenumber">II</span> <span class="title">Part 2: Classical Game Theory</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ClassicalGames.html" class="internal"><span class="codenumber">5</span> <span class="title">Classical Games</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ZeroSumGames.html" class="internal"><span class="codenumber">6</span> <span class="title">Zero Sum Games</span></a></div></li>
+<li class="toc-item toc-chapter active"><div class="toc-title-box"><a href="NonZeroSumGames.html" class="internal"><span class="codenumber">7</span> <span class="title">Non-Zero Sum Games</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="GeneralClassicalGames.html" class="internal"><span class="codenumber">8</span> <span class="title">General Classical Games</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-part">
+<div class="toc-title-box"><a href="Part-3.html" class="internal"><span class="codenumber">III</span> <span class="title">Other Applications of Game Theory</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-chapter"><div class="toc-title-box"><a href="VotingTheory.html" class="internal"><span class="codenumber">9</span> <span class="title">Voting Theory</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="GameTheory-Inquiry-7.html" class="internal"><span class="codenumber">1</span> <span class="title">Topics to consider adding</span></a></div></li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="NonZeroSumGames"><h2 class="heading">
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Non-Zero Sum Games</span>
+</h2>
+<div class="para" id="NonZeroSumGames-2">We now introduce a famous thought experiment to push beyond the world of Zero-Sum Games. Instead of payouts, we now consider the utility to each player. For example, if someone plays a lottery, losing it may be worth <span class="process-math">\(-1\)</span> utility, and winning might be worth <span class="process-math">\(1000\)</span> utility, but winning or losing the lottery does not affect the other players playing it.<div class="autopermalink" data-description="Paragraph"><a href="#NonZeroSumGames-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NonZeroSumGames-3">
+<dfn class="terminology">von Neumann and Morgenstern’s Lottery:</dfn> Suppose that Rose has two possible outcomes in a lottery, <span class="process-math">\(X\)</span> with utility <span class="process-math">\(0\)</span> and <span class="process-math">\(Z\)</span> with utility <span class="process-math">\(10\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#NonZeroSumGames-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="NonZeroSumGames-4" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="question example-like knowl__content"><ol class="decimal" id="NonZeroSumGames-4-1">
+<li id="NonZeroSumGames-4-1-1">
+<div class="para" id="p-derived-NonZeroSumGames-4-1-1">Determine the expected utility of the lottery for Rose if the probability of <span class="process-math">\(X\)</span> is <span class="process-math">\(\frac{1}{2}\)</span> and the probability of <span class="process-math">\(Z\)</span> is <span class="process-math">\(\frac{1}{2}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#NonZeroSumGames-4-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-4-1-2">
+<div class="para" id="p-derived-NonZeroSumGames-4-1-2">Determine the expected utility of the lottery for Rose if the probability of <span class="process-math">\(X\)</span> is <span class="process-math">\(p\)</span> and the probability of <span class="process-math">\(Z\)</span> is <span class="process-math">\(1-p\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#NonZeroSumGames-4-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-4-1-3">
+<div class="para" id="p-derived-NonZeroSumGames-4-1-3">Now suppose a third option exists, <span class="process-math">\(Y\)</span> such that Rose’s preferences are <span class="process-math">\(X LESSTHAN Y LESSTHAN Z\)</span> (that is, it has some value between <span class="process-math">\(0\)</span> and <span class="process-math">\(10\)</span>). Morgenstern and von Neumann propose that there is some <span class="process-math">\(p\)</span> so that if <span class="process-math">\(X\)</span> happens with probability <span class="process-math">\(p\)</span> and <span class="process-math">\(Z\)</span> happens with probability <span class="process-math">\(1-p\)</span> so that <span class="process-math">\(Y\)</span> has the same value as the lottery of <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\text{.}\)</span> Determine (as a function of <span class="process-math">\(p\)</span>) the value of <span class="process-math">\(Y\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#NonZeroSumGames-4-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Question 7.1"><a href="#NonZeroSumGames-4" title="Copy heading and permalink for Question 7.1" aria-label="Copy heading and permalink for Question 7.1">🔗</a></div></article></details><details id="NonZeroSumGames-5" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="question example-like knowl__content"><dfn class="terminology">Dating Dilemma</dfn><span class="process-math">\(B\)</span><span class="process-math">\(F\text{.}\)</span><span class="process-math">\(0\)</span><span class="process-math">\(1\)</span><span class="process-math">\(2\)</span><div class="autopermalink" data-description="Question 7.2"><a href="#NonZeroSumGames-5" title="Copy heading and permalink for Question 7.2" aria-label="Copy heading and permalink for Question 7.2">🔗</a></div></article></details><ol class="decimal" id="NonZeroSumGames-6">
+<li id="NonZeroSumGames-6-1">
+<div class="para" id="p-derived-NonZeroSumGames-6-1">Make a game matrix for the dating dilemma.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#NonZeroSumGames-6-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-6-2">
+<div class="para" id="p-derived-NonZeroSumGames-6-2">Determine what the players might do under rational play. (Assuming no further communication.)</div>
+<div class="autopermalink" data-description="Item 2"><a href="#NonZeroSumGames-6-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<article class="definition definition-like" id="NonZeroSumGames-7"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<dfn class="terminology">Volunteer’s Dilemma</dfn><div class="displaymath process-math" id="NonZeroSumGames-7-2">
+\begin{align*}
+\begin{bmatrix} (-10,-10) \amp (0,-1) \\
+(-1,0) \amp (0,0) \end{bmatrix} 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Definition 7.3"><a href="#NonZeroSumGames-7" title="Copy heading and permalink for Definition 7.3" aria-label="Copy heading and permalink for Definition 7.3">🔗</a></div></article><div class="para" id="NonZeroSumGames-8">Each player’s best outcome is by staying silent, but that can also lead to the worst outcome. This dynamic is common enough that the aboriginal people of Tierra del Fuego have a word for it.<div class="autopermalink" data-description="Paragraph"><a href="#NonZeroSumGames-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="NonZeroSumGames-9"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<dfn class="terminology">Mamihlapinatapai</dfn><div class="autopermalink" data-description="Definition 7.4"><a href="#NonZeroSumGames-9" title="Copy heading and permalink for Definition 7.4" aria-label="Copy heading and permalink for Definition 7.4">🔗</a></div></article><details id="NonZeroSumGames-10" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="question example-like knowl__content"><div class="autopermalink" data-description="Question 7.5"><a href="#NonZeroSumGames-10" title="Copy heading and permalink for Question 7.5" aria-label="Copy heading and permalink for Question 7.5">🔗</a></div></article></details><div class="para logical" id="NonZeroSumGames-11">
+<div class="para">A <dfn class="terminology">movement diagram</dfn> is a matrix with arrows to demonstrate how players are incentivized to move in given situations. For example the prisoner’s dilemma’s payoff matrix is:</div>
+<div class="displaymath process-math" id="NonZeroSumGames-11-2">
+\begin{align*}
+\begin{bmatrix} (-1,-1) \amp (-10,0) \\
+(0, -10) \amp (-5, -5) \end{bmatrix} 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#NonZeroSumGames-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NonZeroSumGames-12">The movement diagram should encapsulate that if a player <span class="process-math">\(A\)</span> does not rat on player <span class="process-math">\(B\text{,}\)</span> then <span class="process-math">\(B\)</span> is incentivized to rat on <span class="process-math">\(A\text{,}\)</span> and if player <span class="process-math">\(A\)</span> suspects that player <span class="process-math">\(B\)</span> will rat, they are incentivized to rat, demonstrated as below:<div class="autopermalink" data-description="Paragraph"><a href="#NonZeroSumGames-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>\begin{tikzpicture} \node[scale = 1] at (0,0) (CC) {<span class="process-math">\((-1,-1)\)</span>}; \node[scale = 1] at (2,0) (CD) {<span class="process-math">\((-10,0)\)</span>}; \node[scale = 1] at (0,-1) (DC) {<span class="process-math">\((0,-10)\)</span>}; \node[scale = 1] at (2,-1) (DD) {<span class="process-math">\((-5,-5)\)</span>}; \draw[-&gt;] (CC) -- (CD); \draw[-&gt;] (CC) -- (DC); \draw[-&gt;] (DC) -- (DD); \draw[-&gt;] (CD) -- (DD); \end{tikzpicture}<details id="NonZeroSumGames-14" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="question example-like knowl__content"><div class="autopermalink" data-description="Question 7.6"><a href="#NonZeroSumGames-14" title="Copy heading and permalink for Question 7.6" aria-label="Copy heading and permalink for Question 7.6">🔗</a></div></article></details><div class="para" id="NonZeroSumGames-15">NASH’S THEOREM<div class="autopermalink" data-description="Paragraph"><a href="#NonZeroSumGames-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NonZeroSumGames-16">Now that we have seen that all classical games have a Nash Equilibrium (that is, a steady state) we want to analyze how to find them. We can do this, at least in small cases by recognizing what the Nash Equilibrium says!<div class="autopermalink" data-description="Paragraph"><a href="#NonZeroSumGames-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NonZeroSumGames-17">A Nash Equilibrium guarantees that there is a pair of strategies so that neither players has an incentive to change strategy.<div class="autopermalink" data-description="Paragraph"><a href="#NonZeroSumGames-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NonZeroSumGames-18">We will call a strategy for Colin <span class="process-math">\(\textbf{q}\)</span> a <dfn class="terminology">best response</dfn> to a strategy for Rose, <span class="process-math">\(\textbf{p}\text{,}\)</span> if Rose has no incentive to change her strategy if Colin continues to play <span class="process-math">\(\textbf{q}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#NonZeroSumGames-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="NonZeroSumGames-19" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="question example-like knowl__content"><div class="displaymath process-math" id="NonZeroSumGames-19-1">
+\begin{align*}
+\begin{bmatrix} (1,-2) \amp (0,2) \\
+(-1,3) \amp (3,-1) \end{bmatrix}
+\end{align*}
+</div>
+<ol class="decimal" id="NonZeroSumGames-19-2">
+<li id="NonZeroSumGames-19-2-1">
+<div class="para" id="p-derived-NonZeroSumGames-19-2-1">Determine Rose’s Payoff Matrix. And Colin’s Payoff matrix.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#NonZeroSumGames-19-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-19-2-2">
+<div class="para" id="p-derived-NonZeroSumGames-19-2-2">Think back to von Neumann. If we want our opponent to have no incentive to change strategy, what should be true about our opponent’s expected values?</div>
+<div class="autopermalink" data-description="Item 2"><a href="#NonZeroSumGames-19-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-19-2-3">
+<div class="para" id="p-derived-NonZeroSumGames-19-2-3">Find a strategy for Rose that equates Colin’s results. (Be careful which payout matrix you use.)</div>
+<div class="autopermalink" data-description="Item 3"><a href="#NonZeroSumGames-19-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-19-2-4">
+<div class="para" id="p-derived-NonZeroSumGames-19-2-4">Find a strategy for Colin that equates Rose’s results.</div>
+<div class="autopermalink" data-description="Item 4"><a href="#NonZeroSumGames-19-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-19-2-5">
+<div class="para" id="p-derived-NonZeroSumGames-19-2-5">If both players take the strategies you’ve determined, does either player have incentive to change their strategy?</div>
+<div class="autopermalink" data-description="Item 5"><a href="#NonZeroSumGames-19-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Question 7.7"><a href="#NonZeroSumGames-19" title="Copy heading and permalink for Question 7.7" aria-label="Copy heading and permalink for Question 7.7">🔗</a></div></article></details><div class="para" id="NonZeroSumGames-20">We now consider a famous game, Hawk vs. Dove. In a paper by John Maynard Smith and George Price, this problem was analyzed and introduced Game Theory into the field of evolutionary biology.<div class="autopermalink" data-description="Paragraph"><a href="#NonZeroSumGames-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="NonZeroSumGames-21">[Hawk vs. Dove] Imagine that members of a certain species engage in pairwise competitions for a scarce resource. Suppose for simplicity that the species has two genetic variants, call them hawk and dove. The hawks of the species are very aggressive and will always fight for the resource. In contrast, the doves are passive and will wait around to see if the opponent gives up and goes away. If two hawks meet, they will fight, injuring one another making the meal not worth collecting. When a hawk and dove compete, the hawk takes all of the meal, leaving the dove with nothing. When two doves compete, they waste time, causing some of the meal to escape, and then share what remains.<div class="autopermalink" data-description="Paragraph"><a href="#NonZeroSumGames-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="NonZeroSumGames-22" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="question example-like knowl__content"><span class="process-math">\(10\)</span><div class="displaymath process-math" id="NonZeroSumGames-22-2">
+\begin{align*}
+\begin{bmatrix}(-5,-5) \amp (10,0)\\
+(0,10) \amp (4,4)\end{bmatrix}
+\end{align*}
+</div>
+<ol class="decimal" id="NonZeroSumGames-22-3">
+<li id="NonZeroSumGames-22-3-1">
+<div class="para" id="p-derived-NonZeroSumGames-22-3-1">If the probability of a member of the species being a hawk is <span class="process-math">\(p\)</span> and the probability of being a dove is <span class="process-math">\(1-p\text{.}\)</span> Calculate the expected value of a hawk encountering another bird at meal time. Calculate the expected value of a dove encountering another bird at meal time.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#NonZeroSumGames-22-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-22-3-2">
+<div class="para" id="p-derived-NonZeroSumGames-22-3-2">Find the probability of being a hawk <span class="process-math">\(p\)</span> so that the expected payoffs are equated.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#NonZeroSumGames-22-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-22-3-3">
+<div class="para" id="p-derived-NonZeroSumGames-22-3-3">What does it mean if the probability of being a hawk is less than your computations show for the last part? What does it mean if the probability of being a hawk is higher?</div>
+<div class="autopermalink" data-description="Item 3"><a href="#NonZeroSumGames-22-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-22-3-4">
+<div class="para" id="p-derived-NonZeroSumGames-22-3-4">Given many generations, what will the proportion of hawks be?</div>
+<div class="autopermalink" data-description="Item 4"><a href="#NonZeroSumGames-22-3-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Question 7.8"><a href="#NonZeroSumGames-22" title="Copy heading and permalink for Question 7.8" aria-label="Copy heading and permalink for Question 7.8">🔗</a></div></article></details><details id="NonZeroSumGames-23" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="question example-like knowl__content"><div class="displaymath process-math" id="NonZeroSumGames-23-1">
+\begin{align*}
+\begin{bmatrix} (1,1) \amp (0,0) \\
+(0,0) \amp (1,1)\end{bmatrix}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Question 7.9"><a href="#NonZeroSumGames-23" title="Copy heading and permalink for Question 7.9" aria-label="Copy heading and permalink for Question 7.9">🔗</a></div></article></details><details id="NonZeroSumGames-24" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="question example-like knowl__content"><div class="autopermalink" data-description="Question 7.10"><a href="#NonZeroSumGames-24" title="Copy heading and permalink for Question 7.10" aria-label="Copy heading and permalink for Question 7.10">🔗</a></div></article></details><ol class="decimal" id="NonZeroSumGames-25">
+<li id="NonZeroSumGames-25-1">
+<div class="para" id="p-derived-NonZeroSumGames-25-1">Find two pure strategy Nash Equilibria using movement diagrams. What do these equilibria mean happen to the subspecies in the long run?</div>
+<div class="autopermalink" data-description="Item 1"><a href="#NonZeroSumGames-25-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-25-2">
+<div class="para" id="p-derived-NonZeroSumGames-25-2">Show that both parties having ``strategies’’ of being either species <span class="process-math">\(\frac{1}{2}\)</span> of the time is also a Nash Equilibrium. In the long run, what would this equilibrium mean?</div>
+<div class="autopermalink" data-description="Item 2"><a href="#NonZeroSumGames-25-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-25-3">
+<div class="para" id="p-derived-NonZeroSumGames-25-3">Which equilibrium is more like to occur? Why?</div>
+<div class="autopermalink" data-description="Item 3"><a href="#NonZeroSumGames-25-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<details id="NonZeroSumGames-26" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="question example-like knowl__content"><span class="process-math">\(-5\)</span><span class="process-math">\(4\)</span><span class="process-math">\(10\)</span><span class="process-math">\(0\text{.}\)</span><ol class="decimal" id="NonZeroSumGames-26-5">
+<li id="NonZeroSumGames-26-5-1">
+<div class="para" id="p-derived-NonZeroSumGames-26-5-1">Imagine you are a hawk. You see a food in the distance and head towards it. As you approach, you see another bird is also approaching.   Determine the expected utility of this interaction for you (a hawk) if the probability of the other bird being a hawk is <span class="process-math">\(1/3\)</span> and the probability of the other bird being a dove is <span class="process-math">\(2/3\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#NonZeroSumGames-26-5-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-26-5-2">
+<div class="para" id="p-derived-NonZeroSumGames-26-5-2">Find the expected utility in the previous scenario for when the probability of the other bird being a hawk is <span class="process-math">\(p\)</span> and probability of being a dove is <span class="process-math">\(1-p\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#NonZeroSumGames-26-5-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-26-5-3">
+<div class="para" id="p-derived-NonZeroSumGames-26-5-3">Imagine you are a dove. You see a food in the distance and head towards it. As you approach, you see another bird is also approaching.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#NonZeroSumGames-26-5-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-26-5-4">
+<div class="para" id="p-derived-NonZeroSumGames-26-5-4">Determine the expected utility of this interaction for you (a dove) if the probability of the other bird being a hawk is <span class="process-math">\(1/3\)</span> and the probability of the other bird being a dove is <span class="process-math">\(2/3\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#NonZeroSumGames-26-5-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-26-5-5">
+<div class="para" id="p-derived-NonZeroSumGames-26-5-5">Find the expected utility of the previous scenario for when the probability of the other bird being a hawk is <span class="process-math">\(p\)</span> and probability of being a dove is <span class="process-math">\(1-p\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#NonZeroSumGames-26-5-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Question 7.11"><a href="#NonZeroSumGames-26" title="Copy heading and permalink for Question 7.11" aria-label="Copy heading and permalink for Question 7.11">🔗</a></div></article></details><details id="NonZeroSumGames-27" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="question example-like knowl__content"><ol class="decimal" id="NonZeroSumGames-27-1">
+<li id="NonZeroSumGames-27-1-1">
+<div class="para" id="p-derived-NonZeroSumGames-27-1-1">Find when the expected utility for the dove and the hawk are the same from the previous problem.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#NonZeroSumGames-27-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-27-1-2">
+<div class="para" id="p-derived-NonZeroSumGames-27-1-2">Determine who (hawk or dove) has a higher utility is <span class="process-math">\(p = 1/4\text{.}\)</span> Which species has the advantage in amount of expected food, and what does that mean for the populations of the next generation?</div>
+<div class="autopermalink" data-description="Item 2"><a href="#NonZeroSumGames-27-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-27-1-3">
+<div class="para" id="p-derived-NonZeroSumGames-27-1-3">Determine who (hawk or dove) has a higher utility when <span class="process-math">\(p = 4/5\text{.}\)</span> Which species has the advantage in amount of expected food, and what does that mean for the populations of the next generation?</div>
+<div class="autopermalink" data-description="Item 3"><a href="#NonZeroSumGames-27-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-27-1-4">
+<div class="para" id="p-derived-NonZeroSumGames-27-1-4">If <span class="process-math">\(p\)</span> is less than the number that equates utility, what do you expect to happen to <span class="process-math">\(p\)</span> over time? If <span class="process-math">\(p\)</span> is greater than the number that equates utility what do you expect will happen to <span class="process-math">\(p\)</span> over time?</div>
+<div class="autopermalink" data-description="Item 4"><a href="#NonZeroSumGames-27-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Question 7.12"><a href="#NonZeroSumGames-27" title="Copy heading and permalink for Question 7.12" aria-label="Copy heading and permalink for Question 7.12">🔗</a></div></article></details><div class="para" id="NonZeroSumGames-28">Consider the following game matrix with two possible actions (<span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span>) for each player:<div class="autopermalink" data-description="Paragraph"><a href="#NonZeroSumGames-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="NonZeroSumGames-29">
+\begin{align*}
+\begin{bmatrix} \amp (1,1) \amp (-1,-1) \\
+\amp (-1,-1) \amp (1,1) \end{bmatrix}
+\end{align*}
+</div>
+<div class="para" id="NonZeroSumGames-30">We can think of this matrix as two subspecies, <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\)</span> which succeed when working together, but fail when they are mismatched.<div class="autopermalink" data-description="Paragraph"><a href="#NonZeroSumGames-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="NonZeroSumGames-31" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="question example-like knowl__content"><ol class="decimal" id="NonZeroSumGames-31-1">
+<li id="NonZeroSumGames-31-1-1">
+<div class="para" id="p-derived-NonZeroSumGames-31-1-1">Find two pure strategy Nash Equilibria using movement diagrams. What do these equilibria mean happen to the subspecies in the long run?</div>
+<div class="autopermalink" data-description="Item 1"><a href="#NonZeroSumGames-31-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-31-1-2">
+<div class="para" id="p-derived-NonZeroSumGames-31-1-2">As in the above scenario, imagine that you are an individual that comes across another individual of the species. Determine the expected value of a species <span class="process-math">\(X\)</span> running into another individual which has probability <span class="process-math">\(p\)</span> of being <span class="process-math">\(X\)</span> and <span class="process-math">\(1-p\)</span> of being <span class="process-math">\(Y\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#NonZeroSumGames-31-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-31-1-3">
+<div class="para" id="p-derived-NonZeroSumGames-31-1-3">Determine the expected value of a species <span class="process-math">\(Y\)</span> running into another individual which has probability <span class="process-math">\(p\)</span> of being <span class="process-math">\(X\)</span> and <span class="process-math">\(1-p\)</span> of being <span class="process-math">\(Y\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#NonZeroSumGames-31-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-31-1-4">
+<div class="para" id="p-derived-NonZeroSumGames-31-1-4">Find when these expected values are equal.</div>
+<div class="autopermalink" data-description="Item 4"><a href="#NonZeroSumGames-31-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-31-1-5">
+<div class="para" id="p-derived-NonZeroSumGames-31-1-5">Which species has the advantage (higher expected value) if probability of <span class="process-math">\(X\)</span> is <span class="process-math">\(p = 1/4\text{?}\)</span> Which species has the advantage (higher expected value) if the probability of <span class="process-math">\(X\)</span> is <span class="process-math">\(p = 6/10\text{?}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#NonZeroSumGames-31-1-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-31-1-6">
+<div class="para" id="p-derived-NonZeroSumGames-31-1-6">If the present population has the probability of <span class="process-math">\(X\)</span> is <span class="process-math">\(p = 2/3\text{,}\)</span> what will happen to subspecies <span class="process-math">\(X\)</span> in the long run? What about subspecies <span class="process-math">\(Y\)</span> in the long run?</div>
+<div class="autopermalink" data-description="Item 6"><a href="#NonZeroSumGames-31-1-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Question 7.13"><a href="#NonZeroSumGames-31" title="Copy heading and permalink for Question 7.13" aria-label="Copy heading and permalink for Question 7.13">🔗</a></div></article></details><div class="para" id="NonZeroSumGames-32">We will now formalize slightly more the difference between the types of stability in equilibria that we saw with Hawks vs Doves, and X vs Y.<div class="autopermalink" data-description="Paragraph"><a href="#NonZeroSumGames-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="NonZeroSumGames-33"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<span class="process-math">\(A\)</span><dfn class="terminology">symmetric</dfn><span class="process-math">\(A\)</span><span class="process-math">\((i,j)\)</span><span class="process-math">\((j,i)\text{.}\)</span><span class="process-math">\(R\)</span><span class="process-math">\(C\)</span><span class="process-math">\(R^T = C\text{.}\)</span><div class="autopermalink" data-description="Definition 7.14"><a href="#NonZeroSumGames-33" title="Copy heading and permalink for Definition 7.14" aria-label="Copy heading and permalink for Definition 7.14">🔗</a></div></article><details id="NonZeroSumGames-34" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="question example-like knowl__content"><ol class="decimal" id="NonZeroSumGames-34-1">
+<li id="NonZeroSumGames-34-1-1">
+<div class="para" id="p-derived-NonZeroSumGames-34-1-1">Verify that the Hawk v Dove and X v Y payoff matrices from last class are indeed symmetric.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#NonZeroSumGames-34-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-34-1-2">
+<div class="para" id="p-derived-NonZeroSumGames-34-1-2">Consider the (mixed) equilibrium strategies for each player in each game. How are the strategies for Rose and Colin related?</div>
+<div class="autopermalink" data-description="Item 2"><a href="#NonZeroSumGames-34-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Question 7.15"><a href="#NonZeroSumGames-34" title="Copy heading and permalink for Question 7.15" aria-label="Copy heading and permalink for Question 7.15">🔗</a></div></article></details><details id="NonZeroSumGames-35" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="question example-like knowl__content"><span class="process-math">\(\textbf{d}\)</span><span class="process-math">\(\textbf{c}^T\)</span><ol class="decimal" id="NonZeroSumGames-35-3">
+<li id="NonZeroSumGames-35-3-1">
+<div class="para" id="p-derived-NonZeroSumGames-35-3-1">For each pure strategy <span class="process-math">\(\textbf{c}\)</span> for Colin in Hawks v Doves calculate <span class="process-math">\(\textbf{d} R \textbf{c}\text{.}\)</span> (Here <span class="process-math">\(d = [6/11, 5/11]\text{.}\)</span>  What do these values mean in terms of expected value?</div>
+<div class="autopermalink" data-description="Item 1"><a href="#NonZeroSumGames-35-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-35-3-2">
+<div class="para" id="p-derived-NonZeroSumGames-35-3-2">For each pure strategy <span class="process-math">\(\textbf{c}\)</span> for Colin, calculate <span class="process-math">\(\textbf{c}^T R \textbf{c}\)</span> for the Hawks v Doves game. What does this tell you compared to the previous part? Which strategies are best for Rose?</div>
+<div class="autopermalink" data-description="Item 2"><a href="#NonZeroSumGames-35-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-35-3-3">
+<div class="para" id="p-derived-NonZeroSumGames-35-3-3">For each pure strategy <span class="process-math">\(\textbf{c}\)</span> for Colin in X versus Y calculate <span class="process-math">\(\textbf{d} R \textbf{c}\text{.}\)</span>  What do these values mean in terms of expected value?</div>
+<div class="autopermalink" data-description="Item 3"><a href="#NonZeroSumGames-35-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="NonZeroSumGames-35-3-4">
+<div class="para" id="p-derived-NonZeroSumGames-35-3-4">For each pure strategy <span class="process-math">\(\textbf{c}\)</span> for Colin and each pure strategy <span class="process-math">\(\textbf{p}\)</span> for rose, calculate <span class="process-math">\(\textbf{p} R \textbf{c}\)</span> for the X v Y game. What does this tell you compared to the previous part? Which strategies are best for Rose?</div>
+<div class="autopermalink" data-description="Item 4"><a href="#NonZeroSumGames-35-3-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Question 7.16"><a href="#NonZeroSumGames-35" title="Copy heading and permalink for Question 7.16" aria-label="Copy heading and permalink for Question 7.16">🔗</a></div></article></details><div class="autopermalink" data-description="Chapter 7: Non-Zero Sum Games"><a href="#NonZeroSumGames" title="Copy heading and permalink for Chapter 7: Non-Zero Sum Games" aria-label="Copy heading and permalink for Chapter 7: Non-Zero Sum Games">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="ZeroSumGames.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="GeneralClassicalGames.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
