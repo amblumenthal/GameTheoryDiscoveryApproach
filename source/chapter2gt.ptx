@@ -1,0 +1,195 @@
+<chapter xml:id="CombGames">
+      <title>Combinatorial Games</title>
+
+<definition>
+    <statement>
+        A game is said to be a <term>Combinatorial Game</term> if it is a sequential two player game with 
+        <ol>
+        <li> A set of possible positions (sometimes called states of the game) </li>
+        <li> A move rule indicating for each position, what positions can be moved to </li>
+        <li> A win rule indicating a set of terminal positions where the game ends in which each terminal position has an associated outcome (which player wins) </li>
+        <li> Both players have total knowledge of the position(s), move rule, and win rule during their turn </li>
+        </ol>
+    </statement>
+</definition>
+
+<question> Which of the games in REFERENCE are Combinatorial Games (as we defined them) and which are not? Why?</question>
+
+<question> The game of Tic is similar to tic tac toe, but is played on a 1 by 3 board. On a player's turn, they fill one empty square with their symbol, <m>\times</m> for the first player, and <m>O</m> for the second player. A player wins if they get two consecutive squares filled with their symbols. Determine if any player has a winning strategy. Justify your answer.
+</question>
+
+<question> Justifying that you have a winning strategy is a pain. Try to brainstorm a way to visualize the entirety of a game (that is all things that could have happened). Describe how you would create such a visualization, and then use it to visualize Tic.
+</question>
+
+<question> Use your visualization of Tic to decide who has a winning strategy. Does your visualization give all of the information necessary to justify that a strategy is a winning strategy? What does a strategy look like in the context of your visualization? 
+
+
+</question>
+
+<p>When analyzing games, we would like to take a step back from looking at the actual game board. (Some games may look different, but play essentially the same way as we were discussing with what makes games ``the same.'')
+</p>
+
+<p>As such, let me abstract the game tree slightly further than where we ended in class. A <term>WLD Game Tree</term> condenses the information of our game tree by suppressing the game board. For example, the WLD Game tree for Tic is as follows: 
+</p>
+
+<latex-image>
+\begin{tikzpicture}
+
+    \node[circle, draw] at (0,0) (root) {R};
+    \node[circle, draw] at (-2,-1) (l) {L};
+    \node[circle, draw] at (0,-1) (m) {L};
+    \node[circle, draw] at (2,-1) (r) {L};
+    \node[circle, draw] at (-2.5,-2) (ll) {R};
+    \node[circle, draw] at (-1.5,-2) (lr) {R};
+    \node[circle, draw] at (-.5,-2) (ml) {R};
+    \node[circle, draw] at (.5,-2) (mr) {R};
+    \node[circle, draw] at (1.5,-2) (rl) {R};
+    \node[circle, draw] at (2.5,-2) (rr) {R};
+    \node[circle, draw] at (-2.5,-3) (llm) {00};
+    \node[circle, draw] at (-1.5,-3) (lrm) {-+};
+    \node[circle, draw] at (-.5,-3) (mlm) {-+};
+    \node[circle, draw] at (.5,-3) (mrm) {-+};
+    \node[circle, draw] at (1.5,-3) (rlm) {-+};
+    \node[circle, draw] at (2.5,-3) (rrm) {00};
+
+    \draw[thick] (root) -- (l);
+    \draw[thick] (root) -- (m);
+    \draw[thick] (root) -- (r);
+    \draw[thick] (llm) -- (ll) -- (l) -- (lr) -- (lrm);
+    \draw[thick] (mlm) -- (ml) -- (m) -- (mr) -- (mrm);
+    \draw[thick] (rlm) -- (rl) -- (r) -- (rr) -- (rrm);
+    
+    
+\end{tikzpicture}
+</latex-image>
+ 
+
+<p> We can build on our tree by saying that sometimes (maybe always?) we know if a position is winning or not, and for whom! We will build on that in this assignment. </p>
+
+
+<question> Draw onto the WLD tree optimal strategies for <m>R</m> and <m>L</m>. 
+
+
+</question>
+<latex-image>
+\begin{tikzpicture}[scale = 1.5]
+    \node[circle, draw] at (0,0) (root) {R};
+    \node[circle, draw] at (-2,-1) (l) {L};
+    \node[circle, draw] at (0,-1) (m) {L};
+    \node[circle, draw] at (2,-1) (r) {L};
+    \node[circle, draw] at (-2.5,-2) (ll) {R};
+    \node[circle, draw] at (-1.5,-2) (lr) {R};
+    \node[circle, draw] at (-.5,-2) (ml) {R};
+    \node[circle, draw] at (.5,-2) (mr) {R};
+    \node[circle, draw] at (1.5,-2) (rl) {R};
+    \node[circle, draw] at (2.5,-2) (rr) {R};
+    \node[circle, draw] at (-2.5,-3) (llm) {00};
+    \node[circle, draw] at (-1.5,-3) (lrm) {-+};
+    \node[circle, draw] at (-.5,-3) (mlm) {-+};
+    \node[circle, draw] at (.5,-3) (mrm) {-+};
+    \node[circle, draw] at (1.5,-3) (rlm) {-+};
+    \node[circle, draw] at (2.5,-3) (rrm) {00};
+
+    \draw[thick] (root) -- (l);
+    \draw[thick] (root) -- (m);
+    \draw[thick] (root) -- (r);
+    \draw[thick] (llm) -- (ll) -- (l) -- (lr) -- (lrm);
+    \draw[thick] (mlm) -- (ml) -- (m) -- (mr) -- (mrm);
+    \draw[thick] (rlm) -- (rl) -- (r) -- (rr) -- (rrm);
+    
+    
+\end{tikzpicture}
+</latex-image>
+ 
+
+
+<p>You may be surprised to realize that you are able to identify who wins the following two games (despite not knowing the rules or what a position even looks like):
+</p>
+
+<latex-image>
+\begin{tikzpicture}
+    \node[circle, draw] at (-3, -.5) (g1) {-+};
+    
+    \node[circle, draw] at (0,0) (root) {R};
+    \node[circle, draw] at (-1,-1) (l) {00};
+    \node[circle, draw] at (1,-1) (r) {-+};
+    
+    \draw[thick] (l)--(root)--(r);
+\end{tikzpicture}
+</latex-image>
+
+
+<question> Think about the positions in the game above (one at a time). Can we determine if <m>R</m> is winning, <m>L</m> is winning, or if it is a draw. If so, how? 
+</question>
+
+<question> Look back at the Tic WLD Game Tree and decide the outcome of the game from EVERY position assuming optimal play! Mark any position where <m>R</m> has a winning strategy with <m>-+</m>, any position where <m>L</m> has a winning strategy with <m>+-</m>, and any position where neither player has a winning strategy with <m>00</m>. Are there some positions that are more interesting to know this type for? 
+</question>
+
+<latex-image>
+\begin{tikzpicture}[scale = 2]
+    \node[circle, draw] at (0,0) (root) {R};
+    \node[circle, draw] at (-2,-1) (l) {L};
+    \node[circle, draw] at (0,-1) (m) {L};
+    \node[circle, draw] at (2,-1) (r) {L};
+    \node[circle, draw] at (-2.5,-2) (ll) {R};
+    \node[circle, draw] at (-1.5,-2) (lr) {R};
+    \node[circle, draw] at (-.5,-2) (ml) {R};
+    \node[circle, draw] at (.5,-2) (mr) {R};
+    \node[circle, draw] at (1.5,-2) (rl) {R};
+    \node[circle, draw] at (2.5,-2) (rr) {R};
+    \node[circle, draw] at (-2.5,-3) (llm) {00};
+    \node[circle, draw] at (-1.5,-3) (lrm) {-+};
+    \node[circle, draw] at (-.5,-3) (mlm) {-+};
+    \node[circle, draw] at (.5,-3) (mrm) {-+};
+    \node[circle, draw] at (1.5,-3) (rlm) {-+};
+    \node[circle, draw] at (2.5,-3) (rrm) {00};
+
+    \draw[thick] (root) -- (l);
+    \draw[thick] (root) -- (m);
+    \draw[thick] (root) -- (r);
+    \draw[thick] (llm) -- (ll) -- (l) -- (lr) -- (lrm);
+    \draw[thick] (mlm) -- (ml) -- (m) -- (mr) -- (mrm);
+    \draw[thick] (rlm) -- (rl) -- (r) -- (rr) -- (rrm);
+    
+    
+\end{tikzpicture}
+</latex-image>
+ 
+
+
+
+<question> Formally prove (by using induction on how many layers are in the tree) that in every Combinatorial Game exactly one of the following holds: (You may assume that <m>R</m> has the first move)
+</question><ul>
+    <li> Louise has a winning strategy. </li>
+    <li> Richard has a winning strategy. </li>
+    <li> Both players have drawing strategies. </li>
+</ul>
+
+<question> Think about the consequence of this theorem. What does it mean about combinatorial games? Can we know who will win before the first move is even taken?
+</question>
+
+<p> There is a problem with our general solution to combinatorial games. Time and computing power are limited! Instead we might like to build strategies by taking advantage of rules or symmetries to give meaningful instructions that would tell a player what to do in any scenario rather that building a gigantic tree.
+</p>
+
+<question> For each of the following games try to come up with an optimal strategy which can be described in words. Determine if <m>R</m> has a winning strategy, <m>L</m> has a winning strategy, or if the both have drawing strategies. Justify your answers.</question>
+<ol>
+    <li> Pick up stones with 7 stones. </li>
+    <li> Pick up stones with <m>n</m> stones. </li>
+    <li> The game Pick Up Stones 2: Electric Boogaloo is a two player game where there are two piles of stones alternating turns. On each turn a player removes <m>1</m>, <m>2</m>, or <m>3</m> stones. The player who picks up a last stone in either pile loses. Determine a strategy if the piles have <m>7</m> and <m>4</m> stones.</li>
+    <li> Pick Up Stones 2: Electric Boogaloo with <m>n</m> stones in both piles. </li>
+    <li> Chomp on a <m>4</m> by <m>4</m> board. </li>
+    <li> Chomp on an <m>n</m> by <m>n</m> board. </li>
+    <li> Chomp on an <m>n</m> by <m>m</m> board. </li>
+</ol>
+
+<p>We now notice a type of symmetry in chomp to develop <term>strategy stealing</term>. The idea is that if a second player could move to a winning position, the first player could have taken moves to get to that position.
+</p>
+
+<question> Prove the following by contradiction:
+
+</question><theorem>
+For every rectangular position in chomp (except the <m>1</m> by <m>1</m> board) the first player has a winning strategy.
+</theorem>
+
+
+</chapter>

@@ -1,0 +1,124 @@
+
+<chapter xml:id="GeneralClassicalGames">
+    <title>General Classical Games</title>
+
+
+
+
+
+<p> We now turn our attention briefly to games with hidden information to apply our knowledge of expected values.
+
+</p>%%%This is horribly out of place to accommodate a visitor to the class and give them something to play
+<term>Easy Black Jack</term>
+
+<p>We consider a modified version of black jack. To enter the game, both Rose and Colin pay in one chip. Rose and Colin are both dealt two cards, but one of the two is face up for both players to see. Rose may look at her face down card and Colin may look at his, but they cannot look at each other's. After looking, they must both decide simultaneously if they bet or fold. Betting players add one more chip to the pot. 
+If one player bets, they get the entire pot. If both players fold, they split the pot.  
+If they both bet, they reveal their unrevealed cards, and the player with the higher sum of points wins where Ace, King, Queen, and Jack each count as <m>10</m> points and all numbered cards are worth their number's points (for example the <m>4</m> of spades is worth <m>4</m> points).
+</p>
+
+<ol>
+  <li> Try to represent this as a game matrix. What difficulties do you run into? </li>
+  <li> If Rose sees her board is an <m>8</m> and a <m>5</m>, and she sees that Colin has a <m>6</m> and an unknown card, should she bet or fold? Justify you answer using expected values. </li>
+</ol>
+
+
+<question> Consider the following game matrix, a variation on the Prisoner's Dilemma:
+</question><md>
+<mrow>\begin{bmatrix}(2,2) \amp (0,3) </mrow>
+<mrow>(3,0) \amp (1,1) \end{bmatrix}</mrow>
+</md>
+
+<ol>
+  <li> Under rational play, if the players are not allowed to communicate, what should each player do? </li>
+  <li> Now imagine that you are not playing this game just once. Instead you will play the game against an opponent, and then each player will flip a fair coin. If both flips come up tails, the game ends. Otherwise, you play another round. Play this game with a partner a few times.</li>
+  <li> Does analysis of the repeated game differ from a single instance? How can strategies differ? Are you ever incentivized to do something OTHER than what the game matrix played once wants you to do?</li>
+</ol>
+
+
+<p> We can now see that playing a game repeatedly requires some additional analytic tools. Intuitively in class, we saw that if you play the game below repeatedly with another player who is willing to cooperate, you can gain <m>2</m> utility every turn instead of just <m>1</m>. This would be a better outcome, even though you would be choosing a dominated strategy! </p>
+
+<p> We will now build some of the tools necessary to play repeated games </p>
+
+
+  
+<question> Consider the following game matrix, a variation on the Prisoner's Dilemma: (Note: we will call strategy <m>1</m> cooperate, and strategy <m>2</m> defect for each player)
+</question><md>PD = 
+<mrow>\begin{bmatrix}(2,2) \amp (0,3) </mrow>
+<mrow>(3,0) \amp (1,1)/end{bmatrix} </mrow>
+</md>
+
+<definition>
+Let <m>A</m> be a matrix game and <m>0 \leq \delta \leq 1</m>. The game <m>Repeat(A, \delta)</m> is defined as follows: On each round, Rose and Colin play the matrix game <m>A</m>, then flip a coin with probability <m>\delta</m> of being heads. On a heads the game continues to a next round, otherwise the game ends. The payoff for each player is the sum of the players payoffs over all of the rounds. 
+</definition>
+
+<ol>
+  <li> Play <m>PD</m> against an opponent, and then each player will flip a fair coin. If both flips come up tails, the game ends. Otherwise, you play another round. Write this game using the <m>Repeat</m> notation.</li>
+  <li> If both players choose to cooperate every round and the game lasts <m>3</m> rounds, what is the expected value of a game for each player? What if the game lasted <m>6</m> rounds? <m>k</m> rounds?</li>
+  <li> If both players choose to defect every round and the game lasts <m>4</m> rounds, what is the expected value of the game for each player? What if the game lasted <m>6</m> rounds? <m>k</m> rounds?</li>
+  <li> Which strategy is better to play in the repeated game? Why? </li>
+</ol>
+
+
+
+<p>We now expand our concept of a pure strategy. We don't need to ALWAYS defect or ALWAYS cooperate. </p>
+
+<definition>
+A \textit{pure strategy} in the game <m>Repeat(A, \delta)</m> is a rule that indicates what choice to make on the <m>k^{th}</m> round depending only on what the players chose in rounds <m>1, 2 \dots , k-1</m>.
+</definition>
+
+<question> Give some examples of pure strategies that are not ``always cooperate'' or ``always defect.''
+
+
+</question> 
+
+<question> The strategy <term>grim trigger</term> strategy cooperates until the opponent defects in the game <m>PD</m>, then you defect forever. Calculate the expected value of a the grim trigger strategy in which the opponent cooperates for the first <m>i</m> rounds for <m>Repeat(PD, \delta)</m>. 
+
+
+</question>We now seek to find a Nash Equilibrium in a repeated game. We saw last class that geometric series will play an important role in our analysis. I will prove a claim that we used before without proof:
+<theorem>
+Let <m>0 \leq \delta \leq 1</m>. Then, <me>\sum_{i=0}^{\infty} t \delta^i = \frac{t}{1-\delta}.</me>
+</theorem>
+
+<md>
+  \begin{proof}
+  Let <m>0 \leq \delta \leq 1</m>, then <md> 
+  <mrow>(1 - \delta) (t + t\delta + t\delta^2 + \dots) \amp= (t + t\delta + t \delta^2 + \dots) - (t\delta + t\delta^2 + t\delta^3 + \dots) </mrow>
+  <mrow>\amp= t + (t\delta - t\delta) + (t\delta^2 - t\delta^2) + \dots </mrow>
+  <mrow>\amp= t.</mrow>
+  </md>
+  Dividing both sides of <m>(1 - \delta) (t + t\delta + t\delta^2 + \dots) = t</m> by <m>1-\delta</m>, we have the desired result.
+  \end{proof}
+</md>
+
+  
+<question> Consider the following game matrix, a variation on the Prisoner's Dilemma: (Note: we will call strategy <m>1</m> cooperate, and strategy <m>2</m> defect for each player)
+  <md>PD = 
+  <mrow>\begin{bmatrix}(2,2) \amp (0,3)</mrow>
+  <mrow>(3,0) \amp (1,1)\end{bmatrix}</mrow>
+  </md>
+</question>
+
+
+<question> The strategy <term>grim trigger</term> strategy cooperates until the opponent defects in the game <m>PD</m>, then you defect forever. We want to determine a best response to the grim trigger strategy. Imagine you are playing against grim trigger.
+<ol>
+  <li>Once you defect once, should you ever choose to cooperate again? Justify your answer. </li>
+  <li> What does the previous question tell us about what an optimal strategy against grim trigger looks like? </li>
+</ol>
+</question>
+
+
+<question> We now consider the game <m>Repeat(PD,\delta)</m> for any <m>\delta</m>. Calculate the expected value of the following strategy played against grim trigger: cooperate until round <m>k</m>, then defect forever. Note that this is an upper bound on expected value for any strategy that defects for the first time on round <m>k</m>. 
+(Try to simplify the expected value to something that could easily be calculated as a function of <m>k</m> and <m>\delta</m> using the theorem about geometric series above.)
+</question>
+
+
+<question> Now that we have an upper bound on the expected value of a strategy against the grim trigger. We want to maximize that expected value, but it depends on <m>\delta</m> and <m>k</m>. Let us find the break points for <m>\delta</m> that cause us to choose to defect at different times.
+<ol>
+  <li> Calculate when <m>(1 - \frac{\delta}{1-\delta}) = 0</m>. </li>
+  <li> If <m>\delta</m> is less than the value calculated above, what round should we defect to maximum payout in <m>Repeat(PD, \delta)</m> against grim trigger? (That is, by fixing <m>\delta</m>, what <m>k</m> value gives maximum expected value.) Why? </li>
+  <li> When should we defect against grim trigger if <m>\delta</m> is greater than the value calculated in part <m>a</m>? </li>
+  <li> What strategies have we talked about that are best responses to grim trigger in <m>Repeat(PD, \delta)</m> for each case? Have we found any Nash Equilibria? How can you tell? </li>
+</ol>
+</question>
+
+</chapter>

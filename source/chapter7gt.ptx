@@ -1,0 +1,227 @@
+
+<chapter xml:id="NonZeroSumGames">
+    <title>Non-Zero Sum Games</title>
+
+
+
+<p>We now introduce a famous thought experiment to push beyond the world of Zero-Sum Games. Instead of payouts, we now consider the utility to each player. For example, if someone plays a lottery, losing it may be worth <m>-1</m> utility, and winning might be worth <m>1000</m> utility, but winning or losing the lottery does not affect the other players playing it.
+</p>
+
+<p> <term>von Neumann and Morgenstern's Lottery:</term>  
+Suppose that Rose has two possible outcomes in a lottery, <m>X</m> with utility <m>0</m> and <m>Z</m> with utility <m>10</m>. </p>
+
+<question> 
+<ol>
+  <li> Determine the expected utility of the lottery for Rose if the probability of <m>X</m> is <m>\frac{1}{2}</m> and the probability of <m>Z</m> is <m>\frac{1}{2}</m>.</li>
+  <li> Determine the expected utility of the lottery for Rose if the probability of <m>X</m> is <m>p</m> and the probability of <m>Z</m> is <m>1-p</m>.</li>
+  <li> Now suppose a third option exists, <m>Y</m> such that Rose's preferences are <m>X LESSTHAN Y LESSTHAN Z</m> (that is, it has some value between <m>0</m> and <m>10</m>). 
+  Morgenstern and von Neumann propose that there is some <m>p</m> so that if <m>X</m> happens with probability <m>p</m> and <m>Z</m> happens with probability <m>1-p</m> so that <m>Y</m> has the same value as the lottery of <m>X</m> and <m>Y</m>. 
+  Determine (as a function of <m>p</m>) the value of <m>Y</m>.</li>
+</ol>
+</question>
+
+<question> <term>Dating Dilemma</term>:
+Suppose Rose and Colin have started dating and they are texting to decide what to do this evening. Colin would like to go to the basketball game <m>B</m> and Rose would like to watch a film <m>F</m>. Colin is irresponsible and didn't charge his phone, so it dies before a decision is made, but they both know the two options. They both value time apart as <m>0</m> utility, time together as <m>1</m> utility at the event they didn't suggest, and <m>2</m> utility for being together at the event they suggested.
+</question>
+
+<ol>
+  <li> Make a game matrix for the dating dilemma. </li>
+  <li> Determine what the players might do under rational play. (Assuming no further communication.) </li>
+</ol>
+
+
+<definition>
+<term>Volunteer's Dilemma</term>:
+Rose and Colin have been a mostly happy couple for some time now, but they disagree about who will do the dishes. Each has the option of either volunteering (V) to do the dishes or staying silent (S). Below is the payoff matrix (with S before V in rows and columns):
+
+<md>
+<mrow>\begin{bmatrix} (-10,-10) \amp (0,-1) </mrow>
+<mrow>(-1,0) \amp (0,0) \end{bmatrix} </mrow>
+</md>
+</definition>
+
+<p> Each player's best outcome is by staying silent, but that can also lead to the worst outcome. This dynamic is common enough that the aboriginal people of Tierra del Fuego have a word for it. </p>
+
+<definition>
+<term>Mamihlapinatapai</term> is the situation when two people are staring at one another, each hoping the other will volunteer to do something both want done but neither wants to do.
+</definition>
+
+<question> What should the Rose and Colin do assuming rational play? </question>
+
+
+<p> A <term>movement diagram</term> is a matrix with arrows to demonstrate how players are incentivized to move in given situations. For example the prisoner's dilemma's payoff matrix is:
+<md>
+<mrow>\begin{bmatrix} (-1,-1) \amp (-10,0) </mrow>
+<mrow>(0, -10) \amp (-5, -5) \end{bmatrix} </mrow>
+</md>
+</p>
+
+<p>The movement diagram should encapsulate that if a player <m>A</m> does not rat on player <m>B</m>, then <m>B</m> is incentivized to rat on <m>A</m>, and if player <m>A</m> suspects that player <m>B</m> will rat, they are incentivized to rat, demonstrated as below:</p>
+
+
+<latex-image>
+\begin{tikzpicture}
+\node[scale = 1] at (0,0) (CC) {<m>(-1,-1)</m>};
+\node[scale = 1] at (2,0) (CD) {<m>(-10,0)</m>};
+\node[scale = 1] at (0,-1) (DC) {<m>(0,-10)</m>};
+\node[scale = 1] at (2,-1) (DD) {<m>(-5,-5)</m>};
+
+\draw[->] (CC) -- (CD);
+\draw[->] (CC) -- (DC);
+\draw[->] (DC) -- (DD);
+\draw[->] (CD) -- (DD);
+
+\end{tikzpicture}
+</latex-image> 
+
+
+<question> Make the movement diagrams for the games proposed in the previous two questions. What do they tell us about ``stable'' or equilibrium solutions?
+
+
+
+</question>
+
+<p>NASH'S THEOREM</p>
+
+
+
+<p>Now that we have seen that all classical games have a Nash Equilibrium (that is, a steady state) we want to analyze how to find them. We can do this, at least in small cases by recognizing what the Nash Equilibrium says!</p>
+
+<p>A Nash Equilibrium guarantees that there is a pair of strategies so that neither players has an incentive to change strategy.</p>
+
+<p>We will call a strategy for Colin <m>\textbf{q}</m> a <term>best response</term> to a strategy for Rose, <m>\textbf{p}</m>, if Rose has no incentive to change her strategy if Colin continues to play <m>\textbf{q}</m>.</p>
+
+
+<question> Consider the following game matrix:
+<md>
+<mrow>\begin{bmatrix} (1,-2) \amp (0,2) </mrow>
+<mrow>(-1,3) \amp (3,-1) \end{bmatrix}</mrow>
+</md>
+<ol>
+  <li> Determine Rose's Payoff Matrix. And Colin's Payoff matrix. </li>
+  <li> Think back to von Neumann. If we want our opponent to have no incentive to change strategy, what should be true about our opponent's expected values?</li>
+  <li> Find a strategy for Rose that equates Colin's results. (Be careful which payout matrix you use.)</li>
+  <li> Find a strategy for Colin that equates Rose's results.</li>
+  <li> If both players take the strategies you've determined, does either player have incentive to change their strategy?</li>
+</ol>
+</question>
+
+%%%NOTE TO FUTURE ME, WE ARE ABOUT TO DO THIS TWICE BECAUSE STUDENTS STRUGGLED SO HEAVILY WITH VIEWING IT FROM THIS WAY FIRST... TRY REORDERING THESE
+<p>We now consider a famous game, Hawk vs. Dove. In a paper by John Maynard Smith and George Price, this problem was analyzed and introduced Game Theory into the field of evolutionary biology.
+</p>
+
+<p>
+[Hawk vs. Dove]
+Imagine that members of a certain species engage in pairwise competitions for a scarce resource. Suppose for simplicity that the species has two genetic variants, call them hawk and dove. The hawks of the species are very aggressive and will always fight for the resource. In contrast, the doves are passive and will wait around to see if the opponent gives up and goes away.  
+If two hawks meet, they will fight, injuring one another making the meal not worth collecting. When a hawk and dove compete, the hawk takes all of the meal, leaving the dove with nothing. When two doves compete, they waste time, causing some of the meal to escape, and then share what remains.
+</p>
+
+<question>
+Consider the following payouts for a meal worth about <m>10</m> utility. With Hawks appearing first in the columns and rows.
+
+<md>
+<mrow>\begin{bmatrix}(-5,-5) \amp (10,0)</mrow>
+<mrow>(0,10) \amp (4,4)\end{bmatrix}</mrow>
+</md>
+<ol>
+  <li> If the probability of a member of the species being a hawk is <m>p</m> and the probability of being a dove is <m>1-p</m>. Calculate the expected value of a hawk encountering another bird at meal time. Calculate the expected value of a dove encountering another bird at meal time. </li>
+  <li> Find the probability of being a hawk <m>p</m> so that the expected payoffs are equated. </li>
+  <li> What does it mean if the probability of being a hawk is less than your computations show for the last part? What does it mean if the probability of being a hawk is higher? </li>
+  <li> Given many generations, what will the proportion of hawks be? </li>
+</ol>
+</question>
+
+<question>
+Consider the following game matrix:
+
+<md>
+<mrow>\begin{bmatrix} (1,1) \amp (0,0) </mrow>
+<mrow>(0,0) \amp (1,1)\end{bmatrix}</mrow>
+</md>
+</question>
+
+<question> We can think of this matrix as two subspecies which succeed when working together, but fail when they are mismatched. </question>
+  
+  <ol>
+      <li> Find two pure strategy Nash Equilibria using movement diagrams. What do these equilibria mean happen to the subspecies in the long run? </li>
+      <li> Show that both parties having ``strategies'' of being either species <m>\frac{1}{2}</m> of the time is also a Nash Equilibrium. In the long run, what would this equilibrium mean? </li>
+      <li> Which equilibrium is more like to occur? Why? </li>
+  </ol>
+
+
+%%%%HERE'S THE SECOND WAY TO DO IT, WORKED BETTER, BUT PROBABLY LESS GENERAL? NEED TO REVISIT TO MAKE A CHOICE/MORE CLEAR INSTRUCTIONS
+
+<question> Imagine you are a bird flying around looking for food. All birds in the area are either hawks or doves.  
+If two hawks meet, they fight producing a utility of <m>-5</m> for one another because they both leave injured and the food likely escapes.  
+If two doves meet, they chat about shared acquaintences and lose track of the time as some of the food escapes, and then share the remainder of the meal for a utility of <m>4</m> for each.  
+If a dove and a hawk meet, the dove knows the hawk will fight and is not trying to catch those hands (or wings/talons/beaks) and leaves the entire meal for the hawk. The hawk gets <m>10</m> utility and the dove gets <m>0</m>.
+<ol>
+  <li> Imagine you are a hawk. You see a food in the distance and head towards it. As you approach, you see another bird is also approaching.   Determine the expected utility of this interaction for you (a hawk) if the probability of the other bird being a hawk is <m>1/3</m> and the probability of the other bird being a dove is <m>2/3</m>.</li>
+  <li> Find the expected utility in the previous scenario for when the probability of the other bird being a hawk is <m>p</m> and probability of being a dove is <m>1-p</m>.</li>
+  <li> Imagine you are a dove. You see a food in the distance and head towards it. As you approach, you see another bird is also approaching.  </li>
+  <li>Determine the expected utility of this interaction for you (a dove) if the probability of the other bird being a hawk is <m>1/3</m> and the probability of the other bird being a dove is <m>2/3</m>.</li>
+  <li> Find the expected utility of the previous scenario for when the probability of the other bird being a hawk is <m>p</m> and probability of being a dove is <m>1-p</m>.</li>
+</ol>
+</question>
+
+
+
+<question> 
+<ol>
+  <li> Find when the expected utility for the dove and the hawk are the same from the previous problem. </li>
+  <li> Determine who (hawk or dove) has a higher utility is <m>p = 1/4</m>. Which species has the advantage in amount of expected food, and what does that mean for the populations of the next generation?</li>
+  <li> Determine who (hawk or dove) has a higher utility when <m>p = 4/5</m>. Which species has the advantage in amount of expected food, and what does that mean for the populations of the next generation?</li>
+  <li> If <m>p</m> is less than the number that equates utility, what do you expect to happen to <m>p</m> over time? If <m>p</m> is greater than the number that equates utility what do you expect will happen to <m>p</m> over time? </li>
+</ol>
+</question>
+
+
+
+
+<p>Consider the following game matrix with two possible actions (<m>X</m> and <m>Y</m>) for each player:</p>
+
+<md> 
+<mrow>\begin{bmatrix} \amp (1,1) \amp (-1,-1) </mrow>
+<mrow>\amp (-1,-1) \amp (1,1) \end{bmatrix}</mrow>
+</md>
+
+<p> We can think of this matrix as two subspecies, <m>X</m> and <m>Y</m> which succeed when working together, but fail when they are mismatched. </p>
+  
+<question>
+<ol>
+  <li> Find two pure strategy Nash Equilibria using movement diagrams. What do these equilibria mean happen to the subspecies in the long run? </li>
+  <li> As in the above scenario, imagine that you are an individual that comes across another individual of the species. Determine the expected value of a species <m>X</m> running into another individual which has probability <m>p</m> of being <m>X</m> and <m>1-p</m> of being <m>Y</m>.</li>
+  <li> Determine the expected value of a species <m>Y</m> running into another individual which has probability <m>p</m> of being <m>X</m> and <m>1-p</m> of being <m>Y</m>. </li>
+  <li> Find when these expected values are equal.</li>
+  <li> Which species has the advantage (higher expected value) if probability of <m>X</m> is <m>p = 1/4</m>? Which species has the advantage (higher expected value) if the probability of <m>X</m> is <m>p = 6/10</m>? </li>
+  <li> If the present population has the probability of <m>X</m> is <m>p = 2/3</m>, what will happen to subspecies <m>X</m> in the long run? What about subspecies <m>Y</m> in the long run? </li>
+</ol>
+</question>
+
+
+
+<p>We will now formalize slightly more the difference between the types of stability in equilibria that we saw with Hawks vs Doves, and X vs Y.</p>
+
+<definition>[Symmetric Game]
+A game matrix <m>A</m> is said to be <term>symmetric</term> if <m>A</m> satisfies that Rose's entry in position <m>(i,j)</m> is always the same as Colin's entry in position <m>(j,i)</m>.  
+(For those who have seen linear algebra, this means that if <m>R</m> and <m>C</m> are Rose and Colin's payout matrices, we have that <m>R^T = C</m>.)
+</definition>
+
+<question> <ol>
+<li> Verify that the Hawk v Dove and X v Y payoff matrices from last class are indeed symmetric.</li>
+<li> Consider the (mixed) equilibrium strategies for each player in each game. How are the strategies for Rose and Colin related? </li>
+</ol>
+</question>
+
+
+
+<question> Let <m>\textbf{d}</m> represent the mixed equilibrium strategy for Rose. Let <m>\textbf{c}^T</m> be the row version of Colin's strategy (saying that Rose takes the same strategy as Colin). 
+<ol>
+  <li> For each pure strategy <m>\textbf{c}</m> for Colin in Hawks v Doves calculate <m>\textbf{d} R \textbf{c}</m>. (Here <m>d = [6/11, 5/11]</m>.  What do these values mean in terms of expected value?</li>
+  <li> For each pure strategy <m>\textbf{c}</m> for Colin, calculate <m>\textbf{c}^T R \textbf{c}</m> for the Hawks v Doves game. What does this tell you compared to the previous part? Which strategies are best for Rose?</li>
+  <li> For each pure strategy <m>\textbf{c}</m> for Colin in X versus Y calculate <m>\textbf{d} R \textbf{c}</m>.  What do these values mean in terms of expected value?</li>
+  <li> For each pure strategy <m>\textbf{c}</m> for Colin and each pure strategy <m>\textbf{p}</m> for rose, calculate <m>\textbf{p} R \textbf{c}</m> for the X v Y game. What does this tell you compared to the previous part? Which strategies are best for Rose?</li>
+</ol>
+</question>
+
+</chapter>

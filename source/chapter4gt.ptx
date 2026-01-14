@@ -1,0 +1,250 @@
+<chapter xml:id="ImpartialGames">
+      <title>Impartial Combinatorial Games</title>
+
+
+<definition>
+    <statement>
+        A combinatorial game is said to be <term>impartial</term> if the move rule is the same for each player in every position.
+    </statement>
+</definition>
+
+<question> Prove or disprove the following Claim:
+</question>
+<claim>
+Every position in an impartial game is one of the following:
+<ol>
+    <li> Type C. </li>
+    <li> Type P. </li>
+</ol>
+</claim>
+
+<question> Using the previous claim, describe how to determine the type of a position of an impartial game using position notation. </question>
+
+
+
+
+<p>To better understand impartial games, we introduce the following game (as a reminder, you are NOT to look up this game online or use any resources other than our brains, the notes, or each other's brains to explore this game): </p>
+
+<p> Nim is an impartial game in which a position consists of <m>\ell</m> piles of stones of sizes <m>a_1,a_2,\dots,a_\ell</m>. To make a move, a player removes one or more (up to all) stones from a chosen pile. The last player to take a stone wins.
+</p>
+
+<question> Let's build an intuition on Nim. Determine the type of the following Nim positions. Justify your answers.
+</question><ol>
+    <li> One pile of <m>n</m> stones.  </li>
+    <li> Two piles of <m>n</m> stones. </li>
+    <li> A pile of <m>3</m> stones and a pile of <m>5</m> stones. </li>
+    <li> One pile with <m>n</m> stones and one pile with <m>m</m> stones with <m>n \neq m</m>. </li>
+    <li> One pile with <m>1</m> stone, one pile with <m>2</m> stones, and one pile with <m>3</m> stones. </li>
+    <li> One pile with <m>2</m> stones, one pile with <m>4</m> stones, and one pile with <m>6</m> stones. </li>
+    
+</ol>
+
+
+
+%THIS QUESTION WAS QUITE DIFFICULT: GIVE MORE GUIDANCE/SCAFFOLDING
+<question> Nim is a relatively general game. Can it be used to describe games that we have played before?
+</question><ol>
+    <li> Convert a game of Pick Up Stones with <m>8</m> stones into a game of Nim. </li>
+    <li> Convert a game of Pick Up Stones with <m>n</m> stones into a game of Nim. </li>
+    <li> Convert a <m>1 \times 6</m> game of Chomp into a game of Nim. </li>
+</ol>
+
+
+ 
+<p>We established that <m>P</m> positions act like <m>0</m> in some way. We want to establish, what do <m>P</m> positions look like in Nim. We will now define a new type of ``number'' to help us assess this.
+</p>
+
+<definition>
+A Nim pile with <m>n</m> stones is said to have <term>nimber</term> <m>*n</m> (read ``star n''). 
+</definition>
+
+<question> Classify all nimbers that correspond to <m>C</m> positions. Classify all nimbers that correspond to <m>P</m> positions. Then try to assign a nimber to each of the games in Problem <m>2</m>.
+</question>
+
+<definition>
+    <statement>
+        A Nim pile with <m>n</m> stones is said to have <term>nimber</term> <m>*n</m> (read ``star n''). 
+    </statement>
+</definition>
+
+<p>We would like to use nimbers to understand what a "balanced" game is.
+Let's take advantage of our idea of mirroring and split large groups into smaller groups that we can work with for balancing purposes.
+We introduce the following definition to decide how to break a game down into smaller pieces in a unique way.
+</p>
+
+<definition>[Binary Expansion]
+Let <m>n</m> be a nonnegative integer. The binary expansion of <m>n</m> is a representation of <m>n</m> as a sum of distinct powers of two.
+</definition>
+
+<p>For example, the binary expansion of <m>45</m> is as follows:</p>
+<md>
+    <mrow> 45 \amp= 32 + 8 + 4 + 1 </mrow>
+    <mrow> \amp= 2^5 + 2^3 + 2^2 +2^0 </mrow>
+</md>
+
+
+<question> Find the binary expansions of the following numbers:
+</question><ol>
+    <li> <m>17</m>  </li>
+    <li> <m>38</m> </li>
+    <li> <m>528</m> </li>
+    <li> <m>1823</m> </li>
+</ol>
+
+
+
+
+<question> Prove (by induction) that every nonnegative integer <m>n</m> has a unique binary expansion. (Hint: Pull out the largest power of <m>2</m> repeatedly.)
+
+</question>
+
+<definition>[Balanced]
+A position in Nim <m>*a_1 + *a_2 + \dots + *a_n</m> is said to be <term>balanced</term> if for every power of <m>2</m>, the total number of subpiles of that size is even.
+</definition>
+
+<question> Determine the type of a balanced position in Nim. Justify your answer.
+</question>
+
+<question> Consider the nim game which has one pile of size <m>11</m>, one pile of size <m>13</m>, one pile of size <m>7</m>, and one pile of size <m>12</m>.
+<ol>
+    <li> Split each of these components into smaller groups based on their binary expansions. Is this position balanced?  </li>
+    <li> Try to determine the winner of this game. Can you build a procedure that ensures that ``unbalanced'' games get ``balanced?'' </li>
+</ol>
+</question>
+
+<p>We want to continue to explore our nim sum, and its relation to what type of game we are playing. 
+To do this, we need to determine if/when we have good moves. 
+First we will prove a useful fact for finding a move.
+</p>
+
+
+<question> Prove that for all non-negative integers <m>k</m>, <m>\displaystyle{\sum_{i \leq k}} 2^i = 2^{k+1}-1</m>.  (In particular, this means that a subgame of size <m>2^{k+1}</m> is big enough to split into subgames of every power of two smaller than it.)
+
+
+</question>
+
+
+<question> Determine if each position below is balanced, then if it is unbalanced find a move that balances the position. (Hint: It may be easier to see with binary representations/nim sums... and we did the previous problem for a reason.)
+
+</question><ol>
+    <li> <m>*11 + *13 + *7 + *12</m> </li>
+    <li> <m>*6 + *13 + *7 + *12</m> </li>
+    <li> <m>*2 + *5 + *4</m> </li>
+    <li> <m>*1 + *2 + *3</m> </li>
+    <li> <m>*2 + *4 + *6</m> </li>
+</ol>
+
+
+
+<p>We now address a conjecture from before: </p>
+<claim xml:id="Conj-BalancedTypeP">
+A position in nim is type P is and only if it is balanced.
+</claim>
+
+<p>We also introduce a new claim which is related (perhaps unintuitively) to our conjecture. </p>
+
+<claim>
+If <m>a_1,\dots , a_\ell</m> are nonnegative integers and <m>b = a_1 \oplus a_2 \oplus \dots \oplus a_\ell</m>, then <me>*a_1 + *a_2 + \dots + *a_\ell \equiv *b</me>
+</claim>
+
+
+<question> 
+<ol>
+    <li> Prove the Claim REFERENCE.   </li>
+    <li> How is the claim related to our conjecture? Why is this claim so exciting to game theorists? What does it allow us to do? </li>
+</ol>
+</question>
+
+<p>We have:</p>
+<theorem>
+If <m>a_1,\dots , a_\ell</m> are nonnegative integers and <m>b = a_1 \oplus a_2 \oplus \dots \oplus a_\ell</m>, then <me>*a_1 + *a_2 + \dots + *a_\ell \equiv *b</me>
+</theorem>
+
+<p>With this theorem, we have now proven that every nim game is equivalent to some nimber! We will now go beyond to show that every impartial game is equivalent to some nimber.</p>
+
+<p>First, let us note that in impartial games, the position notation (<m>\gamma = \{ a_1,a_2,\dots,a_n|b_1,b_2,\dots,b_m\}</m>) is much simpler since each player can make exactly the same moves. Namely the <term>position notation of an impartial game</term> can be simplified to <m>\gamma = \{a_1,\dots , a_k\}</m> since <m>L</m> and <m>R</m> have the same potential moves.</p>
+
+<p>We need just one more tool before we are ready to prove ``the big one.'' </p>
+
+
+<definition>
+For a set <m>S = \{a_1,a_2,\dots,a_n\}</m> of nonnegative integers, we define the <term>Minimal EXcluded value</term> (abbreviated as <term>MEX</term>) of <m>S</m> to be the smallest nonnegative integer <m>B</m> which is not in <m>S</m>. 
+</definition>
+
+<p>For example, the MEX of <m>\{0,1,2,4,5,8,12\}</m> is <m>3</m>, sometimes written  <m>MEX(\{0,1,2,4,5,8,12\}) = 3</m>.
+</p>
+
+%Spend more time with MEX examples, if possible
+<question> We will translate the idea of MEX into nim by using nimbers. For each of the following, determine the impartial position notation for the following games of nim, then determine the (nim) MEX of the position notation. 
+<ol>
+    <li> <m>*2</m> </li>
+    <li> <m>*4</m> </li>
+    <li> <m>*3 + *2</m> </li>
+    <li> <m>*1 + *2 + *3</m> </li>
+    <li> <m>*1 + *2 + *4</m> </li>
+</ol>
+</question>
+
+<question>
+Finally, in the context of the theorem we just proved, how is MEX related to the equivalence?
+</question>
+
+%REFERENCED HOMEWORK PROBLEM: SCAFFOLD BETTER IN TEXTBOOK ALONE
+<question> Discuss the downsides and accomplishments of following theorem for us. Prove it (remember problem 4b on the homework, then tell a player how to make a move). 
+</question><theorem>
+Let <m>\alpha = \{\alpha_1, \alpha_2, \dots , \alpha_k\}</m> be a position in an impartial game. Suppose that <m>\alpha_i \equiv *\alpha_i</m> for every <m>1 \leq i \leq k</m>. Then <m>\alpha \equiv *b</m> where <m>*b</m> is the MEX of the set <m>\{a_1,\dots,a_k\}</m>.
+</theorem>
+
+
+
+
+<p>We've made it to the grand-daddy of all Combinatorial Game Theory.</p>
+
+<p> Use the above theorem and the fact that all type <m>P</m> games are equivalent (hence equivalent to <m>*0</m>) to prove the grand-daddy of all Combinatorial Game Theory  theorems.</p> 
+
+<question> Prove the following (by induction on the number of layers in the game tree):
+</question>[Note - You may assume the game is normal play if that makes analysis easier.]
+<theorem>[Sprague-Grundy]
+Every position in an impartial game is equivalent to a nimber.
+</theorem>
+
+
+
+<p> Use the MEX theorem for the following question. </p>
+
+<question> Find the nimber equivalent to each game of Pick Up Bricks on less than or equal to <m>8</m> bricks. Then conjecture a way to determine the nimber of a Pick Up Bricks game on <m>n</m> bricks.
+</question>
+
+%THIS IS TOO BIG, REDUCE TO SAY FIND NIMBERS FOR EACH CHOMP GAME UP TO 2 by 4
+%SPEND TIME THINKING ABOUT HOW TO GET NON-NORMAL PLAY GAMES TO LOOK LIKE NORMAL PLAY (would anyone choose a losing move?)
+<question> Find the nimber equivalent to each game of chomp on <m>1</m> to <m>8</m> total bricks (such that the width is at least as big as the height).
+
+</question>
+
+<question> Find a winning move in the following game if it exists, otherwise justify that there is no winning move: 
+</question>(<m>2 \times 4</m> game of chomp) <m>+</m> (Pick up bricks on <m>7</m> bricks) <m>+</m> <m>*8</m>
+
+
+<question> Find the nimber equivalent to the <m>2 \times 4</m> game of chomp.
+
+</question>
+
+<question> Find a winning move in the following game if it exists, otherwise justify that there is no winning move: 
+</question>(<m>2 \times 4</m> game of chomp) <m>+</m> (Pick up bricks on <m>7</m> bricks) <m>+</m> <m>*8</m>
+
+ 
+
+<definition>
+    <statement>
+        <term>Chop</term> is a normal play impartial game played on an <m>m \times n</m> array viewed as a plank that is secured only at the lower left corner. On each turn, a player must either make a horizontal or vertical cut (all the way across the plank), and then any piece no longer connected to the lower left corner falls off into the water. (The lower left square is connected to the ground and cannot fall into the water, so the terminal position for Chop is just a <m>1\times 1</m> array that is the bottom left square.)
+    </statement>
+</definition>
+
+%SCAFFOLD BETTER BUILD UP TO THIS!
+<theorem>
+For every <m>m,n \geq 1</m> prove that the <m>m \times n</m> game of chop is equivalent to <m>*(m-1) + *(n-1)</m>.
+</theorem>
+<question> Prove this by induction on <m>n+m</m> with base case <m>n+m = 2</m> (so <m>n =1</m> and <m>m = 1</m>)
+</question>
+
+</chapter>

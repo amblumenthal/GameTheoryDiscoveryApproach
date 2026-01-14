@@ -1,0 +1,223 @@
+<chapter xml:id="NormalPlayGames">
+      <title>Normal Play Games</title>
+
+
+<p>To understand a few questions that have previously arisen, we will make the following definition.</p>
+
+
+
+<definition>
+A combinatorial game is called a <term>normal play game</term> if the win rule is that the last player that can make a move wins.
+</definition>
+
+<question> Cut-Cake is a normal play game between two players Richard and Louise. Each position is a collection of uncut pieces of cake. Each piece of cake is rectangular and has dotted horizontal and vertical lines which show where the cake can be cut. On her turn, Louise can make one vertical cut. Richard can make one horizontal cut on his turns. (The last player to make a cut wins.) 
+</question>Play several games of cut-cake on a <m>5</m> by <m>4</m> cake. Can you come up with a strategy? When can you tell that a game is over?
+
+
+
+<p> Normal Play games are more simple to analyze since the winning condition is the same for both players (and there are no draws). As such, we would like to build a tool to analyze them more robustly. </p>
+<question>Try to develop notation to denote a position of cut-cake regardless of who's turn it is. What information do we need to know? What positions could we end up at? 
+Use your representation to show a <m>4</m> by <m>3</m> position in cut-cake and all of the positions you can move to from this position.</question>
+
+
+
+<p> The key property of a position in a normal play game is where each player can move to. For example, a <m>4 \times 3</m> board of cut cake has the following possible positions: </p>
+
+
+<p>If Louise is set to move, she can create </p>
+    <ul>
+        <li> one <m>1 \times 3</m> and one <m>3 \times 3</m> board </li>
+        <li> two <m>2 \times 3</m> boards </li>
+    </ul> 
+<p> If Richard is set to move, he can create </p>
+    <ul>
+        <li> One <m>4 \times 1</m> and one <m>4 \times 2</m> board </li>
+    </ul>
+
+<p> We develop the following <term>Position Notation</term> for normal play games using set notation. On the left hand side are the positions Louise could move to, and on the right hand side are the positions that Richard could move to. </p>
+
+
+    \includegraphics[width = \textwidth]{Images/PXL_20220907_154711388.jpg}
+    (Sorry I got lazy with the picture)
+
+
+
+<question> For each of the following cut-cake positions, determine the <term>types</term> of the game: Current, Previous, L, or R.
+</question><ul>
+    <li> Two <m>2 \times 1</m> boards and one <m>1 \times 2</m> board </li>
+    <li> One <m>2 \times 2</m> board </li>
+    <li> One <m>2 \times 2</m> board and one <m>1 \times 2</m> board </li>
+    <li> One <m>3 \times 2</m> board </li>
+    <li> Pick up Stones with <m>4</m> stones. </li>
+</ul>
+
+
+
+<question> Try to come up with general rules rules to determine the type of a position <m>\gamma = \{ a_1, a_2, \dots , a_m | b_1, b_2, \dots b_n\}</m>. When do I know that <m>\gamma</m> is type <m>L</m>, <m>R</m>, Current, or Previous? (Think about how we proved Zermelo's theorem: look at the positions we can move to and decide what the best thing each player can do is.)
+
+</question>
+
+<p>We will now start to think of positions of games more like numbers to analyze them algebraically. In fact, we've already started thinking about doing that when we said that Pick Up Stones 2: Electric Boogaloo was like playing two games of Pick Up Stones added together. 
+</p>
+
+<p>In situations like this, we could say that Pick Up Stones 2 with <m>n</m> and <m>m</m> stones is the same as Pick Up Stones with <m>n</m> stones <m>+</m> Pick Up Stones with <m>m</m> stones. The two games being added together are often called <term>components</term> of the game. In sums of games, on a player's turn they choose one component to play in and make one move in that game, then their turn ends. (Just like with Pick Up Stones 2)
+</p>
+
+<question> For each of the games in <m>1</m>, play the sum of that game plus Pick Up Stones with <m>4</m> stones. Try to determine which type the game is.
+
+
+</question>
+
+<question> For each of <m>a</m> through <m>e</m>, play the sum of that game plus Pick Up Stones with <m>4</m> stones. Determine which type the game is.
+</question><ol>
+    <li> Two <m>2 \times 1</m> boards and one <m>1 \times 2</m> board </li>
+    <li> One <m>2 \times 2</m> board </li>
+    <li> One <m>2 \times 2</m> board and one <m>1 \times 2</m> board </li>
+    <li> One <m>3 \times 2</m> board </li>
+    <li> Pick up Stones with <m>4</m> stones. </li>
+</ol>
+
+
+
+
+<p>Pick up bricks is a game that is played like pick up stones, but the last brick is not poisoned. Instead pick up bricks is a normal play game (so the last player to be able to pick up a brick wins). 
+</p>
+
+<question> Determine the type for Pick up bricks with <m>4</m> bricks. Then, for each of <m>a</m> through <m>e</m> above, play the sum of that game plus Pick up bricks with <m>4</m> bricks. Determine which type the game is.
+
+</question> 
+
+<question> Make conjectures about how types interact with sums. Try to justify your thoughts. For example, the top left corner of this table should be filled in with your guess for what type a game <m>a + b</m> would be if <m>a</m> was type <m>R</m> and <m>b</m> was type <m>R</m>. (Question 2 might lead to an interesting extension...)
+</question>\vspace{.5in}
+\resizebox{4.5in}{!}{
+
+    <tabular halign="center">
+        <row top="minor" bottom="minor"> 
+            <cell right="minor">+</cell>
+            <cell>R</cell>
+            <cell>L</cell>
+            <cell>C</cell>
+            <cell>P</cell>
+        </row>
+        <row top="minor" bottom="minor"> 
+            <cell right="minor">R</cell>
+            <cell>\hspace{.2in}</cell>
+            <cell>\hspace{.2in}</cell>
+            <cell>\hspace{.2in}</cell>
+            <cell>\hspace{.2in}</cell>
+        </row>
+        <row top="minor" bottom="minor"> 
+            <cell right="minor">L</cell>
+            <cell>\hspace{.2in}</cell>
+            <cell>\hspace{.2in}</cell>
+            <cell>\hspace{.2in}</cell>
+            <cell>\hspace{.2in}</cell>
+        </row>
+        <row top="minor" bottom="minor"> 
+            <cell right="minor">C</cell>
+            <cell>\hspace{.2in}</cell>
+            <cell>\hspace{.2in}</cell>
+            <cell>\hspace{.2in}</cell>
+            <cell>\hspace{.2in}</cell>
+        </row>
+        <row top="minor" bottom="minor"> 
+            <cell right="minor">P</cell>
+            <cell>\hspace{.2in}</cell>
+            <cell>\hspace{.2in}</cell>
+            <cell>\hspace{.2in}</cell>
+            <cell>\hspace{.2in}</cell>
+        </row>
+    </tabular>
+}
+
+
+<term>Domineering</term> is a normal-play game played using some squares from a rectangular array. On Louise's turn, she may place a <m>2\times 1</m> domino over two unoccupied squares. On Richard's turn, he may place a <m>1 \times 2</m> domino over two unoccupied squares. (The last player to make a move wins.)
+
+<p>Below is a valid game of domineering in which Richard wins: </p>
+
+
+    \includegraphics[width = 4in, angle = -2.3, origin = c]{Images/domineeringex.pdf}
+
+
+<question> Determine the type of the following domineering positions:
+<ol>
+    <li> One <m>2\times 2</m> board </li>
+    <li> One <m>1 \times 2</m> board </li>
+    <li> One <m>1 \times 4</m> board </li>
+    <li> One <m>2\times 2</m> board +  One <m>1 \times 2</m> board </li>
+    <li> One <m>2\times 2</m> board + One <m>1 \times 4</m> board </li>
+</ol>
+</question>
+
+
+
+<question> Prove the following:
+<theorem xml:id="Thm-Pis0">
+If <m>\beta</m> is type <m>P</m>, then <m>\alpha + \beta</m> is the same type as <m>\alpha</m>.
+</theorem>
+</question>
+ 
+
+<p>It is finally time to answer a critical question. When are two games the same?
+</p>
+
+<definition>
+We say that two positions <m>\alpha</m> and <m>\alpha'</m> in (possibly different) normal-play games are <term>equivalent</term> if for every position <m>\beta</m> in any normal play game, the two positions <m>\alpha + \beta</m> and <m>\alpha' + \beta</m> have the same type. We will write <m>\alpha \equiv \alpha'</m> to indicate this.
+</definition>
+
+<question> Is the following domineering game above equivalent to pick-up bricks with one brick? 
+
+</question>
+<latex-image>
+\begin{tikzpicture}
+\draw[thick] (0,0) -- (0,2);
+\draw[thick] (0,0) -- (2,0);
+\draw[thick] (1,2) -- (1,0);
+\draw[thick] (2,1) -- (0,1);
+\draw[thick] (2,0) -- (2,1);
+\draw[thick] (0,2) -- (1,2);
+\end{tikzpicture}
+</latex-image>
+
+
+
+<question> Is a <m>1 \times 2</m> game of domineering equivalent to a <m>1 \times 4</m> game of domineering?
+</question>
+
+<definition>
+We say that two positions <m>\alpha</m> and <m>\alpha'</m> in (possibly different) normal-play games are <term>equivalent</term> if for every position <m>\beta</m> in any normal play game, the two positions <m>\alpha + \beta</m> and <m>\alpha' + \beta</m> have the same type. We will write <m>\alpha \equiv \alpha'</m> to indicate this.
+</definition>
+
+
+
+<question> Use the definition of equivalent to prove the following (Hint: some of these proofs might be VERY short):
+<theorem xml:id="Thm-NormalSums">
+If <m>\alpha, \beta</m>, and <m>\gamma</m> are positions in normal-play games
+<ol>
+    <li> <m>\alpha \equiv \alpha</m>.  </li>
+    <li> If <m>\alpha \equiv \beta</m> then <m>\beta \equiv \alpha</m>. </li>
+    <li> If <m>\alpha \equiv \beta</m> and <m>\beta \equiv \gamma</m> then <m>\alpha \equiv \gamma</m>.  </li>
+</ol>
+</theorem>
+</question>
+
+
+
+<question> We want to explore the relationship between equivalence and type. Decide if the following are true. Justify your answers.
+<ol>
+    <li> If <m>\alpha</m> and <m>\beta</m> have the same type, then <m>\alpha \equiv \beta</m>. </li>
+    <li> If <m>\alpha \equiv \beta</m>, then <m>\alpha</m> and <m>\beta</m> have the same type. </li>
+</ol>
+</question>
+ 
+<p>Theorem REFERENCE establishes that <m>P</m> games are very special. The following explores this idea in an algebraic sense.</p>
+
+<question> Prove the following:
+</question><ol>
+    <li> If <m>\beta</m> is type <m>P</m>, then <m>\alpha + \beta \equiv \alpha</m>. </li>
+    <li> If <m>\alpha</m> and <m>\alpha'</m> are type <m>P</m> then <m>\alpha \equiv \alpha'</m>. </li>
+    <li> Are any <m>P</m> states different from (or not equivalent to) any other <m>P</m> states? </li>
+    <p> Is there some number (under addition) that acts like <m>P</m> states (under equivalence)? Write down your observations about <m>P</m> states.  </p>
+</ol>
+
+</chapter>

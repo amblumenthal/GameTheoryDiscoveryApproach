@@ -1,0 +1,53 @@
+<chapter xml:id="DefiningGames">
+      <title>Defining Games</title>
+
+<question>What is a game? Explore your definition. Try to bend it. Try to break it. List at least 3 examples of games and 3 examples of things that are not games (but might be dangerously close) according to your definition.
+</question>
+
+<question> Play each of the following games a couple of times to get familiar with the rules. (You can find playing boards for some of the games in the pages below)
+
+</question>
+
+<ol>
+    <li> <term>Tic-Tac-Toe</term> (as discussed in class)</li>
+    <li> <term>Rock, Paper, Scissors</term> (as discussed in class) </li>
+    <li> <term>Chomp</term>: Chomp is a two-player game played on an 8 by 6 piece of chocolate. The top left portion of the chocolate is poisoned. Players alternate turns choosing a square to eat and eats all pieces below and to the right of the chosen square. The player who eats the poisoned chocolate piece loses. </li>
+    <li>  <term>Pick-up Stones</term>: Pick-up stones is a two player game played on a pile of 20 rocks. Players alternate turns removing 1,2, or 3 rocks at a time. The player who removes the last rock loses. </li>
+    <li> <term>Hex</term>: Hex is a two-player game played on an <m>11</m> by <m>11</m> board of hexagons. The players have two unique symbols (X and O). They alternate placing their symbols. The X player wins if they create a connected path of X's from the top of the board to the bottom, and the O player wins if they create a connected path of O's from the left to the right. If the board is filled with no such path, the game is a draw. </li>
+</ol>
+    
+    
+<question> Make a list of at least 10 similarities/differences between the games you've played above.
+    
+</question>
+\includegraphics[width = 4in]{Images/tictactoeboard.png}
+
+
+<p>Chomp Board:</p>
+\includegraphics[width = 4in]{Images/700px-Chomp_gameplay.png}
+
+<p>Below is a legal game of chomp in which the first player would lose. </p>
+\includegraphics[width = 4in]{Images/Chomp_gameplay.png}
+
+
+<p>Hex Board</p>
+\includegraphics[width = 6in]{Images/hexgameboard.png}
+
+    
+
+
+<question xml:id="SomeGames"> Now that you're familiar with the rules, try to develop a strategy for each game. If BOTH players make ``optimal decisions'' what happens? How can you tell? [It may help to start with smaller versions of the games to get an idea, for example pick-up stones with only 7 or 8 rocks.]
+
+<ol>
+    <li> <term>Tic-Tac-Toe</term> (as discussed in class)</li>
+    <li> <term>Rock, Paper, Scissors</term> (as discussed in class) </li>
+    <li> <term>Chomp</term>: Chomp is a two-player game played on an 8 by 6 piece of chocolate. The top left portion of the chocolate is poisoned. Players alternate turns choosing a square to eat and eats all pieces below and to the right of the chosen square. The player who eats the poisoned chocolate piece loses. </li>
+    <li>  <term>Pick-up Stones</term>: Pick-up stones is a two player game played on a pile of 20 rocks. Players alternate turns removing 1,2, or 3 rocks at a time. The player who removes the last rock loses. </li>
+    <li> <term>Hex</term>: Hex is a two-player game played on an <m>11</m> by <m>11</m> board of hexagons. The players have two unique symbols (X and O). They alternate placing their symbols. The X player wins if they create a connected path of X's from the top of the board to the bottom, and the O player wins if they create a connected path of O's from the left to the right. If the board is filled with no such path, the game is a draw. </li>
+</ol>
+</question>
+
+<question> ``Strategy'' is not really something we talked about. What does that mean? How can we formalize it?
+</question>
+
+</chapter>

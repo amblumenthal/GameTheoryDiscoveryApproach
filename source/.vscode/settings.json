@@ -1,0 +1,11 @@
+{
+    "xml.fileAssociations": [
+        {
+            "pattern": "**/source/**.ptx",
+            "systemId": "/Users/blumenam/.ptx/schema/pretext.rng"
+        }
+    ],
+    "files.associations": {
+        "numeric": "cpp"
+    }
+}

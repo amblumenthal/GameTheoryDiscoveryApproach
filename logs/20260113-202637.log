@@ -1,0 +1,16 @@
+WARNING : Using CLI version 2.35.0 but project's `requirements.txt`
+WARNING : is configured to use 1.4.0. Consider either installing
+WARNING : CLI version 1.4.0 or running `pretext update`
+WARNING : to update `requirements.txt` and other managed files to match 2.35.0.
+INFO    : Now preparing local server to preview your project directory `/workspaces/GameTheoryText/game-theory`.
+INFO    :   (Reminder: use `pretext deploy` to deploy your built project to a public
+INFO    :   GitHub Pages site that can be shared with readers who cannot access your
+INFO    :   personal computer.)
+INFO    : 
+INFO    : starting server ...
+INFO    : Running in a codespace, so using a subprocess server.
+INFO    : Starting PreTeXt web server
+INFO    : Added pretext web server entry 1b57ac1d48 24696 8129 localhost
+
+INFO    : Server will soon be available at https://ubiquitous-space-fiesta-pg4v776jx4w39676-8129.app.github.dev
+INFO    : Opening browser for target `web` at https://ubiquitous-space-fiesta-pg4v776jx4w39676-8129.app.github.dev/output/web

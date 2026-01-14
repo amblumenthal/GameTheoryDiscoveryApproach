@@ -1,0 +1,12 @@
+<part xml:id="Part-2"  xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <title>Part 2: Classical Game Theory</title>
+
+    <xi:include href="./chapter5gt.ptx" />
+
+    <xi:include href="./chapter6gt.ptx" />
+
+    <xi:include href="./chapter7gt.ptx" />
+
+    <xi:include href="./chapter8gt.ptx" />
+
+</part>

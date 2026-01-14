@@ -1,0 +1,142 @@
+<chapter xml:id="VotingTheory">
+    <title>Voting Theory</title>
+
+
+<question> Imagine that you are conducting an election among three (or more) possibilities. Once you collect the ballots, how can you determine the winner? Try to come up with at least <m>3</m> ways to determine a winner. (Note, they do not all have to be ways that you would be happy with.) </question>
+
+<question> Now that we see there are multiple ways to determine a winner, come up with some criteria that you think are ``fair'' for an election. For example, a common one is the following: ``If a candidate is in first place in all ballots, they are in first place in the final results.'' 
+
+(Note: It can be helpful instead to think about what you might consider unfair, or object to, in a method for determining the winner or ordering.)
+</question>
+
+<p>In class, we established a few guidelines for ``fairness'' in an election and developed a few election methods. As a reminder, here are the fairness criteria that Arrow's Theorem entail:</p>
+<ol>
+  <li> <term>Unanimity.</term> If every individual prefers <m>X</m> to <m>Y</m>, the output ranking prefers <m>X</m> to <m>Y</m>. </li>
+  <li> <term>Independence of Irrelevant Alternatives.</term> The society's preference on <m>X</m> and <m>Y</m> should depend only on how each voter compares <m>X</m> and <m>Y</m>. </li>
+  <li> <term>Non-dictatorship.</term> The output ranking is not determined by just a single voter. </li>
+</ol>
+
+<p> Formally, a voting system is a function that sends a collection of preferences (or ballots) to a final ranking. Often the top of the output ranking is considered the winner (and the rest are ignored). Here are some of the voting systems that were suggested in class: </p>
+
+<definition>
+  <statement>
+      <term> Dictatorship</term>: After ballots are collected, pull out one ballot and that ballot determines the societal preference.
+  </statement>
+</definition>
+
+<definition>
+  <statement>
+      <term>Plurality</term> (sometimes called ``First past the post''): collects all ballots and determines the winner by whoever has the most first place votes.
+  </statement>
+</definition>
+
+<definition>
+  <statement>
+      In an <term>instant run-off</term>, the total number of first place votes are counted for each candidate. The candidate with the least number of first place votes is removed from all ballots. This process is repeated until only one candidate remains, who is declared the winner.
+  </statement>
+</definition>
+
+<definition>
+  <statement>
+      <term>Condorcet</term>: Use the ballot rankings to simulate a head-to-head runoff between each pair of candidates. If any candidate wins all head-to-head elections, they are declared the winner. Otherwise we will say there is no Condorcet winner. (And there are many modifications that have been proposed to solve this issue.)
+  </statement>
+</definition>
+
+<definition>
+  <statement>
+      <term>Borda Count</term>:Each candidate gets points for each ballot according to values assigned to each ranking. A standard system is that last place candidates in a ballot get <m>0</m> points, second to last gets <m>1</m>, and so on. (So top ranking candidate gets <m>n-1</m> points from that ballot). The candidate with the highest sum of points is the winner. 
+  </statement>
+</definition>
+
+<p>Example of Borda Count: Suppose there are three candidates, <m>A,B</m>, and <m>C</m>, and the ballots come back as <m>8</m> copies of <m>A>B>C</m> and <m>6</m> copies of <m>B>C>A</m> and <m>5</m> copies of <m>C>B>A</m>. Then,</p>
+<md>
+  <mrow>\text{Points for }A \amp= 8*(2) + 6*(0) + 5*(0) = 16 </mrow>
+  <mrow>\text{Points for }B \amp= 8*(1) + 6*(2) + 5*(1) = 25 </mrow>
+  <mrow>\text{Points for }C \amp= 8*(0) + 6*(1) + 5*(3) = 21 </mrow>
+</md>
+<p>which means that <m>B</m> is the Borda Count winner.</p>
+
+  
+<question> Let there be <m>3</m> candidates, <m>A,B</m> and <m>C</m>. If the ballots come back as
+</question>
+
+<md> <tabular halign="center">
+  <row bottom="minor">
+      <cell right="minor">Voter</cell>
+      <cell>1</cell>
+      <cell>2</cell>
+      <cell>3</cell>
+      <cell>4</cell>
+      <cell>5</cell>
+      <cell>6</cell>
+      <cell>7</cell>
+      <cell>8</cell>
+      <cell>9</cell>
+      <cell>10</cell>
+  </row>
+  <row>
+      <cell right="minor"> </cell>
+      <cell>C</cell>
+      <cell>A</cell>
+      <cell>C</cell>
+      <cell>B</cell>
+      <cell>B</cell>
+      <cell>A</cell>
+      <cell>B</cell>
+      <cell>A</cell>
+      <cell>C</cell>
+      <cell>C</cell>
+  </row>
+  <row>
+      <cell right="minor">Rank</cell>
+      <cell>B</cell>
+      <cell>B</cell>
+      <cell>A</cell>
+      <cell>C</cell>
+      <cell>A</cell>
+      <cell>C</cell>
+      <cell>A</cell>
+      <cell>B</cell>
+      <cell>B</cell>
+      <cell>B</cell>
+  </row>
+  <row>
+      <cell right="minor"> </cell>
+      <cell>A</cell>
+      <cell>C</cell>
+      <cell>B</cell>
+      <cell>A</cell>
+      <cell>C</cell>
+      <cell>B</cell>
+      <cell>C</cell>
+      <cell>C</cell>
+      <cell>A</cell>
+      <cell>A</cell>
+  </row>
+</tabular>
+</md>
+
+<question> Determine the winner, if one exists for each voting system defined above. </question>
+
+
+
+<p> We now formalize slightly the fairness criteria above. A <term>profile</term>(often written <m>\mathcal{P}</m> or <m>\mathcal{Q}</m>) is the collection of all ballots. We will use <m>>_\mathcal{P}</m> to denote the output ordering of a voting system with profile <m>\mathcal{P}</m> (note this depends on the voting system). To see this, in the Borda Count example, the collection of votes would be <m>\mathcal{P}</m>, and the result is <m>B >_{\mathcal{P}} C >_\mathcal{P} A</m>.
+</p>
+
+<p>We say that profiles <m>\mathcal{P}</m> and <m>\mathcal{Q}</m> <term>agree in comparing X and Y</term> if for every voter <m>i</m>, either <m>i</m> prefers <m>X</m> to <m>Y</m> in both profiles or <m>i</m> prefers <m>Y</m> to <m>X</m> in both profiles. </p>
+
+<p> The following are called Arrow's Axioms:</p>
+<ol>
+Consider a voting system with at least three candidates. We desire the following ``fairness criteria'':
+  <li> Nondictatorship. The voting system is not a dictatorship.</li>
+  <li> Unanimity. If in profile <m>\mathcal{P}</m> every voter prefers <m>X</m> to <m>Y</m>, then <m>X >_\mathcal{P} Y</m>. </li>
+  <li> Independence. If the profiles <m>\mathcal{P}</m> and <m>\mathcal{Q}</m> agree in comparing <m>X</m> and <m>Y</m>, then the output rankings <m>>_{\mathcal{P}}</m> and <m>>_{\mathcal{Q}}</m> either both rank <m>X</m> above <m>Y</m> or both rank <m>Y</m> above <m>X</m>. </li>
+</ol>
+
+
+<question> For each voting system, try to determine which fairness criteria above they do and do not satisfy. Justify your answers. (Note: if one of them does not satisfy a criterion, you should be able to find an example which violates it in <m>5</m> or less ballots.)
+</question>
+
+<p>OUTLINE OF PROOF OF ARROW'S THEOREM </p>
+
+</chapter>

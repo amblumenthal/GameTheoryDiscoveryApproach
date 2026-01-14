@@ -1,0 +1,7 @@
+<part xml:id="Part-3"  xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <title>Other Applications of Game Theory</title>
+
+
+    <xi:include href="./chapter9gt.ptx" />
+
+</part>

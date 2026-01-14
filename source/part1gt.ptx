@@ -1,0 +1,13 @@
+
+<part xml:id="CombinatorialGames"  xmlns:xi="http://www.w3.org/2001/XInclude" >
+    <title>Part 1: Combinatorial Game Theory</title>
+
+    <xi:include href="./chapter1gt.ptx" />
+
+    <xi:include href="./chapter2gt.ptx" />
+
+    <xi:include href="./chapter3gt.ptx" />
+
+    <xi:include href="./chapter4gt.ptx" />
+
+</part>

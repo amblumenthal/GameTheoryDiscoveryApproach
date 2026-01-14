@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <docinfo>
+    <macros>
+      \newcommand{\R}{\mathbb R}
+    </macros>
+    <latex-image-preamble>
+      \usepackage{tikz}
+      \usepackage{amssymb,amsmath,centernot}
+      \usetikzlibrary{positioning,matrix,arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+      \usetikzlibrary{shapes,decorations,shadows,fadings}
+      \usetikzlibrary{arrows.meta,calc,decorations.markings,math}
+      \tikzset{main node/.style={circle,draw,fill=black,minimum size=.1cm,inner sep=0pt},
+                  }
+
+      \usepackage{pgfplots}
+    </latex-image-preamble>
+  </docinfo>
+
+  <book xml:id="GameTheory-Inquiry">
+    <title>Game Theory - An Inquiry Approach</title>
+    <subtitle>Introduction to Combinatorial and Classical Games for Mathematics Majors</subtitle>
+
+    <frontmatter xml:id="frontmatter">
+      <titlepage>
+        <author>
+          <personname>Adam Blumenthal</personname>
+          <department>Department of Mathematics and Computer Science</department>
+          <institution>Westminster College</institution>
+        </author>
+        <author>
+          <personname>Jennifer Firkins Nordstrom</personname>
+          <department>Department of Mathematics and Computer Science</department>
+          <institution>Linfield University</institution>
+        </author>
+        <date>
+          <today />
+        </date>
+      </titlepage>
+
+      <colophon>
+
+        <website>
+          <name>
+            <c>example.org</c>
+          </name>
+          <address>https://example.org</address>
+        </website>
+
+        <copyright>
+          <year>2020<ndash />2023</year>
+          <holder>Adam Blumenthal and Jennifer Firkins Nordstrom</holder>
+          <shortlicense> 
+            This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
+          </shortlicense>
+        </copyright>
+      </colophon>
+    </frontmatter>
+
+    <xi:include href="./part1gt.ptx" />
+
+    <xi:include href="./part2gt.ptx" />
+
+    <xi:include href="./part3gt.ptx" />
+    
+
+<section> 
+    <title> Topics to consider adding </title>
+Potential Additions and Changes
+<ul> 
+<li> Analysis of games as graphs which are not necessarily acyclic (Kernels, independent/dominating sets in graphs) </li>
+<li> Hackenbush and partizan games (and dyadic numbers... into p-adic numbers???) </li>
+<li> Fair division/apportionment (maybe up to gerrymandering, but this can be complex to analyze with Markov stuff running around for ``typical'' analysis) </li>
+<li> Complications of hidden information including the Lemons problem and No Trade Theorem (More economics in case students are into that?)</li>
+<li> Surely I am missing a lot of classical game theory ideas (Looking forward to Jennifer's feedback)</li>
+</ul>
+
+</section>
+
+    <backmatter xml:id="backmatter">
+      <title>Backmatter</title>
+
+      <colophon>
+        <p> This book was authored in <pretext />. </p>
+      </colophon>
+
+    </backmatter>
+
+</book>
+</pretext>

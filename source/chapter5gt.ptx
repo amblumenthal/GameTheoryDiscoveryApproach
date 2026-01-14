@@ -1,0 +1,221 @@
+
+<chapter xml:id="ClassicalGames">
+    <title>Classical Games</title>
+
+
+<p>We now seek to analyze the outcomes of games with simultaneous decisions. Our primary tool is to understand payouts.</p>
+
+<definition>
+A <term>game matrix</term> for a game with two players, Rose and Colin, is a matrix with each row representing a choice that Rose can make and each column representing a choice that Colin can make. 
+The <m>(i,j)</m> entry of the matrix is the pair <m>(a,b)</m>, called the \textit{payoff vector}, where <m>a</m> is the payout for Rose and <m>b</m> is the payout for Colin if Rose chooses <m>i</m> and Colin chooses <m>j</m>.
+</definition>
+
+<p> This definition is a bit ugly to read, below is the Game Matrix for Rock Paper Scissors. </p>
+
+
+
+<tabular halign="center">
+  <row bottom="minor"> 
+      <cell right="minor"> </cell>
+      <cell>Rock</cell>
+      <cell>Paper</cell>
+      <cell>Scissors</cell> 
+  </row>
+  <row bottom="minor"> 
+      <cell right="minor">Rock</cell>
+      <cell>(0,0)</cell>
+      <cell>(-1,1)</cell>
+      <cell>(1,-1)</cell> 
+  </row>
+  <row bottom="minor"> 
+      <cell right="minor">Paper</cell>
+      <cell>(1,-1)</cell>
+      <cell>(0,0)</cell>
+      <cell>(-1,1)</cell> 
+  </row>
+  <row bottom="minor"> 
+      <cell right="minor">Scissors</cell>
+      <cell>(-1,1)</cell>
+      <cell>(1,-1)</cell>
+      <cell>(0,0)</cell> 
+  </row>
+</tabular>
+
+
+
+<question> For each of the following, create the Game Matrix for the following game. Take a guess at what a good strategy might be. Justify your answer.
+
+</question><ol>
+
+<li><term>Matching Pennies</term>:
+In the game of Matching Pennies, each player has a penny which they will reveal simultaneously. That is, each player two choices: Heads (H) or Tails (T). If they choose the same letter, then Rose wins <m>1</m> dollar from Colin. If they don't match, then Rose pays <m>1</m> dollar to Colin.
+</li>
+
+<li> <term>Chicken</term>:
+In the game of chicken, Rose and Colin line up in a street and drive directly at one another with their ``street cred'' on the line. Each player can choose to go straight or swerve to avoid collision. If both players swerve, neither player gains or loses any ``street cred.'' If one player swerves and the other does not, the swerving player loses one ``street cred'' and the player that does not swerve gains <m>10</m> ``street cred.'' If neither player swerves, they crash causing both players to lose <m>100</m> ``street cred.''
+</li>
+</ol>
+
+
+<p> For now, we will consider playing each game only one time. </p>
+<p>This means that we do not have an opportunity to learn or take advantage of tendencies or patterns that the opponent shows (but we can build game matrices to decide what moves make sense for them). </p>
+
+<definition>[Pure Strategy]
+A <term>pure strategy</term> for a player means that the player ALWAYS makes the same decision.
+</definition>
+
+<p>Note that when a game is played only once, we must always choose a pure strategy (we play the game once, so we have only one opportunity to select a choice). </p>
+
+<question> For each of the following games, try to decide a ``best'' pure strategy for each player. Discuss and justify your answers.
+
+</question><ol>
+  <li> <tabular halign="center">
+      <row bottom="minor">
+          <cell right="minor"> </cell>
+          <cell>A</cell>
+          <cell>B</cell>
+      </row>
+      <row>
+          <cell right="minor">C</cell>
+          <cell>(100,-100)</cell>
+          <cell>(-10,10)</cell>
+      </row>
+      <row>
+          <cell right="minor">D</cell>
+          <cell>(0,0)</cell>
+          <cell>(-1,11)</cell>
+      </row>
+  </tabular> </li>
+  
+  <li> <tabular halign="center">
+       <row bottom="minor">
+          <cell right="minor"> </cell>
+          <cell>A</cell>
+          <cell>B</cell>
+          <cell>C</cell>
+      </row>
+      <row>
+          <cell right="minor">D</cell>
+          <cell>(1000,-1000)</cell>
+          <cell>(-5,5)</cell>
+          <cell>(-15,15)</cell>
+      </row>
+       <row>
+          <cell right="minor">E</cell>
+          <cell>(200,-200)</cell>
+          <cell>(0,0)</cell>
+          <cell>(-5,5)</cell>
+      </row>
+       <row>
+          <cell right="minor">D</cell>
+          <cell>(500,-500)</cell>
+          <cell>(20,-20)</cell>
+          <cell>(-25,25)</cell>
+      </row>
+  </tabular> </li>
+</ol>
+
+
+
+<p>In the previous problem, you may have noticed a similar phenomenon to the Prisoner's Dilemma. </p>
+
+<definition>[Dominating Strategies]
+A strategy of row (or column) <m>i</m> dominates a strategy of column <m>i'</m> if every entry of row (or column) <m>i'</m> is less than or equal to the corresponding entry in row (or column) <m>i</m>. 
+</definition>
+
+<definition>[Strictly Dominating Strategies]
+A strategy of row (or column) <m>i</m> dominates a strategy of column <m>i'</m> if every entry if row (or column) <m>i'</m> is strictly less than the corresponding entry in row (or column) <m>i</m>. 
+</definition>
+
+<question> If strategy <m>i</m> dominates strategy <m>i'</m>, will a rational player  choose strategy <m>i'</m>? 
+Use your answer to reduce the following game into as simple a form as possible or justify why we cannot reduce the game further. (Remove dominated rows and columns whenever you see them.)
+</question>
+
+<p>Imagine a voting model where there are exactly <m>7</m> political views, linearly ordered <m>1,2,\dots,7</m> with <m>1</m> being the most liberal and <m>7</m> being the most conservative. Suppose that two candidates are running for office and must choose to adopt <m>1</m> of the <m>7</m> views. Each candidate wants to maximize their favorability ratings, and the following Game Matrix shows how their ratings change for each scenario:
+</p>
+
+  <tabular halign="center">
+      <row bottom="minor">
+          <cell right="minor"> </cell>
+          <cell>1</cell>
+          <cell>2</cell>
+          <cell>3</cell>
+          <cell>4</cell>
+          <cell>5</cell>
+          <cell>6</cell>
+          <cell>7</cell>
+      </row>
+      <row>
+          <cell right="minor">1</cell>
+          <cell>(0,0)</cell>
+          <cell>(-50,50)</cell>
+          <cell>(-40,40)</cell>
+          <cell>(-30,30)</cell>
+          <cell>(-20,20)</cell>
+          <cell>(-10,10)</cell>
+          <cell>(0,0)</cell>
+      </row>
+      <row>
+          <cell right="minor">1</cell>
+          <cell>(50,-50)</cell>
+          <cell>(0,0)</cell>
+          <cell>(-30,30)</cell>
+          <cell>(-20,20)</cell>
+          <cell>(-10,10)</cell>
+          <cell>(0,0)</cell>
+          <cell>(10,-10)</cell>
+      </row>
+      <row>
+          <cell right="minor">1</cell>
+          <cell>(40,-40)</cell>
+          <cell>(30,-30)</cell>
+          <cell>(0,0)</cell>
+          <cell>(-10,10)</cell>
+          <cell>(0,0)</cell>
+          <cell>(10,-10)</cell>
+          <cell>(20,-20)</cell>
+      </row>
+      <row>
+          <cell right="minor">1</cell>
+          <cell>(30,-30)</cell>
+          <cell>(20,-20)</cell>
+          <cell>(10,-10)</cell>
+          <cell>(0,0)</cell>
+          <cell>(10,-10)</cell>
+          <cell>(20,-20)</cell>
+          <cell>(30,-30)</cell>
+      </row>
+      <row>
+          <cell right="minor">1</cell>
+          <cell>(20,-20)</cell>
+          <cell>(10,-10)</cell>
+          <cell>(0,0)</cell>
+          <cell>(-10,10)</cell>
+          <cell>(0,0)</cell>
+          <cell>(30,-30)</cell>
+          <cell>(40,-40)</cell>
+      </row>
+      <row>
+          <cell right="minor">1</cell>
+          <cell>(10,-10)</cell>
+          <cell>(0,0)</cell>
+          <cell>(-10,10)</cell>
+          <cell>(-20,20)</cell>
+          <cell>(-30,30)</cell>
+          <cell>(0,0)</cell>
+          <cell>(50,-50)</cell>
+      </row>
+      <row>
+          <cell right="minor">1</cell>
+          <cell>(0,0)</cell>
+          <cell>(-10,10)</cell>
+          <cell>(-20,20)</cell>
+          <cell>(-30,30)</cell>
+          <cell>(-40,40)</cell>
+          <cell>(-50,50)</cell>
+          <cell>(0,0)</cell>
+      </row>
+      </tabular>
+
+
+</chapter>
