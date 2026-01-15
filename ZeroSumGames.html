@@ -62,7 +62,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -80,7 +80,7 @@ window.MathJax = {
 <meta property="book:title" content="Game Theory - An Inquiry Approach">
 <meta property="book:author" content="Adam Blumenthal">
 <meta property="book:author" content="Jennifer Firkins Nordstrom">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -111,7 +111,7 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.991c135ccf182bf5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1c010553c35c544c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.677a75a9120449ff.css">
-<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
@@ -176,12 +176,93 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <span class="process-math">\((i,j)\)</span><span class="process-math">\(-a\text{.}\)</span><div class="autopermalink" data-description="Definition 6.1"><a href="#ZeroSumGames-3" title="Copy heading and permalink for Definition 6.1" aria-label="Copy heading and permalink for Definition 6.1">🔗</a></div></article><details id="ZeroSumGames-4" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><div class="autopermalink" data-description="Question 6.2"><a href="#ZeroSumGames-4" title="Copy heading and permalink for Question 6.2" aria-label="Copy heading and permalink for Question 6.2">🔗</a></div></article></details><ol class="decimal" id="ZeroSumGames-5"></ol>
-<div class="para" id="ZeroSumGames-6">We now develop another way to find a ``good’’ strategy which does not rely on dominating strategies. We think of this new strategy as ``extremely defensive play.’’<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-4-1">For each of the following zero-sum games, find all equilibrium pairs. If you are unable to find equilibrium pairs, explain the issue you ran into. Justify your answers.<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="ZeroSumGames-7" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="autopermalink" data-description="Question 6.2"><a href="#ZeroSumGames-4" title="Copy heading and permalink for Question 6.2" aria-label="Copy heading and permalink for Question 6.2">🔗</a></div></article></details><details id="ZeroSumGames-5" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="question example-like knowl__content"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">W</td>
+<td class="c m b1 r0 l0 t0 lines">X</td>
+<td class="c m b1 r0 l0 t0 lines">Y</td>
+<td class="c m b1 r0 l0 t0 lines">Z</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">A</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+<td class="c m b0 r0 l0 t0 lines">2</td>
+<td class="c m b0 r0 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">B</td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r0 l0 t0 lines">-1</td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r0 l0 t0 lines">5</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">C</td>
+<td class="c m b0 r0 l0 t0 lines">-1</td>
+<td class="c m b0 r0 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines">2</td>
+<td class="c m b0 r0 l0 t0 lines">4</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">D</td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+<td class="c m b0 r0 l0 t0 lines">-1</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+</tr>
+</table></div>
+<div class="autopermalink" data-description="Question 6.3"><a href="#ZeroSumGames-5" title="Copy heading and permalink for Question 6.3" aria-label="Copy heading and permalink for Question 6.3">🔗</a></div></article></details><details id="ZeroSumGames-6" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="question example-like knowl__content"><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b1 r1 l0 t0 lines"></td>
+<td class="c m b1 r0 l0 t0 lines">W</td>
+<td class="c m b1 r0 l0 t0 lines">X</td>
+<td class="c m b1 r0 l0 t0 lines">Y</td>
+<td class="c m b1 r0 l0 t0 lines">Z</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">A</td>
+<td class="c m b0 r0 l0 t0 lines">-2</td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r0 l0 t0 lines">3</td>
+<td class="c m b0 r0 l0 t0 lines">20</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">B</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+<td class="c m b0 r0 l0 t0 lines">-2</td>
+<td class="c m b0 r0 l0 t0 lines">-5</td>
+<td class="c m b0 r0 l0 t0 lines">-3</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">C</td>
+<td class="c m b0 r0 l0 t0 lines">10</td>
+<td class="c m b0 r0 l0 t0 lines">-10</td>
+<td class="c m b0 r0 l0 t0 lines">-1</td>
+<td class="c m b0 r0 l0 t0 lines">1</td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">D</td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r0 l0 t0 lines">0</td>
+<td class="c m b0 r0 l0 t0 lines">10</td>
+<td class="c m b0 r0 l0 t0 lines">8</td>
+</tr>
+</table></div>
+<div class="autopermalink" data-description="Question 6.4"><a href="#ZeroSumGames-6" title="Copy heading and permalink for Question 6.4" aria-label="Copy heading and permalink for Question 6.4">🔗</a></div></article></details><div class="para" id="ZeroSumGames-7">We now develop another way to find a ``good’’ strategy which does not rely on dominating strategies. We think of this new strategy as ``extremely defensive play.’’<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ZeroSumGames-8" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><div class="autopermalink" data-description="Question 6.5"><a href="#ZeroSumGames-7" title="Copy heading and permalink for Question 6.5" aria-label="Copy heading and permalink for Question 6.5">🔗</a></div></article></details><div class="tabular-box natural-width"><table class="tabular">
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-8-1">Imagine you are playing the following game. You know that your opponent CAN read your mind, but you can’t read theirs. What should you do if you are Rose? What should you do if you are Colin? Why?<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question 6.5"><a href="#ZeroSumGames-8" title="Copy heading and permalink for Question 6.5" aria-label="Copy heading and permalink for Question 6.5">🔗</a></div></article></details><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l0 t0 lines"></td>
 <td class="c m b1 r0 l0 t0 lines">W</td>
@@ -218,11 +299,15 @@ eBookConfig.enable_chatcodes =  false;
 <td class="c m b0 r0 l0 t0 lines">7</td>
 </tr>
 </table></div>
-<details id="ZeroSumGames-9" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<details id="ZeroSumGames-10" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><div class="autopermalink" data-description="Question 6.6"><a href="#ZeroSumGames-9" title="Copy heading and permalink for Question 6.6" aria-label="Copy heading and permalink for Question 6.6">🔗</a></div></article></details><details id="ZeroSumGames-10" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-10-1">Try the method built in the previous problem on the other games on this pre-class. What do you notice about the strategies each player ends up choosing?<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question 6.6"><a href="#ZeroSumGames-10" title="Copy heading and permalink for Question 6.6" aria-label="Copy heading and permalink for Question 6.6">🔗</a></div></article></details><details id="ZeroSumGames-11" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><div class="autopermalink" data-description="Question 6.7"><a href="#ZeroSumGames-10" title="Copy heading and permalink for Question 6.7" aria-label="Copy heading and permalink for Question 6.7">🔗</a></div></article></details><div class="para" id="ZeroSumGames-11">
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-11-1">How does the strategy developed above work in the following game? If both players start the game using this strategy, would either player be better served to change strategy? If Colin guesses that Rose might change, would Colin be at an advantage to switch?<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question 6.7"><a href="#ZeroSumGames-11" title="Copy heading and permalink for Question 6.7" aria-label="Copy heading and permalink for Question 6.7">🔗</a></div></article></details><div class="para" id="ZeroSumGames-12">
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l0 t0 lines"></td>
@@ -260,40 +345,46 @@ eBookConfig.enable_chatcodes =  false;
 <td class="c m b0 r0 l0 t0 lines">15</td>
 </tr>
 </table></div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="ZeroSumGames-12" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<details id="ZeroSumGames-13" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><article class="claim theorem-like" id="ZeroSumGames-12-1"><h4 class="heading">
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-13-1">Prove the following:<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="claim theorem-like" id="ZeroSumGames-13-2"><h4 class="heading">
 <span class="type">Claim</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
-<span class="process-math">\(A\)</span><span class="process-math">\(A\)</span><span class="process-math">\(1 \times 1\)</span><span class="process-math">\((i,j)\)</span><span class="process-math">\((i,j)\)</span><span class="process-math">\(A\)</span><div class="autopermalink" data-description="Claim 6.9"><a href="#ZeroSumGames-12-1" title="Copy heading and permalink for Claim 6.9" aria-label="Copy heading and permalink for Claim 6.9">🔗</a></div></article><div class="autopermalink" data-description="Question 6.8"><a href="#ZeroSumGames-12" title="Copy heading and permalink for Question 6.8" aria-label="Copy heading and permalink for Question 6.8">🔗</a></div></article></details><article class="definition definition-like" id="ZeroSumGames-13"><h3 class="heading">
+<span class="process-math">\(A\)</span><span class="process-math">\(A\)</span><span class="process-math">\(1 \times 1\)</span><span class="process-math">\((i,j)\)</span><span class="process-math">\((i,j)\)</span><span class="process-math">\(A\)</span><div class="autopermalink" data-description="Claim 6.9"><a href="#ZeroSumGames-13-2" title="Copy heading and permalink for Claim 6.9" aria-label="Copy heading and permalink for Claim 6.9">🔗</a></div></article><div class="para" id="ZeroSumGames-13-3">(Hint: Show that a removed row can’t have been a better option for Rose and a removed Column can’t have been a better option for Colin.)<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-13-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question 6.8"><a href="#ZeroSumGames-13" title="Copy heading and permalink for Question 6.8" aria-label="Copy heading and permalink for Question 6.8">🔗</a></div></article></details><article class="definition definition-like" id="ZeroSumGames-14"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<dfn class="terminology">expected value</dfn><div class="autopermalink" data-description="Definition 6.10"><a href="#ZeroSumGames-13" title="Copy heading and permalink for Definition 6.10" aria-label="Copy heading and permalink for Definition 6.10">🔗</a></div></article><div class="para logical" id="ZeroSumGames-14">
+<dfn class="terminology">expected value</dfn><div class="autopermalink" data-description="Definition 6.10"><a href="#ZeroSumGames-14" title="Copy heading and permalink for Definition 6.10" aria-label="Copy heading and permalink for Definition 6.10">🔗</a></div></article><div class="para logical" id="ZeroSumGames-15">
 <div class="para">For example, imagine you have a coin that comes up heads <span class="process-math">\(1/4\)</span> of the time and tails <span class="process-math">\(3/4\)</span> of the time. If you gain <span class="process-math">\(2\)</span> dollars for every heads and lose <span class="process-math">\(4\)</span> dollars for every tails, the expected value of the game is</div>
-<div class="displaymath process-math" id="ZeroSumGames-14-5">
+<div class="displaymath process-math" id="ZeroSumGames-15-5">
 \begin{equation*}
 (\frac{1}{4}*2) + (\frac{3}{4} * -4) =\frac{1}{2} -3 = -\frac{5}{2} 
 \end{equation*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<ul class="disc" id="ZeroSumGames-15">
-<li id="ZeroSumGames-15-1">
-<div class="para" id="p-derived-ZeroSumGames-15-1">If we roll a fair <span class="process-math">\(6\)</span> sided die and win dollars equal to the number rolled, what is the expected value of the game?</div>
-<div class="autopermalink" data-description="Item"><a href="#ZeroSumGames-15-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<ul class="disc" id="ZeroSumGames-16">
+<li id="ZeroSumGames-16-1">
+<div class="para" id="p-derived-ZeroSumGames-16-1">If we roll a fair <span class="process-math">\(6\)</span> sided die and win dollars equal to the number rolled, what is the expected value of the game?</div>
+<div class="autopermalink" data-description="Item"><a href="#ZeroSumGames-16-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="ZeroSumGames-15-2">
-<div class="para" id="p-derived-ZeroSumGames-15-2">If we roll two fair <span class="process-math">\(6\)</span> sided dice and win dollars equal to the sum of the rolled numbers, what is the expected value of the game?</div>
-<div class="autopermalink" data-description="Item"><a href="#ZeroSumGames-15-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<li id="ZeroSumGames-16-2">
+<div class="para" id="p-derived-ZeroSumGames-16-2">If we roll two fair <span class="process-math">\(6\)</span> sided dice and win dollars equal to the sum of the rolled numbers, what is the expected value of the game?</div>
+<div class="autopermalink" data-description="Item"><a href="#ZeroSumGames-16-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="para" id="ZeroSumGames-16">We now turn our attention to mixed strategies, but need to build tools to deal with them first. Recall that a mixed strategy can be written as follows: <span class="process-math">\([(r_1,r_2,\dots,r_m),(c_1,c_2,\dots,c_m)]\)</span> where <span class="process-math">\(r_i\)</span> is the probability that Rose selects row <span class="process-math">\(i\)</span> and <span class="process-math">\(c_j\)</span> is the probability that Colin selects column <span class="process-math">\(j\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ZeroSumGames-17">We now turn our attention to mixed strategies, but need to build tools to deal with them first. Recall that a mixed strategy can be written as follows: <span class="process-math">\([(r_1,r_2,\dots,r_m),(c_1,c_2,\dots,c_m)]\)</span> where <span class="process-math">\(r_i\)</span> is the probability that Rose selects row <span class="process-math">\(i\)</span> and <span class="process-math">\(c_j\)</span> is the probability that Colin selects column <span class="process-math">\(j\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="ZeroSumGames-17" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<details id="ZeroSumGames-18" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><div class="autopermalink" data-description="Question 6.11"><a href="#ZeroSumGames-17" title="Copy heading and permalink for Question 6.11" aria-label="Copy heading and permalink for Question 6.11">🔗</a></div></article></details><div class="tabular-box natural-width"><table class="tabular">
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-18-1">Consider the following zero sum game matrix:<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-18-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question 6.11"><a href="#ZeroSumGames-18" title="Copy heading and permalink for Question 6.11" aria-label="Copy heading and permalink for Question 6.11">🔗</a></div></article></details><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b1 r1 l0 t0 lines"></td>
 <td class="c m b1 r0 l0 t0 lines">X</td>
@@ -310,238 +401,251 @@ eBookConfig.enable_chatcodes =  false;
 <td class="c m b0 r0 l0 t0 lines">2</td>
 </tr>
 </table></div>
-<ol class="decimal" id="ZeroSumGames-19">
-<li id="ZeroSumGames-19-1">
-<div class="para" id="p-derived-ZeroSumGames-19-1">Are there any dominated (pure) strategies?</div>
-<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-19-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<ol class="decimal" id="ZeroSumGames-20">
+<li id="ZeroSumGames-20-1">
+<div class="para" id="p-derived-ZeroSumGames-20-1">Are there any dominated (pure) strategies?</div>
+<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-20-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="ZeroSumGames-19-2">
-<div class="para" id="p-derived-ZeroSumGames-19-2">Calculate the expected value of this game if the players have mixed strategies <span class="process-math">\([(\frac{1}{2},\frac{1}{2}),(\frac{1}{2},\frac{1}{2})]\text{.}\)</span>
+<li id="ZeroSumGames-20-2">
+<div class="para" id="p-derived-ZeroSumGames-20-2">Calculate the expected value of this game if the players have mixed strategies <span class="process-math">\([(\frac{1}{2},\frac{1}{2}),(\frac{1}{2},\frac{1}{2})]\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-19-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-20-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
-<li id="ZeroSumGames-19-3">
-<div class="para" id="p-derived-ZeroSumGames-19-3">Calculated the expected value of this game if the players have mixed strategies <span class="process-math">\([(\frac{3}{4},\frac{1}{4}),(\frac{1}{4},\frac{3}{4})]\text{.}\)</span>
+<li id="ZeroSumGames-20-3">
+<div class="para" id="p-derived-ZeroSumGames-20-3">Calculated the expected value of this game if the players have mixed strategies <span class="process-math">\([(\frac{3}{4},\frac{1}{4}),(\frac{1}{4},\frac{3}{4})]\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item 3"><a href="#ZeroSumGames-19-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" data-description="Item 3"><a href="#ZeroSumGames-20-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 </ol>
-<article class="definition definition-like" id="ZeroSumGames-20"><h3 class="heading">
+<article class="definition definition-like" id="ZeroSumGames-21"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<dfn class="terminology">One-card Stud Poker</dfn> We begin with a deck of cards in which <span class="process-math">\(50\%\)</span> are Aces (you can use Red cards for Aces) and <span class="process-math">\(50\%\)</span> are Kings (you can use Black cards for Kings). There are two players and one dealer. The play begins by each player putting in the ante (1 chip). Each player is dealt one card face down. WITHOUT LOOKING AT HIS OR HER CARD, the players decide to Bet (say, 1 chip) or Fold. Players secretly show the dealer their choice. If one player bet and the other folded, then the player who bet wins. If both bet or both fold, then Ace beats King (or Red beats Black); winner takes the pot (all the chips from the ante and any bets). If there is a tie, they split the pot.<div class="autopermalink" data-description="Definition 6.12"><a href="#ZeroSumGames-20" title="Copy heading and permalink for Definition 6.12" aria-label="Copy heading and permalink for Definition 6.12">🔗</a></div></article><details id="ZeroSumGames-21" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<dfn class="terminology">One-card Stud Poker</dfn> We begin with a deck of cards in which <span class="process-math">\(50\%\)</span> are Aces (you can use Red cards for Aces) and <span class="process-math">\(50\%\)</span> are Kings (you can use Black cards for Kings). There are two players and one dealer. The play begins by each player putting in the ante (1 chip). Each player is dealt one card face down. WITHOUT LOOKING AT HIS OR HER CARD, the players decide to Bet (say, 1 chip) or Fold. Players secretly show the dealer their choice. If one player bet and the other folded, then the player who bet wins. If both bet or both fold, then Ace beats King (or Red beats Black); winner takes the pot (all the chips from the ante and any bets). If there is a tie, they split the pot.<div class="autopermalink" data-description="Definition 6.12"><a href="#ZeroSumGames-21" title="Copy heading and permalink for Definition 6.12" aria-label="Copy heading and permalink for Definition 6.12">🔗</a></div></article><details id="ZeroSumGames-22" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><div class="autopermalink" data-description="Question 6.13"><a href="#ZeroSumGames-21" title="Copy heading and permalink for Question 6.13" aria-label="Copy heading and permalink for Question 6.13">🔗</a></div></article></details><details id="ZeroSumGames-22" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-22-1">Play some games of One-card Stud’s Poker (be sure to play some games as each player). Conjecture a best strategy for each player.<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-22-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question 6.13"><a href="#ZeroSumGames-22" title="Copy heading and permalink for Question 6.13" aria-label="Copy heading and permalink for Question 6.13">🔗</a></div></article></details><details id="ZeroSumGames-23" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><ol class="decimal" id="ZeroSumGames-22-1">
-<li id="ZeroSumGames-22-1-1">
-<div class="para" id="p-derived-ZeroSumGames-22-1-1"><span class="process-math">\(\displaystyle [Bet, Fold]\)</span></div>
-<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-22-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-23-1">Determine the payoff for the following strategies: Note that some of these outcomes depend on chance... in this case, find the expected payout for each player!<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-23-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="ZeroSumGames-23-2">
+<li id="ZeroSumGames-23-2-1">
+<div class="para" id="p-derived-ZeroSumGames-23-2-1"><span class="process-math">\(\displaystyle [Bet, Fold]\)</span></div>
+<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-23-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="ZeroSumGames-22-1-2">
-<div class="para" id="p-derived-ZeroSumGames-22-1-2"><span class="process-math">\(\displaystyle [Fold, Bet]\)</span></div>
-<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-22-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<li id="ZeroSumGames-23-2-2">
+<div class="para" id="p-derived-ZeroSumGames-23-2-2"><span class="process-math">\(\displaystyle [Fold, Bet]\)</span></div>
+<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-23-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
-<li id="ZeroSumGames-22-1-3">
-<div class="para" id="p-derived-ZeroSumGames-22-1-3"><span class="process-math">\(\displaystyle [Bet, Bet]\)</span></div>
-<div class="autopermalink" data-description="Item 3"><a href="#ZeroSumGames-22-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<li id="ZeroSumGames-23-2-3">
+<div class="para" id="p-derived-ZeroSumGames-23-2-3"><span class="process-math">\(\displaystyle [Bet, Bet]\)</span></div>
+<div class="autopermalink" data-description="Item 3"><a href="#ZeroSumGames-23-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
-<li id="ZeroSumGames-22-1-4">
-<div class="para" id="p-derived-ZeroSumGames-22-1-4"><span class="process-math">\(\displaystyle [Fold, Fold]\)</span></div>
-<div class="autopermalink" data-description="Item 4"><a href="#ZeroSumGames-22-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+<li id="ZeroSumGames-23-2-4">
+<div class="para" id="p-derived-ZeroSumGames-23-2-4"><span class="process-math">\(\displaystyle [Fold, Fold]\)</span></div>
+<div class="autopermalink" data-description="Item 4"><a href="#ZeroSumGames-23-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Question 6.14"><a href="#ZeroSumGames-22" title="Copy heading and permalink for Question 6.14" aria-label="Copy heading and permalink for Question 6.14">🔗</a></div></article></details><details id="ZeroSumGames-23" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="autopermalink" data-description="Question 6.14"><a href="#ZeroSumGames-23" title="Copy heading and permalink for Question 6.14" aria-label="Copy heading and permalink for Question 6.14">🔗</a></div></article></details><details id="ZeroSumGames-24" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><div class="autopermalink" data-description="Question 6.15"><a href="#ZeroSumGames-23" title="Copy heading and permalink for Question 6.15" aria-label="Copy heading and permalink for Question 6.15">🔗</a></div></article></details><details id="ZeroSumGames-24" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-24-1">Use the answers from above to create the game matrix for One-Card Stud Poker (using expected payout values where appropriate). Use methods from class to try to determine a best strategy for One-Card Stud Poker.<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-24-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question 6.15"><a href="#ZeroSumGames-24" title="Copy heading and permalink for Question 6.15" aria-label="Copy heading and permalink for Question 6.15">🔗</a></div></article></details><details id="ZeroSumGames-25" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><div class="autopermalink" data-description="Question 6.16"><a href="#ZeroSumGames-24" title="Copy heading and permalink for Question 6.16" aria-label="Copy heading and permalink for Question 6.16">🔗</a></div></article></details><div class="displaymath process-math" id="ZeroSumGames-25">
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-25-1">We return to a game with no equilibrium.<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-25-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question 6.16"><a href="#ZeroSumGames-25" title="Copy heading and permalink for Question 6.16" aria-label="Copy heading and permalink for Question 6.16">🔗</a></div></article></details><div class="displaymath process-math" id="ZeroSumGames-26">
 \begin{align*}
 \begin{bmatrix} 1 \amp 0 \\
 -1 \amp 2 \end{bmatrix}
 \end{align*}
 </div>
-<ol class="decimal" id="ZeroSumGames-26">
-<li id="ZeroSumGames-26-1">
-<div class="para" id="p-derived-ZeroSumGames-26-1">Conjecture a (possibly mixed) for Rose strategy for this game.</div>
-<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-26-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<ol class="decimal" id="ZeroSumGames-27">
+<li id="ZeroSumGames-27-1">
+<div class="para" id="p-derived-ZeroSumGames-27-1">Conjecture a (possibly mixed) for Rose strategy for this game.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-27-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="ZeroSumGames-26-2">
-<div class="para" id="p-derived-ZeroSumGames-26-2">Assume that you are Rose and Colin is using the strategy <span class="process-math">\((1,0)\text{.}\)</span> Determine your expected payout if you have strategies i) <span class="process-math">\((0,1)\text{,}\)</span> iv) <span class="process-math">\((\frac{1}{4},\frac{3}{4})\text{,}\)</span> iii) <span class="process-math">\((\frac{1}{2}, \frac{1}{2})\text{,}\)</span> ii) <span class="process-math">\((\frac{3}{4},\frac{1}{4})\text{,}\)</span> v) <span class="process-math">\((1,0)\text{.}\)</span>
+<li id="ZeroSumGames-27-2">
+<div class="para" id="p-derived-ZeroSumGames-27-2">Assume that you are Rose and Colin is using the strategy <span class="process-math">\((1,0)\text{.}\)</span> Determine your expected payout if you have strategies i) <span class="process-math">\((0,1)\text{,}\)</span> iv) <span class="process-math">\((\frac{1}{4},\frac{3}{4})\text{,}\)</span> iii) <span class="process-math">\((\frac{1}{2}, \frac{1}{2})\text{,}\)</span> ii) <span class="process-math">\((\frac{3}{4},\frac{1}{4})\text{,}\)</span> v) <span class="process-math">\((1,0)\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-26-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-27-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
-<li id="ZeroSumGames-26-3">
-<div class="para" id="p-derived-ZeroSumGames-26-3">Plot the results of the previous part on the <span class="process-math">\(p,m\)</span> plane where <span class="process-math">\(p\)</span> is the probability that Rose selects the first row, and <span class="process-math">\(m\)</span> is the payout to Rose.</div>
-<div class="autopermalink" data-description="Item 3"><a href="#ZeroSumGames-26-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<li id="ZeroSumGames-27-3">
+<div class="para" id="p-derived-ZeroSumGames-27-3">Plot the results of the previous part on the <span class="process-math">\(p,m\)</span> plane where <span class="process-math">\(p\)</span> is the probability that Rose selects the first row, and <span class="process-math">\(m\)</span> is the payout to Rose.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#ZeroSumGames-27-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
-<li id="ZeroSumGames-26-4">
-<div class="para" id="p-derived-ZeroSumGames-26-4">Repeat the previous two steps assuming that Colin is using the strategy <span class="process-math">\((0,1)\text{.}\)</span> (Put your plot on the same graph). Do the lines intersect? Where is the intersection?</div>
-<div class="autopermalink" data-description="Item 4"><a href="#ZeroSumGames-26-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+<li id="ZeroSumGames-27-4">
+<div class="para" id="p-derived-ZeroSumGames-27-4">Repeat the previous two steps assuming that Colin is using the strategy <span class="process-math">\((0,1)\text{.}\)</span> (Put your plot on the same graph). Do the lines intersect? Where is the intersection?</div>
+<div class="autopermalink" data-description="Item 4"><a href="#ZeroSumGames-27-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
 </li>
 </ol>
-<div class="para logical" id="ZeroSumGames-27">
-<div class="para">We want to expand on the meaning of graphical representations of strategy developed last class. After determining Rose’s potential strategies for the game matrix</div>
-<div class="displaymath process-math" id="ZeroSumGames-27-1">
+<div class="para" id="ZeroSumGames-28">We want to expand on the meaning of graphical representations of strategy developed last class. After determining Rose’s potential strategies for the game matrix<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="displaymath process-math" id="ZeroSumGames-29">
 \begin{align*}
 \begin{bmatrix} 1 \amp 0 \\
 -1 \amp 2 \end{bmatrix} 
 \end{align*}
 </div>
-<div class="para">we arrived at the following plot for Rose:</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>\begin{tikzpicture} \draw[thick] (0,2)--(0,-1); \draw[thick] (0,0)--(1,0); \foreach \i in {-2,-1,0,1,2,3,4} { \draw (-0.1, \i * .5)--(.1, \i * .5); } \foreach \j in {-1,0,1,2} { \node[circle] at (-.5, \j) () {\j}; } \foreach \i in {0,1,2} { \draw ( \i * .5, -.1)--(\i * .5, .1); } \foreach \j in {1} { \node[circle] at (\j, -.5) () {\j}; } \draw[very thick] (0, -1) -- (1, 1); \draw[very thick] (0, 2) -- (1, 0); \node[circle, draw, fill = black, scale = .35] at (0,-1) () {}; \node[circle, draw, fill = black, scale = .35] at (1,1) () {}; \node[circle, draw, fill = black, scale = .35] at (0,2) () {}; \node[circle, draw, fill = black, scale = .35] at (1,0) () {}; \end{tikzpicture}<div class="para" id="ZeroSumGames-29">We will now explore the relationship between payout plots (like this one), payout expectations, and optimal strategies.<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ZeroSumGames-30">we arrived at the following plot for Rose:<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>\begin{tikzpicture} \draw[thick] (0,2)--(0,-1); \draw[thick] (0,0)--(1,0); \foreach \i in {-2,-1,0,1,2,3,4} { \draw (-0.1, \i * .5)--(.1, \i * .5); } \foreach \j in {-1,0,1,2} { \node[circle] at (-.5, \j) () {\j}; } \foreach \i in {0,1,2} { \draw ( \i * .5, -.1)--(\i * .5, .1); } \foreach \j in {1} { \node[circle] at (\j, -.5) () {\j}; } \draw[very thick] (0, -1) -- (1, 1); \draw[very thick] (0, 2) -- (1, 0); \node[circle, draw, fill = black, scale = .35] at (0,-1) () {}; \node[circle, draw, fill = black, scale = .35] at (1,1) () {}; \node[circle, draw, fill = black, scale = .35] at (0,2) () {}; \node[circle, draw, fill = black, scale = .35] at (1,0) () {}; \end{tikzpicture}<div class="para" id="ZeroSumGames-32">We will now explore the relationship between payout plots (like this one), payout expectations, and optimal strategies.<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="ZeroSumGames-30" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<details id="ZeroSumGames-33" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><ol class="decimal" id="ZeroSumGames-30-1">
-<li id="ZeroSumGames-30-1-1">
-<div class="para" id="p-derived-ZeroSumGames-30-1-1">Find the intersection of the two lines in Rose’s payout plot above.</div>
-<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-30-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</h3></summary><article class="question example-like knowl__content"><ol class="decimal" id="ZeroSumGames-33-1">
+<li id="ZeroSumGames-33-1-1">
+<div class="para" id="p-derived-ZeroSumGames-33-1-1">Find the intersection of the two lines in Rose’s payout plot above.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-33-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="ZeroSumGames-30-1-2">
-<div class="para" id="p-derived-ZeroSumGames-30-1-2">Imagine Colin plays an unknown mixed strategy. What is the maximum expected payout that Rose could hope for if she plays the strategy <span class="process-math">\((1,0)\text{?}\)</span> What is minimum possible expected payout if she plays <span class="process-math">\((1,0)\text{?}\)</span> What are the maximum and minimum possible payouts if she plays <span class="process-math">\((0,1)\text{?}\)</span>
+<li id="ZeroSumGames-33-1-2">
+<div class="para" id="p-derived-ZeroSumGames-33-1-2">Imagine Colin plays an unknown mixed strategy. What is the maximum expected payout that Rose could hope for if she plays the strategy <span class="process-math">\((1,0)\text{?}\)</span> What is minimum possible expected payout if she plays <span class="process-math">\((1,0)\text{?}\)</span> What are the maximum and minimum possible payouts if she plays <span class="process-math">\((0,1)\text{?}\)</span>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-30-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-33-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
-<li id="ZeroSumGames-30-1-3">
-<div class="para" id="p-derived-ZeroSumGames-30-1-3">If Colin plays strategy <span class="process-math">\((.5,.5)\)</span> and Rose plays strategy <span class="process-math">\((1,0)\text{,}\)</span> what is Rose’s expected payout? If Colin plays <span class="process-math">\((.5,.5)\)</span> and Rose plays <span class="process-math">\((0,1)\)</span> what is Rose’s expected payout?</div>
-<div class="autopermalink" data-description="Item 3"><a href="#ZeroSumGames-30-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<li id="ZeroSumGames-33-1-3">
+<div class="para" id="p-derived-ZeroSumGames-33-1-3">If Colin plays strategy <span class="process-math">\((.5,.5)\)</span> and Rose plays strategy <span class="process-math">\((1,0)\text{,}\)</span> what is Rose’s expected payout? If Colin plays <span class="process-math">\((.5,.5)\)</span> and Rose plays <span class="process-math">\((0,1)\)</span> what is Rose’s expected payout?</div>
+<div class="autopermalink" data-description="Item 3"><a href="#ZeroSumGames-33-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
-<li id="ZeroSumGames-30-1-4">
-<div class="para" id="p-derived-ZeroSumGames-30-1-4">How do the last two questions relate to the graph above?</div>
-<div class="autopermalink" data-description="Item 4"><a href="#ZeroSumGames-30-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+<li id="ZeroSumGames-33-1-4">
+<div class="para" id="p-derived-ZeroSumGames-33-1-4">How do the last two questions relate to the graph above?</div>
+<div class="autopermalink" data-description="Item 4"><a href="#ZeroSumGames-33-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
 </li>
-<li id="ZeroSumGames-30-1-5">
-<div class="para" id="p-derived-ZeroSumGames-30-1-5">Calculate the expected value of the game for Rose if she uses the intersection point’s strategy <span class="process-math">\((\frac{3}{4},\frac{1}{4})\)</span> when Colin plays strategy <span class="process-math">\((q, 1-q)\)</span> where <span class="process-math">\(0 \leq q \leq 1\text{.}\)</span>
+<li id="ZeroSumGames-33-1-5">
+<div class="para" id="p-derived-ZeroSumGames-33-1-5">Calculate the expected value of the game for Rose if she uses the intersection point’s strategy <span class="process-math">\((\frac{3}{4},\frac{1}{4})\)</span> when Colin plays strategy <span class="process-math">\((q, 1-q)\)</span> where <span class="process-math">\(0 \leq q \leq 1\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item 5"><a href="#ZeroSumGames-30-1-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+<div class="autopermalink" data-description="Item 5"><a href="#ZeroSumGames-33-1-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Question 6.17"><a href="#ZeroSumGames-30" title="Copy heading and permalink for Question 6.17" aria-label="Copy heading and permalink for Question 6.17">🔗</a></div></article></details><details id="ZeroSumGames-31" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="autopermalink" data-description="Question 6.17"><a href="#ZeroSumGames-33" title="Copy heading and permalink for Question 6.17" aria-label="Copy heading and permalink for Question 6.17">🔗</a></div></article></details><details id="ZeroSumGames-34" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><div class="autopermalink" data-description="Question 6.18"><a href="#ZeroSumGames-31" title="Copy heading and permalink for Question 6.18" aria-label="Copy heading and permalink for Question 6.18">🔗</a></div></article></details><div class="displaymath process-math" id="ZeroSumGames-32">
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-34-1">Build Colin’s plot (like Rose’s above) for the zero sum game:<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-34-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question 6.18"><a href="#ZeroSumGames-34" title="Copy heading and permalink for Question 6.18" aria-label="Copy heading and permalink for Question 6.18">🔗</a></div></article></details><div class="displaymath process-math" id="ZeroSumGames-35">
 \begin{align*}
 \begin{bmatrix}1 \amp 0 \\
 -1 \amp 2\end{bmatrix}
 \end{align*}
 </div>
-<div class="para" id="ZeroSumGames-33">Then find the intersection point of the lines you drew and calculate the expected value of the game for Colin if he plays his intersection point strategy. (Hint: Remember that these payouts are the NEGATIVE of what Colin gets!)<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-33" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ZeroSumGames-36">Then find the intersection point of the lines you drew and calculate the expected value of the game for Colin if he plays his intersection point strategy. (Hint: Remember that these payouts are the NEGATIVE of what Colin gets!)<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-36" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="ZeroSumGames-34" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<details id="ZeroSumGames-37" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><div class="autopermalink" data-description="Question 6.19"><a href="#ZeroSumGames-34" title="Copy heading and permalink for Question 6.19" aria-label="Copy heading and permalink for Question 6.19">🔗</a></div></article></details><div class="displaymath process-math" id="ZeroSumGames-35">
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-37-1">Consider the following zero sum game matrix:<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-37-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question 6.19"><a href="#ZeroSumGames-37" title="Copy heading and permalink for Question 6.19" aria-label="Copy heading and permalink for Question 6.19">🔗</a></div></article></details><div class="displaymath process-math" id="ZeroSumGames-38">
 \begin{align*}
-\begin{bmatrix&gt; 4 \amp -2 \amp -1 \\
+\begin{bmatrix} 4 \amp -2 \amp -1 \\
 -1 \amp 3 \amp 1\end{bmatrix}
 \end{align*}
 </div>
-<div class="para" id="ZeroSumGames-36">Make the payout plot (the plots we have been making in the past few problems) for Rose in this game. Note there should be <span class="process-math">\(3\)</span> lines on your plot. (Why?) Conjecture an optimal strategy for Rose based on your plot.<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-36" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ZeroSumGames-39">Make the payout plot (the plots we have been making in the past few problems) for Rose in this game. Note there should be <span class="process-math">\(3\)</span> lines on your plot. (Why?) Conjecture an optimal strategy for Rose based on your plot.<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-39" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ZeroSumGames-37">In class, we considered the lines drawn in a payoff plot as upper and lower bounds for payouts. They are a sort of worst or best case scenario for each player given a particular strategy. We formalize this notion with the following definition:<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-37" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ZeroSumGames-40">In class, we considered the lines drawn in a payoff plot as upper and lower bounds for payouts. They are a sort of worst or best case scenario for each player given a particular strategy. We formalize this notion with the following definition:<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-40" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="definition definition-like" id="ZeroSumGames-38"><h3 class="heading">
+<article class="definition definition-like" id="ZeroSumGames-41"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.20</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<span class="process-math">\(\textbf{p}\)</span><dfn class="terminology">guarantee</dfn><span class="process-math">\(\textbf{p}\)</span><span class="process-math">\(A\)</span><span class="process-math">\(\textbf{p}A\)</span><dfn class="terminology">guarantee</dfn><span class="process-math">\(\textbf{q}\)</span><span class="process-math">\(A\textbf{q}\)</span><div class="autopermalink" data-description="Definition 6.20"><a href="#ZeroSumGames-38" title="Copy heading and permalink for Definition 6.20" aria-label="Copy heading and permalink for Definition 6.20">🔗</a></div></article><div class="para" id="ZeroSumGames-39">For simplicity’s sake, we will stop fighting with Colin’s payout vs Rose’s payout (though we will keep it in mind for who is winning) and instead calculate only using Rose’s payoffs.<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-39" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(\textbf{p}\)</span><dfn class="terminology">guarantee</dfn><span class="process-math">\(\textbf{p}\)</span><span class="process-math">\(A\)</span><span class="process-math">\(\textbf{p}A\)</span><dfn class="terminology">guarantee</dfn><span class="process-math">\(\textbf{q}\)</span><span class="process-math">\(A\textbf{q}\)</span><div class="autopermalink" data-description="Definition 6.20"><a href="#ZeroSumGames-41" title="Copy heading and permalink for Definition 6.20" aria-label="Copy heading and permalink for Definition 6.20">🔗</a></div></article><div class="para" id="ZeroSumGames-42">For simplicity’s sake, we will stop fighting with Colin’s payout vs Rose’s payout (though we will keep it in mind for who is winning) and instead calculate only using Rose’s payoffs.<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-42" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="ZeroSumGames-40"><h3 class="heading">
+<article class="theorem theorem-like" id="ZeroSumGames-43"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.21</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<span class="process-math">\(A\)</span><span class="process-math">\(v\text{,}\)</span><span class="process-math">\(A\)</span><div class="autopermalink" data-description="Theorem 6.21"><a href="#ZeroSumGames-40" title="Copy heading and permalink for Theorem 6.21" aria-label="Copy heading and permalink for Theorem 6.21">🔗</a></div></article><details id="ZeroSumGames-41" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="process-math">\(A\)</span><span class="process-math">\(v\text{,}\)</span><span class="process-math">\(A\)</span><div class="autopermalink" data-description="Theorem 6.21"><a href="#ZeroSumGames-43" title="Copy heading and permalink for Theorem 6.21" aria-label="Copy heading and permalink for Theorem 6.21">🔗</a></div></article><details id="ZeroSumGames-44" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.22</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><div class="autopermalink" data-description="Question 6.22"><a href="#ZeroSumGames-41" title="Copy heading and permalink for Question 6.22" aria-label="Copy heading and permalink for Question 6.22">🔗</a></div></article></details><div class="displaymath process-math" id="ZeroSumGames-42">
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-44-1">Consider the following zero sum game matrix:<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-44-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question 6.22"><a href="#ZeroSumGames-44" title="Copy heading and permalink for Question 6.22" aria-label="Copy heading and permalink for Question 6.22">🔗</a></div></article></details><div class="displaymath process-math" id="ZeroSumGames-45">
 \begin{align*}
 \begin{bmatrix} 2 \amp -1 \\
 1 \amp 2 \end{bmatrix}
 \end{align*}
 </div>
-<ol class="decimal" id="ZeroSumGames-43">
-<li id="ZeroSumGames-43-1">
-<div class="para" id="p-derived-ZeroSumGames-43-1">What is the guarantee of the strategy <span class="process-math">\((1/2, 1/2)\)</span> for Rose?</div>
-<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-43-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<ol class="decimal" id="ZeroSumGames-46">
+<li id="ZeroSumGames-46-1">
+<div class="para" id="p-derived-ZeroSumGames-46-1">What is the guarantee of the strategy <span class="process-math">\((1/2, 1/2)\)</span> for Rose?</div>
+<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-46-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="ZeroSumGames-43-2">
-<div class="para" id="p-derived-ZeroSumGames-43-2">What is the guarantee of the strategy <span class="process-math">\((1/4, 3/4)\)</span> for Rose?</div>
-<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-43-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<li id="ZeroSumGames-46-2">
+<div class="para" id="p-derived-ZeroSumGames-46-2">What is the guarantee of the strategy <span class="process-math">\((1/4, 3/4)\)</span> for Rose?</div>
+<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-46-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
-<li id="ZeroSumGames-43-3">
-<div class="para" id="p-derived-ZeroSumGames-43-3">What is the guarantee of the strategy <span class="process-math">\((1/2, 1/2)\)</span> for Colin?</div>
-<div class="autopermalink" data-description="Item 3"><a href="#ZeroSumGames-43-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<li id="ZeroSumGames-46-3">
+<div class="para" id="p-derived-ZeroSumGames-46-3">What is the guarantee of the strategy <span class="process-math">\((1/2, 1/2)\)</span> for Colin?</div>
+<div class="autopermalink" data-description="Item 3"><a href="#ZeroSumGames-46-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 </ol>
-<div class="para" id="ZeroSumGames-44">Recall that the expected value of a game <span class="process-math">\(A\)</span> with strategies <span class="process-math">\(\textbf{p}\)</span> and <span class="process-math">\(\textbf{q}\)</span> for Rose and Colin respectively can be calculated as <span class="process-math">\(\textbf{p}A\textbf{q}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-44" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ZeroSumGames-47">Recall that the expected value of a game <span class="process-math">\(A\)</span> with strategies <span class="process-math">\(\textbf{p}\)</span> and <span class="process-math">\(\textbf{q}\)</span> for Rose and Colin respectively can be calculated as <span class="process-math">\(\textbf{p}A\textbf{q}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-47" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="ZeroSumGames-45"><h3 class="heading">
+<article class="theorem theorem-like" id="ZeroSumGames-48"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.23</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<span class="process-math">\(\textbf{p}\)</span><span class="process-math">\(\textbf{q}\)</span><span class="process-math">\(A\text{.}\)</span><ol class="decimal" id="ZeroSumGames-45-4">
-<li id="ZeroSumGames-45-4-1">
-<div class="para" id="p-derived-ZeroSumGames-45-4-1">If <span class="process-math">\(\textbf{p}\)</span> has a guarantee of <span class="process-math">\(r\text{,}\)</span> then <span class="process-math">\(\textbf{p}A\textbf{q} \geq r\text{.}\)</span>
+<span class="process-math">\(\textbf{p}\)</span><span class="process-math">\(\textbf{q}\)</span><span class="process-math">\(A\text{.}\)</span><ol class="decimal" id="ZeroSumGames-48-4">
+<li id="ZeroSumGames-48-4-1">
+<div class="para" id="p-derived-ZeroSumGames-48-4-1">If <span class="process-math">\(\textbf{p}\)</span> has a guarantee of <span class="process-math">\(r\text{,}\)</span> then <span class="process-math">\(\textbf{p}A\textbf{q} \geq r\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-45-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-48-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="ZeroSumGames-45-4-2">
-<div class="para" id="p-derived-ZeroSumGames-45-4-2">If <span class="process-math">\(\textbf{q}\)</span> has a guarantee of <span class="process-math">\(c\text{,}\)</span> then <span class="process-math">\(\textbf{p}A\textbf{q} \leq c\text{.}\)</span>
+<li id="ZeroSumGames-48-4-2">
+<div class="para" id="p-derived-ZeroSumGames-48-4-2">If <span class="process-math">\(\textbf{q}\)</span> has a guarantee of <span class="process-math">\(c\text{,}\)</span> then <span class="process-math">\(\textbf{p}A\textbf{q} \leq c\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-45-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-48-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
-<li id="ZeroSumGames-45-4-3">
-<div class="para" id="p-derived-ZeroSumGames-45-4-3">If <span class="process-math">\(\textbf{p}\)</span> and <span class="process-math">\(\textbf{q}\)</span> have guarantees of <span class="process-math">\(r\)</span> and <span class="process-math">\(c\text{,}\)</span> then <span class="process-math">\(r \leq c\text{.}\)</span>
+<li id="ZeroSumGames-48-4-3">
+<div class="para" id="p-derived-ZeroSumGames-48-4-3">If <span class="process-math">\(\textbf{p}\)</span> and <span class="process-math">\(\textbf{q}\)</span> have guarantees of <span class="process-math">\(r\)</span> and <span class="process-math">\(c\text{,}\)</span> then <span class="process-math">\(r \leq c\text{.}\)</span>
 </div>
-<div class="autopermalink" data-description="Item 3"><a href="#ZeroSumGames-45-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" data-description="Item 3"><a href="#ZeroSumGames-48-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Theorem 6.23"><a href="#ZeroSumGames-45" title="Copy heading and permalink for Theorem 6.23" aria-label="Copy heading and permalink for Theorem 6.23">🔗</a></div></article><details id="ZeroSumGames-46" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="autopermalink" data-description="Theorem 6.23"><a href="#ZeroSumGames-48" title="Copy heading and permalink for Theorem 6.23" aria-label="Copy heading and permalink for Theorem 6.23">🔗</a></div></article><details id="ZeroSumGames-49" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.24</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><ol class="decimal" id="ZeroSumGames-46-1">
-<li id="ZeroSumGames-46-1-1">
-<div class="para" id="p-derived-ZeroSumGames-46-1-1">Consider the above theorem. What does it mean? (Why is the name guarantee accurate?)</div>
-<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-46-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</h3></summary><article class="question example-like knowl__content"><ol class="decimal" id="ZeroSumGames-49-1">
+<li id="ZeroSumGames-49-1-1">
+<div class="para" id="p-derived-ZeroSumGames-49-1-1">Consider the above theorem. What does it mean? (Why is the name guarantee accurate?)</div>
+<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-49-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="ZeroSumGames-46-1-2">
-<div class="para" id="p-derived-ZeroSumGames-46-1-2">Prove part <span class="process-math">\(3\)</span> of the theorem. You may assume that parts <span class="process-math">\(1\)</span> and <span class="process-math">\(2\)</span> are true.</div>
-<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-46-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<li id="ZeroSumGames-49-1-2">
+<div class="para" id="p-derived-ZeroSumGames-49-1-2">Prove part <span class="process-math">\(3\)</span> of the theorem. You may assume that parts <span class="process-math">\(1\)</span> and <span class="process-math">\(2\)</span> are true.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-49-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Question 6.24"><a href="#ZeroSumGames-46" title="Copy heading and permalink for Question 6.24" aria-label="Copy heading and permalink for Question 6.24">🔗</a></div></article></details><article class="definition definition-like" id="ZeroSumGames-47"><h3 class="heading">
+<div class="autopermalink" data-description="Question 6.24"><a href="#ZeroSumGames-49" title="Copy heading and permalink for Question 6.24" aria-label="Copy heading and permalink for Question 6.24">🔗</a></div></article></details><article class="definition definition-like" id="ZeroSumGames-50"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.25</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<span class="process-math">\(A\)</span><span class="process-math">\(\textbf{p}\)</span><dfn class="terminology">equates Colin’s Results</dfn><span class="process-math">\(\textbf{p}A\)</span><span class="process-math">\(\textbf{q}\)</span><span class="process-math">\(A\textbf{q}\)</span><div class="autopermalink" data-description="Definition 6.25"><a href="#ZeroSumGames-47" title="Copy heading and permalink for Definition 6.25" aria-label="Copy heading and permalink for Definition 6.25">🔗</a></div></article><div class="para" id="ZeroSumGames-48">Consider the following game matrix:<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-48" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(A\)</span><span class="process-math">\(\textbf{p}\)</span><dfn class="terminology">equates Colin’s Results</dfn><span class="process-math">\(\textbf{p}A\)</span><span class="process-math">\(\textbf{q}\)</span><span class="process-math">\(A\textbf{q}\)</span><div class="autopermalink" data-description="Definition 6.25"><a href="#ZeroSumGames-50" title="Copy heading and permalink for Definition 6.25" aria-label="Copy heading and permalink for Definition 6.25">🔗</a></div></article><div class="para" id="ZeroSumGames-51">Consider the following game matrix:<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-51" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="ZeroSumGames-49">
+<div class="displaymath process-math" id="ZeroSumGames-52">
 \begin{align*}
 \begin{bmatrix}2 \amp -1 \\
 1 \amp 2\end{bmatrix} 
 \end{align*}
 </div>
-<details id="ZeroSumGames-50" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<details id="ZeroSumGames-53" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.26</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><ol class="decimal" id="ZeroSumGames-50-1">
-<li id="ZeroSumGames-50-1-1">
-<div class="para" id="p-derived-ZeroSumGames-50-1-1">Show that the strategy <span class="process-math">\((1/4, 3/4)\)</span> for Rose equates Colin’s results.</div>
-<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-50-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</h3></summary><article class="question example-like knowl__content"><ol class="decimal" id="ZeroSumGames-53-1">
+<li id="ZeroSumGames-53-1-1">
+<div class="para" id="p-derived-ZeroSumGames-53-1-1">Show that the strategy <span class="process-math">\((1/4, 3/4)\)</span> for Rose equates Colin’s results.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-53-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="ZeroSumGames-50-1-2">
-<div class="para" id="p-derived-ZeroSumGames-50-1-2">Show that the strategy <span class="process-math">\((1/2, 1/2)\)</span> for Colin does NOT equate Rose’s results.</div>
-<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-50-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<li id="ZeroSumGames-53-1-2">
+<div class="para" id="p-derived-ZeroSumGames-53-1-2">Show that the strategy <span class="process-math">\((1/2, 1/2)\)</span> for Colin does NOT equate Rose’s results.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-53-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Question 6.26"><a href="#ZeroSumGames-50" title="Copy heading and permalink for Question 6.26" aria-label="Copy heading and permalink for Question 6.26">🔗</a></div></article></details><div class="para" id="ZeroSumGames-51">We would now like to build a strategy to find when results are equated for each player. Solving systems of equations will be the key to victory!<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-51" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Question 6.26"><a href="#ZeroSumGames-53" title="Copy heading and permalink for Question 6.26" aria-label="Copy heading and permalink for Question 6.26">🔗</a></div></article></details><div class="para" id="ZeroSumGames-54">We would now like to build a strategy to find when results are equated for each player. Solving systems of equations will be the key to victory!<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-54" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="ZeroSumGames-52">
+<div class="para logical" id="ZeroSumGames-55">
 <div class="para">We want to find a strategy <span class="process-math">\((q, 1-q)\)</span> for Colin that equates Rose’s results in the matrix</div>
-<div class="displaymath process-math" id="ZeroSumGames-52-2">
+<div class="displaymath process-math" id="ZeroSumGames-55-2">
 \begin{align*}
 \begin{bmatrix}2 \amp -1 \\
 1 \amp 2 \end{bmatrix}\text{.}
 \end{align*}
 </div>
-<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-52" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-55" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="ZeroSumGames-53">We want to find <span class="process-math">\(q\)</span> so that all of Rose’s strategies give the same result. In particular, we want <span class="process-math">\(q\)</span> such that<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-53" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ZeroSumGames-56">We want to find <span class="process-math">\(q\)</span> so that all of Rose’s strategies give the same result. In particular, we want <span class="process-math">\(q\)</span> such that<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-56" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="displaymath process-math" id="ZeroSumGames-54">
+<div class="displaymath process-math" id="ZeroSumGames-57">
 \begin{align*}
 \begin{bmatrix} 2 \amp -1 \\
 1 \amp 2 \end{bmatrix} \\
@@ -551,85 +655,97 @@ eBookConfig.enable_chatcodes =  false;
 v \end{bmatrix}
 \end{align*}
 </div>
-<details id="ZeroSumGames-55" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<details id="ZeroSumGames-58" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.27</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><div class="autopermalink" data-description="Question 6.27"><a href="#ZeroSumGames-55" title="Copy heading and permalink for Question 6.27" aria-label="Copy heading and permalink for Question 6.27">🔗</a></div></article></details><article class="definition definition-like" id="ZeroSumGames-56"><h3 class="heading">
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-58-1">Find the strategy for Colin that equates Rose’s results. What is the expected value of the strategy? How does it compare to Rose’s expected value?<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-58-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question 6.27"><a href="#ZeroSumGames-58" title="Copy heading and permalink for Question 6.27" aria-label="Copy heading and permalink for Question 6.27">🔗</a></div></article></details><article class="definition definition-like" id="ZeroSumGames-59"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.28</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<span class="process-math">\(A\)</span><span class="process-math">\(\textbf{p}\)</span><span class="process-math">\(\textbf{q}\)</span><span class="process-math">\(v\text{.}\)</span><span class="process-math">\(v, \textbf{p},\)</span><span class="process-math">\(\textbf{q}\)</span><div class="autopermalink" data-description="Definition 6.28"><a href="#ZeroSumGames-56" title="Copy heading and permalink for Definition 6.28" aria-label="Copy heading and permalink for Definition 6.28">🔗</a></div></article><div class="para" id="ZeroSumGames-57">We argued in class that if one can find a von Neumann solution, then <span class="process-math">\(v\)</span> is the expected value of the game under rational play. The following result provides a satisfying conclusion:<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-57" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<span class="process-math">\(A\)</span><span class="process-math">\(\textbf{p}\)</span><span class="process-math">\(\textbf{q}\)</span><span class="process-math">\(v\text{.}\)</span><span class="process-math">\(v, \textbf{p},\)</span><span class="process-math">\(\textbf{q}\)</span><div class="autopermalink" data-description="Definition 6.28"><a href="#ZeroSumGames-59" title="Copy heading and permalink for Definition 6.28" aria-label="Copy heading and permalink for Definition 6.28">🔗</a></div></article><div class="para" id="ZeroSumGames-60">We argued in class that if one can find a von Neumann solution, then <span class="process-math">\(v\)</span> is the expected value of the game under rational play. The following result provides a satisfying conclusion:<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-60" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="theorem theorem-like" id="ZeroSumGames-58"><h3 class="heading">
+<article class="theorem theorem-like" id="ZeroSumGames-61"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.29</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<span class="process-math">\(A\)</span><span class="process-math">\(v\text{,}\)</span><span class="process-math">\(A\)</span><div class="autopermalink" data-description="Theorem 6.29"><a href="#ZeroSumGames-58" title="Copy heading and permalink for Theorem 6.29" aria-label="Copy heading and permalink for Theorem 6.29">🔗</a></div></article><details id="ZeroSumGames-59" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="process-math">\(A\)</span><span class="process-math">\(v\text{,}\)</span><span class="process-math">\(A\)</span><div class="autopermalink" data-description="Theorem 6.29"><a href="#ZeroSumGames-61" title="Copy heading and permalink for Theorem 6.29" aria-label="Copy heading and permalink for Theorem 6.29">🔗</a></div></article><details id="ZeroSumGames-62" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.30</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><div class="autopermalink" data-description="Question 6.30"><a href="#ZeroSumGames-59" title="Copy heading and permalink for Question 6.30" aria-label="Copy heading and permalink for Question 6.30">🔗</a></div></article></details><details id="ZeroSumGames-60" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-62-1">Interpret von Neumann’s Minimax Theorem. What does it mean for classical games? Why would it be called the Minimax Theorem?<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-62-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question 6.30"><a href="#ZeroSumGames-62" title="Copy heading and permalink for Question 6.30" aria-label="Copy heading and permalink for Question 6.30">🔗</a></div></article></details><details id="ZeroSumGames-63" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.31</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><span class="process-math">\(20\%\)</span><span class="process-math">\(50\%\)</span><span class="process-math">\(80\%\)</span><span class="process-math">\(90\%\)</span><div class="autopermalink" data-description="Question 6.31"><a href="#ZeroSumGames-60" title="Copy heading and permalink for Question 6.31" aria-label="Copy heading and permalink for Question 6.31">🔗</a></div></article></details><ol class="decimal" id="ZeroSumGames-61">
-<li id="ZeroSumGames-61-1">
-<div class="para" id="p-derived-ZeroSumGames-61-1">Convert this information into a game matrix.</div>
-<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-61-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-63-1">Imagine that Rose and Colin are playing tennis at a high level. Analytics have been done to determine the odds of Rose winning a given point based on the following scenarios. Rose can either hit to Colin’s forehand (F) or backhand side (B), and since the ball is moving so quickly, Colin must guess which side, forehand (F) or backhand (B) that Rose will hit to. If Colin guesses wrong, he will not get his racket as solidly on the ball. The data analysts have determined that if both play F, Rose has an <span class="process-math">\(20\%\)</span> chance of winning the point, if the both play B Rose has a <span class="process-math">\(50\%\)</span> chance of winning the point. If Rose plays F and Colin guesses B, she has a <span class="process-math">\(80\%\)</span> chance of winning, and if Rose plays B and Colin guesses F she has a <span class="process-math">\(90\%\)</span> chance of winning.<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-63-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question 6.31"><a href="#ZeroSumGames-63" title="Copy heading and permalink for Question 6.31" aria-label="Copy heading and permalink for Question 6.31">🔗</a></div></article></details><ol class="decimal" id="ZeroSumGames-64">
+<li id="ZeroSumGames-64-1">
+<div class="para" id="p-derived-ZeroSumGames-64-1">Convert this information into a game matrix.</div>
+<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-64-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="ZeroSumGames-61-2">
-<div class="para" id="p-derived-ZeroSumGames-61-2">Find a strategy for Rose that equates Colin’s Results.</div>
-<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-61-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<li id="ZeroSumGames-64-2">
+<div class="para" id="p-derived-ZeroSumGames-64-2">Find a strategy for Rose that equates Colin’s Results.</div>
+<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-64-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
-<li id="ZeroSumGames-61-3">
-<div class="para" id="p-derived-ZeroSumGames-61-3">Find a strategy for Colin that equates Rose’s Results.</div>
-<div class="autopermalink" data-description="Item 3"><a href="#ZeroSumGames-61-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<li id="ZeroSumGames-64-3">
+<div class="para" id="p-derived-ZeroSumGames-64-3">Find a strategy for Colin that equates Rose’s Results.</div>
+<div class="autopermalink" data-description="Item 3"><a href="#ZeroSumGames-64-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
-<li id="ZeroSumGames-61-4">
-<div class="para" id="p-derived-ZeroSumGames-61-4">From this information alone, have you found a von Neumann solution? Why or why not?</div>
-<div class="autopermalink" data-description="Item 4"><a href="#ZeroSumGames-61-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+<li id="ZeroSumGames-64-4">
+<div class="para" id="p-derived-ZeroSumGames-64-4">From this information alone, have you found a von Neumann solution? Why or why not?</div>
+<div class="autopermalink" data-description="Item 4"><a href="#ZeroSumGames-64-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
 </li>
 </ol>
-<details id="ZeroSumGames-62" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<details id="ZeroSumGames-65" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.32</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><span class="process-math">\([\frac{2}{7}, \frac{5}{7}]\text{.}\)</span><div class="autopermalink" data-description="Question 6.32"><a href="#ZeroSumGames-62" title="Copy heading and permalink for Question 6.32" aria-label="Copy heading and permalink for Question 6.32">🔗</a></div></article></details><div class="displaymath process-math" id="ZeroSumGames-63">
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-65-1">We now revisit a matrix that we drew a payoff plot for. The payoff plot showed visually where an optimal strategy might lie, but now we have to tools to algebraically nail down optimal strategies for both players. We determined that the best guarantee for Rose was with strategy <span class="process-math">\([\frac{2}{7}, \frac{5}{7}]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-65-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question 6.32"><a href="#ZeroSumGames-65" title="Copy heading and permalink for Question 6.32" aria-label="Copy heading and permalink for Question 6.32">🔗</a></div></article></details><div class="displaymath process-math" id="ZeroSumGames-66">
 \begin{align*}
 \begin{bmatrix} 4 \amp -2 \amp -1 \\
 -1 \amp 3 \amp 1 \end{bmatrix} 
 \end{align*}
 </div>
-<ol class="decimal" id="ZeroSumGames-64">
-<li id="ZeroSumGames-64-1">
-<div class="para" id="p-derived-ZeroSumGames-64-1">Determine Rose’s guarantee with the strategy <span class="process-math">\([\frac{2}{7}, \frac{5}{7}]\text{.}\)</span>
-</div>
-<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-64-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
-</li>
-<li id="ZeroSumGames-64-2">
-<div class="para" id="p-derived-ZeroSumGames-64-2">What does the payoff vector tell you about which columns Colin should (or shouldn’t) play?</div>
-<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-64-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
-</li>
-<li id="ZeroSumGames-64-3">
-<div class="para" id="p-derived-ZeroSumGames-64-3">Determine a strategy for Colin that equates Rose’s results. (Hint: There should be a column you never choose from part b.)</div>
-<div class="autopermalink" data-description="Item 3"><a href="#ZeroSumGames-64-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
-</li>
-<li id="ZeroSumGames-64-4">
-<div class="para" id="p-derived-ZeroSumGames-64-4">Give a von Neumann solution for this game matrix.</div>
-<div class="autopermalink" data-description="Item 4"><a href="#ZeroSumGames-64-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
-</li>
-</ol>
-<details id="ZeroSumGames-65" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.33</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><span class="process-math">\(n \times 2\)</span><div class="autopermalink" data-description="Question 6.33"><a href="#ZeroSumGames-65" title="Copy heading and permalink for Question 6.33" aria-label="Copy heading and permalink for Question 6.33">🔗</a></div></article></details><article class="definition definition-like" id="ZeroSumGames-66"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.34</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3>
-<dfn class="terminology">Undercut</dfn> is a two player game between Rose and Colin. Each round, both players choose a number between <span class="process-math">\(1\)</span> and <span class="process-math">\(5\)</span> and simultaneously reveal their decisions. Let their decisions be <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> with <span class="process-math">\(a \leq b\text{.}\)</span><div class="autopermalink" data-description="Definition 6.34"><a href="#ZeroSumGames-66" title="Copy heading and permalink for Definition 6.34" aria-label="Copy heading and permalink for Definition 6.34">🔗</a></div></article><ul class="disc" id="ZeroSumGames-67">
+<ol class="decimal" id="ZeroSumGames-67">
 <li id="ZeroSumGames-67-1">
-<div class="para" id="p-derived-ZeroSumGames-67-1">If <span class="process-math">\(a+1 = b\text{,}\)</span> then the person who played <span class="process-math">\(a\)</span> adds <span class="process-math">\(a+b\)</span> to their score and the opponent gets nothing.</div>
-<div class="autopermalink" data-description="Item"><a href="#ZeroSumGames-67-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="para" id="p-derived-ZeroSumGames-67-1">Determine Rose’s guarantee with the strategy <span class="process-math">\([\frac{2}{7}, \frac{5}{7}]\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#ZeroSumGames-67-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
 <li id="ZeroSumGames-67-2">
-<div class="para" id="p-derived-ZeroSumGames-67-2">Otherwise, each player adds their own number to their score.</div>
-<div class="autopermalink" data-description="Item"><a href="#ZeroSumGames-67-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="para" id="p-derived-ZeroSumGames-67-2">What does the payoff vector tell you about which columns Colin should (or shouldn’t) play?</div>
+<div class="autopermalink" data-description="Item 2"><a href="#ZeroSumGames-67-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="ZeroSumGames-67-3">
+<div class="para" id="p-derived-ZeroSumGames-67-3">Determine a strategy for Colin that equates Rose’s results. (Hint: There should be a column you never choose from part b.)</div>
+<div class="autopermalink" data-description="Item 3"><a href="#ZeroSumGames-67-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="ZeroSumGames-67-4">
+<div class="para" id="p-derived-ZeroSumGames-67-4">Give a von Neumann solution for this game matrix.</div>
+<div class="autopermalink" data-description="Item 4"><a href="#ZeroSumGames-67-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<details id="ZeroSumGames-68" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.33</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-68-1">Generalize the procedure of the previous problem. Give instructions on how to find a von Neumann solution in any <span class="process-math">\(n \times 2\)</span> zero sum matrix game.<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-68-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question 6.33"><a href="#ZeroSumGames-68" title="Copy heading and permalink for Question 6.33" aria-label="Copy heading and permalink for Question 6.33">🔗</a></div></article></details><article class="definition definition-like" id="ZeroSumGames-69"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.34</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<dfn class="terminology">Undercut</dfn> is a two player game between Rose and Colin. Each round, both players choose a number between <span class="process-math">\(1\)</span> and <span class="process-math">\(5\)</span> and simultaneously reveal their decisions. Let their decisions be <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> with <span class="process-math">\(a \leq b\text{.}\)</span><div class="autopermalink" data-description="Definition 6.34"><a href="#ZeroSumGames-69" title="Copy heading and permalink for Definition 6.34" aria-label="Copy heading and permalink for Definition 6.34">🔗</a></div></article><ul class="disc" id="ZeroSumGames-70">
+<li id="ZeroSumGames-70-1">
+<div class="para" id="p-derived-ZeroSumGames-70-1">If <span class="process-math">\(a+1 = b\text{,}\)</span> then the person who played <span class="process-math">\(a\)</span> adds <span class="process-math">\(a+b\)</span> to their score and the opponent gets nothing.</div>
+<div class="autopermalink" data-description="Item"><a href="#ZeroSumGames-70-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ZeroSumGames-70-2">
+<div class="para" id="p-derived-ZeroSumGames-70-2">Otherwise, each player adds their own number to their score.</div>
+<div class="autopermalink" data-description="Item"><a href="#ZeroSumGames-70-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
-<div class="para" id="ZeroSumGames-68">For example, if Rose plays <span class="process-math">\(5\)</span> and Colin plays <span class="process-math">\(3\text{,}\)</span> Rose gains <span class="process-math">\(5\)</span> points and Colin gains <span class="process-math">\(3\)</span> for a net difference of <span class="process-math">\(+2\)</span> for Rose. But if Rose plays <span class="process-math">\(5\)</span> and Colin plays <span class="process-math">\(4\text{,}\)</span> Rose gets <span class="process-math">\(0\)</span> points and Colin gets <span class="process-math">\(9\)</span> for a net change of <span class="process-math">\(-9\)</span> for Rose!<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-68" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ZeroSumGames-71">For example, if Rose plays <span class="process-math">\(5\)</span> and Colin plays <span class="process-math">\(3\text{,}\)</span> Rose gains <span class="process-math">\(5\)</span> points and Colin gains <span class="process-math">\(3\)</span> for a net difference of <span class="process-math">\(+2\)</span> for Rose. But if Rose plays <span class="process-math">\(5\)</span> and Colin plays <span class="process-math">\(4\text{,}\)</span> Rose gets <span class="process-math">\(0\)</span> points and Colin gets <span class="process-math">\(9\)</span> for a net change of <span class="process-math">\(-9\)</span> for Rose!<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-71" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="ZeroSumGames-69" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<details id="ZeroSumGames-72" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Question</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.35</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="question example-like knowl__content"><div class="autopermalink" data-description="Question 6.35"><a href="#ZeroSumGames-69" title="Copy heading and permalink for Question 6.35" aria-label="Copy heading and permalink for Question 6.35">🔗</a></div></article></details><div class="autopermalink" data-description="Chapter 6: Zero Sum Games"><a href="#ZeroSumGames" title="Copy heading and permalink for Chapter 6: Zero Sum Games" aria-label="Copy heading and permalink for Chapter 6: Zero Sum Games">🔗</a></div></section></div>
+</h3></summary><article class="question example-like knowl__content"><div class="para" id="ZeroSumGames-72-1">Find a von Neumann solution for Undercut. (Hint: You will be solving a system of linear equations... those of you who have taken linear algebra may have nice techniques for this!)<div class="autopermalink" data-description="Paragraph"><a href="#ZeroSumGames-72-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Question 6.35"><a href="#ZeroSumGames-72" title="Copy heading and permalink for Question 6.35" aria-label="Copy heading and permalink for Question 6.35">🔗</a></div></article></details><div class="autopermalink" data-description="Chapter 6: Zero Sum Games"><a href="#ZeroSumGames" title="Copy heading and permalink for Chapter 6: Zero Sum Games" aria-label="Copy heading and permalink for Chapter 6: Zero Sum Games">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ClassicalGames.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="NonZeroSumGames.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
