@@ -70,7 +70,7 @@ var ptx_lunr_docs = [
   "type": "Chapter",
   "number": "2",
   "title": "Combinatorial Games",
-  "body": " Combinatorial Games   A game is said to be a Combinatorial Game if it is a sequential two player game with  A set of possible positions (sometimes called states of the game)  A move rule indicating for each position, what positions can be moved to  A win rule indicating a set of terminal positions where the game ends in which each terminal position has an associated outcome (which player wins)  Both players have total knowledge of the position(s), move rule, and win rule during their turn      Which of the games in REFERENCE are Combinatorial Games (as we defined them) and which are not? Why?    The game of Tic is similar to tic tac toe, but is played on a 1 by 3 board. On a player's turn, they fill one empty square with their symbol, for the first player, and for the second player. A player wins if they get two consecutive squares filled with their symbols. Determine if any player has a winning strategy. Justify your answer.    Justifying that you have a winning strategy is a pain. Try to brainstorm a way to visualize the entirety of a game (that is all things that could have happened). Describe how you would create such a visualization, and then use it to visualize Tic.    Use your visualization of Tic to decide who has a winning strategy. Does your visualization give all of the information necessary to justify that a strategy is a winning strategy? What does a strategy look like in the context of your visualization?   When analyzing games, we would like to take a step back from looking at the actual game board. (Some games may look different, but play essentially the same way as we were discussing with what makes games ``the same.'')  As such, let me abstract the game tree slightly further than where we ended in class. A WLD Game Tree condenses the information of our game tree by suppressing the game board. For example, the WLD Game tree for Tic is as follows:   We can build on our tree by saying that sometimes (maybe always?) we know if a position is winning or not, and for whom! We will build on that in this assignment.   Draw onto the WLD tree optimal strategies for and .    You may be surprised to realize that you are able to identify who wins the following two games (despite not knowing the rules or what a position even looks like):    Think about the positions in the game above (one at a time). Can we determine if is winning, is winning, or if it is a draw. If so, how?    Look back at the Tic WLD Game Tree and decide the outcome of the game from EVERY position assuming optimal play! Mark any position where has a winning strategy with , any position where has a winning strategy with , and any position where neither player has a winning strategy with . Are there some positions that are more interesting to know this type for?     Formally prove (by using induction on how many layers are in the tree) that in every Combinatorial Game exactly one of the following holds: (You may assume that has the first move)   Louise has a winning strategy.  Richard has a winning strategy.  Both players have drawing strategies.    Think about the consequence of this theorem. What does it mean about combinatorial games? Can we know who will win before the first move is even taken?   There is a problem with our general solution to combinatorial games. Time and computing power are limited! Instead we might like to build strategies by taking advantage of rules or symmetries to give meaningful instructions that would tell a player what to do in any scenario rather that building a gigantic tree.   For each of the following games try to come up with an optimal strategy which can be described in words. Determine if has a winning strategy, has a winning strategy, or if the both have drawing strategies. Justify your answers.    Pick up stones with 7 stones.  Pick up stones with stones.  The game Pick Up Stones 2: Electric Boogaloo is a two player game where there are two piles of stones alternating turns. On each turn a player removes , , or stones. The player who picks up a last stone in either pile loses. Determine a strategy if the piles have and stones.  Pick Up Stones 2: Electric Boogaloo with stones in both piles.  Chomp on a by board.  Chomp on an by board.  Chomp on an by board.   We now notice a type of symmetry in chomp to develop strategy stealing . The idea is that if a second player could move to a winning position, the first player could have taken moves to get to that position.   Prove the following by contradiction:   For every rectangular position in chomp (except the by board) the first player has a winning strategy.  "
+  "body": " Combinatorial Games    A game is said to be a Combinatorial Game if it is a sequential two player game with   A set of possible positions (sometimes called states of the game)  A move rule indicating for each position, what positions can be moved to  A win rule indicating a set of terminal positions where the game ends in which each terminal position has an associated outcome (which player wins)  Both players have total knowledge of the position(s), move rule, and win rule during their turn      Which of the games in REFERENCE are Combinatorial Games (as we defined them) and which are not? Why?    The game of Tic is similar to tic tac toe, but is played on a 1 by 3 board. On a player's turn, they fill one empty square with their symbol, for the first player, and for the second player. A player wins if they get two consecutive squares filled with their symbols. Determine if any player has a winning strategy. Justify your answer.    Justifying that you have a winning strategy is a pain. Try to brainstorm a way to visualize the entirety of a game (that is all things that could have happened). Describe how you would create such a visualization, and then use it to visualize Tic.    Use your visualization of Tic to decide who has a winning strategy. Does your visualization give all of the information necessary to justify that a strategy is a winning strategy? What does a strategy look like in the context of your visualization?   When analyzing games, we would like to take a step back from looking at the actual game board. (Some games may look different, but play essentially the same way as we were discussing with what makes games ``the same.'')  As such, let us abstract the game tree slightly further than where we ended in class. A WLD Game Tree condenses the information of our game tree by suppressing the game board. For example, the WLD Game tree for Tic is as follows:   We can build on our tree by saying that sometimes (maybe always?) we know if a position is winning or not, and for whom! We will build on that in this assignment.   Draw onto the WLD tree optimal strategies for and .    You may be surprised to realize that you are able to identify who wins the following two games (despite not knowing the rules or what a position even looks like):    Think about the positions in the game above (one at a time). Can we determine if is winning, is winning, or if it is a draw. If so, how?    Look back at the Tic WLD Game Tree and decide the outcome of the game from EVERY position assuming optimal play! Mark any position where has a winning strategy with , any position where has a winning strategy with , and any position where neither player has a winning strategy with . Are there some positions that are more interesting to know this type for?     Formally prove (by using induction on how many layers are in the tree) that in every Combinatorial Game exactly one of the following holds: (You may assume that has the first move)    Louise has a winning strategy.   Richard has a winning strategy.    Both players have drawing strategies.      Think about the consequence of this theorem. What does it mean about combinatorial games? Can we know who will win before the first move is even taken?   There is a problem with our general solution to combinatorial games. Time and computing power are limited! Instead we might like to build strategies by taking advantage of rules or symmetries to give meaningful instructions that would tell a player what to do in any scenario rather that building a gigantic tree.   For each of the following games try to come up with an optimal strategy which can be described in words. Determine if has a winning strategy, has a winning strategy, or if the both have drawing strategies. Justify your answers.    Pick up stones with 7 stones.  Pick up stones with stones.  The game Pick Up Stones 2: Electric Boogaloo is a two player game where there are two piles of stones alternating turns. On each turn a player removes , , or stones. The player who picks up a last stone in either pile loses. Determine a strategy if the piles have and stones.  Pick Up Stones 2: Electric Boogaloo with stones in both piles.  Chomp on a by board.  Chomp on an by board.  Chomp on an by board.   We now notice a type of symmetry in chomp to develop strategy stealing . The idea is that if a second player could move to a winning position, the first player could have taken moves to get to that position.   Prove the following by contradiction:   For every rectangular position in chomp (except the by board) the first player has a winning strategy.    "
 },
 {
   "id": "CombGames-2",
@@ -79,14 +79,14 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "2.1",
   "title": "",
-  "body": " A game is said to be a Combinatorial Game if it is a sequential two player game with  A set of possible positions (sometimes called states of the game)  A move rule indicating for each position, what positions can be moved to  A win rule indicating a set of terminal positions where the game ends in which each terminal position has an associated outcome (which player wins)  Both players have total knowledge of the position(s), move rule, and win rule during their turn    "
+  "body": "  A game is said to be a Combinatorial Game if it is a sequential two player game with   A set of possible positions (sometimes called states of the game)  A move rule indicating for each position, what positions can be moved to  A win rule indicating a set of terminal positions where the game ends in which each terminal position has an associated outcome (which player wins)  Both players have total knowledge of the position(s), move rule, and win rule during their turn    "
 },
 {
   "id": "CombGames-3",
   "level": "2",
   "url": "CombGames.html#CombGames-3",
   "type": "Question",
-  "number": "2.2",
+  "number": "2.3",
   "title": "",
   "body": " Which of the games in REFERENCE are Combinatorial Games (as we defined them) and which are not? Why?  "
 },
@@ -95,7 +95,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CombGames.html#CombGames-4",
   "type": "Question",
-  "number": "2.3",
+  "number": "2.4",
   "title": "",
   "body": " The game of Tic is similar to tic tac toe, but is played on a 1 by 3 board. On a player's turn, they fill one empty square with their symbol, for the first player, and for the second player. A player wins if they get two consecutive squares filled with their symbols. Determine if any player has a winning strategy. Justify your answer.  "
 },
@@ -104,7 +104,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CombGames.html#CombGames-5",
   "type": "Question",
-  "number": "2.4",
+  "number": "2.5",
   "title": "",
   "body": " Justifying that you have a winning strategy is a pain. Try to brainstorm a way to visualize the entirety of a game (that is all things that could have happened). Describe how you would create such a visualization, and then use it to visualize Tic.  "
 },
@@ -113,7 +113,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CombGames.html#CombGames-6",
   "type": "Question",
-  "number": "2.5",
+  "number": "2.6",
   "title": "",
   "body": " Use your visualization of Tic to decide who has a winning strategy. Does your visualization give all of the information necessary to justify that a strategy is a winning strategy? What does a strategy look like in the context of your visualization?  "
 },
@@ -131,7 +131,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CombGames.html#CombGames-11",
   "type": "Question",
-  "number": "2.6",
+  "number": "2.7",
   "title": "",
   "body": " Draw onto the WLD tree optimal strategies for and .  "
 },
@@ -140,7 +140,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CombGames.html#CombGames-15",
   "type": "Question",
-  "number": "2.7",
+  "number": "2.8",
   "title": "",
   "body": " Think about the positions in the game above (one at a time). Can we determine if is winning, is winning, or if it is a draw. If so, how?  "
 },
@@ -149,7 +149,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CombGames.html#CombGames-16",
   "type": "Question",
-  "number": "2.8",
+  "number": "2.9",
   "title": "",
   "body": " Look back at the Tic WLD Game Tree and decide the outcome of the game from EVERY position assuming optimal play! Mark any position where has a winning strategy with , any position where has a winning strategy with , and any position where neither player has a winning strategy with . Are there some positions that are more interesting to know this type for?  "
 },
@@ -158,54 +158,45 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CombGames.html#CombGames-18",
   "type": "Question",
-  "number": "2.9",
+  "number": "2.10",
   "title": "",
-  "body": " Formally prove (by using induction on how many layers are in the tree) that in every Combinatorial Game exactly one of the following holds: (You may assume that has the first move)  "
+  "body": " Formally prove (by using induction on how many layers are in the tree) that in every Combinatorial Game exactly one of the following holds: (You may assume that has the first move)    Louise has a winning strategy.   Richard has a winning strategy.    Both players have drawing strategies.    "
 },
 {
-  "id": "CombGames-20",
+  "id": "CombGames-19",
   "level": "2",
-  "url": "CombGames.html#CombGames-20",
+  "url": "CombGames.html#CombGames-19",
   "type": "Question",
-  "number": "2.10",
+  "number": "2.11",
   "title": "",
   "body": " Think about the consequence of this theorem. What does it mean about combinatorial games? Can we know who will win before the first move is even taken?  "
 },
 {
-  "id": "CombGames-22",
+  "id": "CombGames-21",
   "level": "2",
-  "url": "CombGames.html#CombGames-22",
+  "url": "CombGames.html#CombGames-21",
   "type": "Question",
-  "number": "2.11",
+  "number": "2.12",
   "title": "",
   "body": " For each of the following games try to come up with an optimal strategy which can be described in words. Determine if has a winning strategy, has a winning strategy, or if the both have drawing strategies. Justify your answers.  "
 },
 {
-  "id": "CombGames-24",
+  "id": "CombGames-23",
   "level": "2",
-  "url": "CombGames.html#CombGames-24",
+  "url": "CombGames.html#CombGames-23",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "strategy stealing "
 },
 {
-  "id": "CombGames-25",
+  "id": "CombGames-24",
   "level": "2",
-  "url": "CombGames.html#CombGames-25",
+  "url": "CombGames.html#CombGames-24",
   "type": "Question",
-  "number": "2.12",
-  "title": "",
-  "body": " Prove the following by contradiction:  "
-},
-{
-  "id": "CombGames-26",
-  "level": "2",
-  "url": "CombGames.html#CombGames-26",
-  "type": "Theorem",
   "number": "2.13",
   "title": "",
-  "body": "For every rectangular position in chomp (except the by board) the first player has a winning strategy. "
+  "body": " Prove the following by contradiction:   For every rectangular position in chomp (except the by board) the first player has a winning strategy.   "
 },
 {
   "id": "NormalPlayGames",
@@ -214,7 +205,7 @@ var ptx_lunr_docs = [
   "type": "Chapter",
   "number": "3",
   "title": "Normal Play Games",
-  "body": " Normal Play Games  To understand a few questions that have previously arisen, we will make the following definition.  A combinatorial game is called a normal play game if the win rule is that the last player that can make a move wins.  Cut-Cake is a normal play game between two players Richard and Louise. Each position is a collection of uncut pieces of cake. Each piece of cake is rectangular and has dotted horizontal and vertical lines which show where the cake can be cut. On her turn, Louise can make one vertical cut. Richard can make one horizontal cut on his turns. (The last player to make a cut wins.)   Play several games of cut-cake on a by cake. Can you come up with a strategy? When can you tell that a game is over?   Normal Play games are more simple to analyze since the winning condition is the same for both players (and there are no draws). As such, we would like to build a tool to analyze them more robustly.   Try to develop notation to denote a position of cut-cake regardless of who's turn it is. What information do we need to know? What positions could we end up at? Use your representation to show a by position in cut-cake and all of the positions you can move to from this position.   The key property of a position in a normal play game is where each player can move to. For example, a board of cut cake has the following possible positions:  If Louise is set to move, she can create   one and one board  two boards   If Richard is set to move, he can create   One and one board   We develop the following Position Notation for normal play games using set notation. On the left hand side are the positions Louise could move to, and on the right hand side are the positions that Richard could move to. \\includegraphics[width = \\textwidth]{Images\/PXL_20220907_154711388.jpg} (Sorry I got lazy with the picture)  For each of the following cut-cake positions, determine the types of the game: Current, Previous, L, or R.    Two boards and one board  One board  One board and one board  One board  Pick up Stones with stones.    Try to come up with general rules rules to determine the type of a position . When do I know that is type , , Current, or Previous? (Think about how we proved Zermelo's theorem: look at the positions we can move to and decide what the best thing each player can do is.)   We will now start to think of positions of games more like numbers to analyze them algebraically. In fact, we've already started thinking about doing that when we said that Pick Up Stones 2: Electric Boogaloo was like playing two games of Pick Up Stones added together.  In situations like this, we could say that Pick Up Stones 2 with and stones is the same as Pick Up Stones with stones Pick Up Stones with stones. The two games being added together are often called components of the game. In sums of games, on a player's turn they choose one component to play in and make one move in that game, then their turn ends. (Just like with Pick Up Stones 2)   For each of the games in , play the sum of that game plus Pick Up Stones with stones. Try to determine which type the game is.    For each of the following, play the sum of that game plus Pick Up Stones with stones. Determine which type the game is.    Two boards and one board  One board  One board and one board  One board  Pick up Stones with stones.   Pick up bricks is a game that is played like pick up stones, but the last brick is not poisoned. Instead pick up bricks is a normal play game (so the last player to be able to pick up a brick wins).   Determine the type for Pick up bricks with bricks. Then, for each of through above, play the sum of that game plus Pick up bricks with bricks. Determine which type the game is.    Make conjectures about how types interact with sums. Try to justify your thoughts. For example, the top left corner of this table should be filled in with your guess for what type a game would be if was type and was type . (Question 2 might lead to an interesting extension...)  \\vspace{.5in} \\resizebox{4.5in}{!}{   +  R  L  C  P    R  \\hspace{.2in}  \\hspace{.2in}  \\hspace{.2in}  \\hspace{.2in}    L  \\hspace{.2in}  \\hspace{.2in}  \\hspace{.2in}  \\hspace{.2in}    C  \\hspace{.2in}  \\hspace{.2in}  \\hspace{.2in}  \\hspace{.2in}    P  \\hspace{.2in}  \\hspace{.2in}  \\hspace{.2in}  \\hspace{.2in}   } Domineering is a normal-play game played using some squares from a rectangular array. On Louise's turn, she may place a domino over two unoccupied squares. On Richard's turn, he may place a domino over two unoccupied squares. (The last player to make a move wins.) Below is a valid game of domineering in which Richard wins: \\includegraphics[width = 4in, angle = -2.3, origin = c]{Images\/domineeringex.pdf}  Determine the type of the following domineering positions:   One board  One board  One board  One board + One board  One board + One board     Prove the following:  If is type , then is the same type as .   It is finally time to answer a critical question. When are two games the same?  We say that two positions and in (possibly different) normal-play games are equivalent if for every position in any normal play game, the two positions and have the same type. We will write to indicate this.   Is the following domineering game above equivalent to pick-up bricks with one brick?     Is a game of domineering equivalent to a game of domineering?   We say that two positions and in (possibly different) normal-play games are equivalent if for every position in any normal play game, the two positions and have the same type. We will write to indicate this.   Use the definition of equivalent to prove the following (Hint: some of these proofs might be VERY short):   If , and are positions in normal-play games    .  If then .  If and then .      We want to explore the relationship between equivalence and type. Decide if the following are true. Justify your answers.   If and have the same type, then .  If , then and have the same type.    Theorem REFERENCE establishes that games are very special. The following explores this idea in an algebraic sense.   Prove the following:    If is type , then .  If and are type then .  Are any states different from (or not equivalent to) any other states?  Is there some number (under addition) that acts like states (under equivalence)? Write down your observations about states.   "
+  "body": " Normal Play Games  To understand a few questions that have previously arisen, we will make the following definition.   A combinatorial game is called a normal play game if the win rule is that the last player that can make a move wins.   Cut-Cake is a normal play game between two players Richard and Louise. Each position is a collection of uncut pieces of cake. Each piece of cake is rectangular and has dotted horizontal and vertical lines which show where the cake can be cut. On her turn, Louise can make one vertical cut. Richard can make one horizontal cut on his turns. (The last player to make a cut wins.)   Play several games of cut-cake on a by cake. Can you come up with a strategy? When can you tell that a game is over?   Normal Play games are more simple to analyze since the winning condition is the same for both players (and there are no draws). As such, we would like to build a tool to analyze them more robustly.   Try to develop notation to denote a position of cut-cake regardless of who's turn it is. What information do we need to know? What positions could we end up at? Use your representation to show a by position in cut-cake and all of the positions you can move to from this position.   The key property of a position in a normal play game is where each player can move to. For example, a board of cut cake has the following possible positions:  If Louise is set to move, she can create   one and one board  two boards   If Richard is set to move, he can create   One and one board   We develop the following Position Notation for normal play games using set notation. On the left hand side are the positions Louise could move to, and on the right hand side are the positions that Richard could move to.  PICTURE OF POSITION NOTATION \\includegraphics[width = \\textwidth]{Images\/PXL_20220907_154711388.jpg} (Sorry I got lazy with the picture)  For each of the following cut-cake positions, determine the types of the game: Current, Previous, L, or R.   Two boards and one board  One board  One board and one board  One board  Pick up Stones with stones.     Try to come up with general rules rules to determine the type of a position . When do I know that is type , , Current, or Previous? (Think about how we proved Zermelo's theorem: look at the positions we can move to and decide what the best thing each player can do is.)   We will now start to think of positions of games more like numbers to analyze them algebraically. In fact, we've already started thinking about doing that when we said that Pick Up Stones 2: Electric Boogaloo was like playing two games of Pick Up Stones added together.  In situations like this, we could say that Pick Up Stones 2 with and stones is the same as Pick Up Stones with stones Pick Up Stones with stones. The two games being added together are often called components of the game. In sums of games, on a player's turn they choose one component to play in and make one move in that game, then their turn ends. (Just like with Pick Up Stones 2)   For each of the games in , play the sum of that game plus Pick Up Stones with stones. Try to determine which type the game is.    For each of the following, play the sum of that game plus Pick Up Stones with stones. Determine which type the game is.   Two boards and one board  One board  One board and one board  One board  Pick up Stones with stones.    Pick up bricks is a game that is played like pick up stones, but the last brick is not poisoned. Instead pick up bricks is a normal play game (so the last player to be able to pick up a brick wins).   Determine the type for Pick up bricks with bricks. Then, for each of through above, play the sum of that game plus Pick up bricks with bricks. Determine which type the game is.    Make conjectures about how types interact with sums. Try to justify your thoughts. For example, the top left corner of this table should be filled in with your guess for what type a game would be if was type and was type . (Question 2 might lead to an interesting extension...)  \\vspace{.5in} \\resizebox{4.5in}{!}{   +  R  L  C  P    R            L            C            P           }  Domineering is a normal-play game played using some squares from a rectangular array. On Louise's turn, she may place a domino over two unoccupied squares. On Richard's turn, he may place a domino over two unoccupied squares. (The last player to make a move wins.)  Below is a valid game of domineering in which Richard wins:  PICTURE OF DOMINEERING \\includegraphics[width = 4in, angle = -2.3, origin = c]{Images\/domineeringex.pdf}  Determine the type of the following domineering positions:   One board  One board  One board  One board + One board  One board + One board     Prove the following:  If is type , then is the same type as .   It is finally time to answer a critical question. When are two games the same?   We say that two positions and in (possibly different) normal-play games are equivalent if for every position in any normal play game, the two positions and have the same type. We will write to indicate this.    Is the following domineering game above equivalent to pick-up bricks with one brick?     Is a game of domineering equivalent to a game of domineering?    We say that two positions and in (possibly different) normal-play games are equivalent if for every position in any normal play game, the two positions and have the same type. We will write to indicate this.    Use the definition of equivalent to prove the following (Hint: some of these proofs might be VERY short):   If , and are positions in normal-play games    .  If then .  If and then .      We want to explore the relationship between equivalence and type. Decide if the following are true. Justify your answers.   If and have the same type, then .  If , then and have the same type.    Theorem REFERENCE establishes that games are very special. The following explores this idea in an algebraic sense.   Prove the following:    If is type , then .  If and are type then .  Are any states different from (or not equivalent to) any other states?  Is there some number (under addition) that acts like states (under equivalence)? Write down your observations about states.   "
 },
 {
   "id": "NormalPlayGames-3",
@@ -223,7 +214,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "3.1",
   "title": "",
-  "body": "A combinatorial game is called a normal play game if the win rule is that the last player that can make a move wins. "
+  "body": " A combinatorial game is called a normal play game if the win rule is that the last player that can make a move wins.  "
 },
 {
   "id": "NormalPlayGames-5",
@@ -253,13 +244,13 @@ var ptx_lunr_docs = [
   "body": "Position Notation "
 },
 {
-  "id": "NormalPlayGames-14",
+  "id": "NormalPlayGames-15",
   "level": "2",
-  "url": "NormalPlayGames.html#NormalPlayGames-14",
+  "url": "NormalPlayGames.html#NormalPlayGames-15",
   "type": "Question",
   "number": "3.4",
   "title": "",
-  "body": " For each of the following cut-cake positions, determine the types of the game: Current, Previous, L, or R.  "
+  "body": " For each of the following cut-cake positions, determine the types of the game: Current, Previous, L, or R.   Two boards and one board  One board  One board and one board  One board  Pick up Stones with stones.   "
 },
 {
   "id": "NormalPlayGames-16",
@@ -295,102 +286,111 @@ var ptx_lunr_docs = [
   "type": "Question",
   "number": "3.7",
   "title": "",
-  "body": " For each of the following, play the sum of that game plus Pick Up Stones with stones. Determine which type the game is.  "
+  "body": " For each of the following, play the sum of that game plus Pick Up Stones with stones. Determine which type the game is.   Two boards and one board  One board  One board and one board  One board  Pick up Stones with stones.   "
 },
 {
-  "id": "NormalPlayGames-23",
+  "id": "NormalPlayGames-22",
   "level": "2",
-  "url": "NormalPlayGames.html#NormalPlayGames-23",
+  "url": "NormalPlayGames.html#NormalPlayGames-22",
   "type": "Question",
   "number": "3.8",
   "title": "",
   "body": " Determine the type for Pick up bricks with bricks. Then, for each of through above, play the sum of that game plus Pick up bricks with bricks. Determine which type the game is.  "
 },
 {
-  "id": "NormalPlayGames-24",
+  "id": "NormalPlayGames-23",
   "level": "2",
-  "url": "NormalPlayGames.html#NormalPlayGames-24",
+  "url": "NormalPlayGames.html#NormalPlayGames-23",
   "type": "Question",
   "number": "3.9",
   "title": "",
   "body": " Make conjectures about how types interact with sums. Try to justify your thoughts. For example, the top left corner of this table should be filled in with your guess for what type a game would be if was type and was type . (Question 2 might lead to an interesting extension...)  "
 },
 {
-  "id": "NormalPlayGames-30",
+  "id": "NormalPlayGames-25",
   "level": "2",
-  "url": "NormalPlayGames.html#NormalPlayGames-30",
+  "url": "NormalPlayGames.html#NormalPlayGames-25",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Domineering "
+},
+{
+  "id": "NormalPlayGames-28",
+  "level": "2",
+  "url": "NormalPlayGames.html#NormalPlayGames-28",
   "type": "Question",
   "number": "3.10",
   "title": "",
   "body": " Determine the type of the following domineering positions:   One board  One board  One board  One board + One board  One board + One board   "
 },
 {
-  "id": "NormalPlayGames-31",
+  "id": "NormalPlayGames-29",
   "level": "2",
-  "url": "NormalPlayGames.html#NormalPlayGames-31",
+  "url": "NormalPlayGames.html#NormalPlayGames-29",
   "type": "Question",
   "number": "3.11",
   "title": "",
   "body": " Prove the following:  If is type , then is the same type as .  "
 },
 {
-  "id": "NormalPlayGames-33",
+  "id": "NormalPlayGames-31",
   "level": "2",
-  "url": "NormalPlayGames.html#NormalPlayGames-33",
+  "url": "NormalPlayGames.html#NormalPlayGames-31",
   "type": "Definition",
   "number": "3.13",
   "title": "",
-  "body": "We say that two positions and in (possibly different) normal-play games are equivalent if for every position in any normal play game, the two positions and have the same type. We will write to indicate this. "
+  "body": " We say that two positions and in (possibly different) normal-play games are equivalent if for every position in any normal play game, the two positions and have the same type. We will write to indicate this.  "
 },
 {
-  "id": "NormalPlayGames-34",
+  "id": "NormalPlayGames-32",
   "level": "2",
-  "url": "NormalPlayGames.html#NormalPlayGames-34",
+  "url": "NormalPlayGames.html#NormalPlayGames-32",
   "type": "Question",
   "number": "3.14",
   "title": "",
   "body": " Is the following domineering game above equivalent to pick-up bricks with one brick?  "
 },
 {
-  "id": "NormalPlayGames-36",
+  "id": "NormalPlayGames-34",
   "level": "2",
-  "url": "NormalPlayGames.html#NormalPlayGames-36",
+  "url": "NormalPlayGames.html#NormalPlayGames-34",
   "type": "Question",
   "number": "3.15",
   "title": "",
   "body": " Is a game of domineering equivalent to a game of domineering?  "
 },
 {
-  "id": "NormalPlayGames-37",
+  "id": "NormalPlayGames-35",
   "level": "2",
-  "url": "NormalPlayGames.html#NormalPlayGames-37",
+  "url": "NormalPlayGames.html#NormalPlayGames-35",
   "type": "Definition",
   "number": "3.16",
   "title": "",
-  "body": "We say that two positions and in (possibly different) normal-play games are equivalent if for every position in any normal play game, the two positions and have the same type. We will write to indicate this. "
+  "body": " We say that two positions and in (possibly different) normal-play games are equivalent if for every position in any normal play game, the two positions and have the same type. We will write to indicate this.  "
 },
 {
-  "id": "NormalPlayGames-38",
+  "id": "NormalPlayGames-36",
   "level": "2",
-  "url": "NormalPlayGames.html#NormalPlayGames-38",
+  "url": "NormalPlayGames.html#NormalPlayGames-36",
   "type": "Question",
   "number": "3.17",
   "title": "",
   "body": " Use the definition of equivalent to prove the following (Hint: some of these proofs might be VERY short):   If , and are positions in normal-play games    .  If then .  If and then .    "
 },
 {
-  "id": "NormalPlayGames-39",
+  "id": "NormalPlayGames-37",
   "level": "2",
-  "url": "NormalPlayGames.html#NormalPlayGames-39",
+  "url": "NormalPlayGames.html#NormalPlayGames-37",
   "type": "Question",
   "number": "3.19",
   "title": "",
   "body": " We want to explore the relationship between equivalence and type. Decide if the following are true. Justify your answers.   If and have the same type, then .  If , then and have the same type.   "
 },
 {
-  "id": "NormalPlayGames-41",
+  "id": "NormalPlayGames-39",
   "level": "2",
-  "url": "NormalPlayGames.html#NormalPlayGames-41",
+  "url": "NormalPlayGames.html#NormalPlayGames-39",
   "type": "Question",
   "number": "3.20",
   "title": "",
