@@ -70,7 +70,7 @@ var ptx_lunr_docs = [
   "type": "Chapter",
   "number": "2",
   "title": "Combinatorial Games",
-  "body": " Combinatorial Games    A game is said to be a Combinatorial Game if it is a sequential two player game with   A set of possible positions (sometimes called states of the game)  A move rule indicating for each position, what positions can be moved to  A win rule indicating a set of terminal positions where the game ends in which each terminal position has an associated outcome (which player wins)  Both players have total knowledge of the position(s), move rule, and win rule during their turn      Which of the games in REFERENCE are Combinatorial Games (as we defined them) and which are not? Why?    The game of Tic is similar to tic tac toe, but is played on a 1 by 3 board. On a player's turn, they fill one empty square with their symbol, for the first player, and for the second player. A player wins if they get two consecutive squares filled with their symbols. Determine if any player has a winning strategy. Justify your answer.    Justifying that you have a winning strategy is a pain. Try to brainstorm a way to visualize the entirety of a game (that is all things that could have happened). Describe how you would create such a visualization, and then use it to visualize Tic.    Use your visualization of Tic to decide who has a winning strategy. Does your visualization give all of the information necessary to justify that a strategy is a winning strategy? What does a strategy look like in the context of your visualization?   When analyzing games, we would like to take a step back from looking at the actual game board. (Some games may look different, but play essentially the same way as we were discussing with what makes games ``the same.'')  As such, let us abstract the game tree slightly further than where we ended in class. A WLD Game Tree condenses the information of our game tree by suppressing the game board. For example, the WLD Game tree for Tic is as follows:   We can build on our tree by saying that sometimes (maybe always?) we know if a position is winning or not, and for whom! We will build on that in this assignment.   Draw onto the WLD tree optimal strategies for and .    You may be surprised to realize that you are able to identify who wins the following two games (despite not knowing the rules or what a position even looks like):    Think about the positions in the game above (one at a time). Can we determine if is winning, is winning, or if it is a draw. If so, how?    Look back at the Tic WLD Game Tree and decide the outcome of the game from EVERY position assuming optimal play! Mark any position where has a winning strategy with , any position where has a winning strategy with , and any position where neither player has a winning strategy with . Are there some positions that are more interesting to know this type for?     Formally prove (by using induction on how many layers are in the tree) that in every Combinatorial Game exactly one of the following holds: (You may assume that has the first move)    Louise has a winning strategy.   Richard has a winning strategy.    Both players have drawing strategies.      Think about the consequence of this theorem. What does it mean about combinatorial games? Can we know who will win before the first move is even taken?   There is a problem with our general solution to combinatorial games. Time and computing power are limited! Instead we might like to build strategies by taking advantage of rules or symmetries to give meaningful instructions that would tell a player what to do in any scenario rather that building a gigantic tree.   For each of the following games try to come up with an optimal strategy which can be described in words. Determine if has a winning strategy, has a winning strategy, or if the both have drawing strategies. Justify your answers.    Pick up stones with 7 stones.  Pick up stones with stones.  The game Pick Up Stones 2: Electric Boogaloo is a two player game where there are two piles of stones alternating turns. On each turn a player removes , , or stones. The player who picks up a last stone in either pile loses. Determine a strategy if the piles have and stones.  Pick Up Stones 2: Electric Boogaloo with stones in both piles.  Chomp on a by board.  Chomp on an by board.  Chomp on an by board.   We now notice a type of symmetry in chomp to develop strategy stealing . The idea is that if a second player could move to a winning position, the first player could have taken moves to get to that position.   Prove the following by contradiction:   For every rectangular position in chomp (except the by board) the first player has a winning strategy.    "
+  "body": " Combinatorial Games    A game is said to be a Combinatorial Game if it is a sequential two player game with   A set of possible positions (sometimes called states of the game)  A move rule indicating for each position, what positions can be moved to  A win rule indicating a set of terminal positions where the game ends in which each terminal position has an associated outcome (which player wins)  Both players have total knowledge of the position(s), move rule, and win rule during their turn      Which of the games in REFERENCE are Combinatorial Games (as we defined them) and which are not? Why?    The game of Tic is similar to tic tac toe, but is played on a 1 by 3 board. On a player's turn, they fill one empty square with their symbol, for the first player, and for the second player. A player wins if they get two consecutive squares filled with their symbols. Determine if any player has a winning strategy. Justify your answer.    Justifying that you have a winning strategy is a pain. Try to brainstorm a way to visualize the entirety of a game (that is all things that could have happened). Describe how you would create such a visualization, and then use it to visualize Tic.    Use your visualization of Tic to decide who has a winning strategy. Does your visualization give all of the information necessary to justify that a strategy is a winning strategy? What does a strategy look like in the context of your visualization?   When analyzing games, we would like to take a step back from looking at the actual game board. (Some games may look different, but play essentially the same way as we were discussing with what makes games ``the same.'')  As such, let us abstract the game tree slightly further than where we ended in class. A WLD Game Tree condenses the information of our game tree by suppressing the game board. For example, the WLD Game tree for Tic is as follows:   We can build on our tree by saying that sometimes (maybe always?) we know if a position is winning or not, and for whom! We will build on that in this assignment.   Draw onto the WLD tree below optimal strategies for and .    A WLD Game Tree      You may be surprised to realize that you are able to identify who wins the following two games (despite not knowing the rules or what a position even looks like):    Think about the positions in the game above (one at a time). Can we determine if is winning, is winning, or if it is a draw. If so, how?    Look back at the Tic WLD Game Tree and decide the outcome of the game from EVERY position assuming optimal play! Mark any position where has a winning strategy with , any position where has a winning strategy with , and any position where neither player has a winning strategy with . Are there some positions that are more interesting to know this type for?     Formally prove (by using induction on how many layers are in the tree) that in every Combinatorial Game exactly one of the following holds: (You may assume that has the first move)    Louise has a winning strategy.   Richard has a winning strategy.    Both players have drawing strategies.      Think about the consequence of this theorem. What does it mean about combinatorial games? Can we know who will win before the first move is even taken?   There is a problem with our general solution to combinatorial games. Time and computing power are limited! Instead we might like to build strategies by taking advantage of rules or symmetries to give meaningful instructions that would tell a player what to do in any scenario rather that building a gigantic tree.   For each of the following games try to come up with an optimal strategy which can be described in words. Determine if has a winning strategy, has a winning strategy, or if the both have drawing strategies. Justify your answers.    Pick up stones with 7 stones.  Pick up stones with stones.  The game Pick Up Stones 2: Electric Boogaloo is a two player game where there are two piles of stones alternating turns. On each turn a player removes , , or stones. The player who picks up a last stone in either pile loses. Determine a strategy if the piles have and stones.  Pick Up Stones 2: Electric Boogaloo with stones in both piles.  Chomp on a by board.  Chomp on an by board.  Chomp on an by board.   We now notice a type of symmetry in chomp to develop strategy stealing . The idea is that if a second player could move to a winning position, the first player could have taken moves to get to that position.   Prove the following by contradiction:   For every rectangular position in chomp (except the by board) the first player has a winning strategy.    "
 },
 {
   "id": "CombGames-2",
@@ -133,14 +133,23 @@ var ptx_lunr_docs = [
   "type": "Question",
   "number": "2.7",
   "title": "",
-  "body": " Draw onto the WLD tree optimal strategies for and .  "
+  "body": " Draw onto the WLD tree below optimal strategies for and .  "
+},
+{
+  "id": "WLDGameTree",
+  "level": "2",
+  "url": "CombGames.html#WLDGameTree",
+  "type": "Figure",
+  "number": "2.8",
+  "title": "",
+  "body": " A WLD Game Tree     "
 },
 {
   "id": "CombGames-15",
   "level": "2",
   "url": "CombGames.html#CombGames-15",
   "type": "Question",
-  "number": "2.8",
+  "number": "2.9",
   "title": "",
   "body": " Think about the positions in the game above (one at a time). Can we determine if is winning, is winning, or if it is a draw. If so, how?  "
 },
@@ -149,7 +158,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CombGames.html#CombGames-16",
   "type": "Question",
-  "number": "2.9",
+  "number": "2.10",
   "title": "",
   "body": " Look back at the Tic WLD Game Tree and decide the outcome of the game from EVERY position assuming optimal play! Mark any position where has a winning strategy with , any position where has a winning strategy with , and any position where neither player has a winning strategy with . Are there some positions that are more interesting to know this type for?  "
 },
@@ -158,7 +167,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CombGames.html#CombGames-18",
   "type": "Question",
-  "number": "2.10",
+  "number": "2.11",
   "title": "",
   "body": " Formally prove (by using induction on how many layers are in the tree) that in every Combinatorial Game exactly one of the following holds: (You may assume that has the first move)    Louise has a winning strategy.   Richard has a winning strategy.    Both players have drawing strategies.    "
 },
@@ -167,7 +176,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CombGames.html#CombGames-19",
   "type": "Question",
-  "number": "2.11",
+  "number": "2.12",
   "title": "",
   "body": " Think about the consequence of this theorem. What does it mean about combinatorial games? Can we know who will win before the first move is even taken?  "
 },
@@ -176,7 +185,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CombGames.html#CombGames-21",
   "type": "Question",
-  "number": "2.12",
+  "number": "2.13",
   "title": "",
   "body": " For each of the following games try to come up with an optimal strategy which can be described in words. Determine if has a winning strategy, has a winning strategy, or if the both have drawing strategies. Justify your answers.  "
 },
@@ -194,7 +203,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CombGames.html#CombGames-24",
   "type": "Question",
-  "number": "2.13",
+  "number": "2.14",
   "title": "",
   "body": " Prove the following by contradiction:   For every rectangular position in chomp (except the by board) the first player has a winning strategy.   "
 },
