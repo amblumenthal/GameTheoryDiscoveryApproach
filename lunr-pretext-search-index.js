@@ -70,7 +70,7 @@ var ptx_lunr_docs = [
   "type": "Chapter",
   "number": "2",
   "title": "Combinatorial Games",
-  "body": " Combinatorial Games    A game is said to be a Combinatorial Game if it is a sequential two player game with   A set of possible positions (sometimes called states of the game)  A move rule indicating for each position, what positions can be moved to  A win rule indicating a set of terminal positions where the game ends in which each terminal position has an associated outcome (which player wins)  Both players have total knowledge of the position(s), move rule, and win rule during their turn      Which of the games in REFERENCE are Combinatorial Games (as we defined them) and which are not? Why?    The game of Tic is similar to tic tac toe, but is played on a 1 by 3 board. On a player's turn, they fill one empty square with their symbol, for the first player, and for the second player. A player wins if they get two consecutive squares filled with their symbols. Determine if any player has a winning strategy. Justify your answer.    Justifying that you have a winning strategy is a pain. Try to brainstorm a way to visualize the entirety of a game (that is all things that could have happened). Describe how you would create such a visualization, and then use it to visualize Tic.    Use your visualization of Tic to decide who has a winning strategy. Does your visualization give all of the information necessary to justify that a strategy is a winning strategy? What does a strategy look like in the context of your visualization?   When analyzing games, we would like to take a step back from looking at the actual game board. (Some games may look different, but play essentially the same way as we were discussing with what makes games ``the same.'')  As such, let us abstract the game tree slightly further than where we ended in class. A WLD Game Tree condenses the information of our game tree by suppressing the game board. For example, the WLD Game tree for Tic is as follows:   We can build on our tree by saying that sometimes (maybe always?) we know if a position is winning or not, and for whom! We will build on that in this assignment.   Draw onto the WLD tree below optimal strategies for and .    A WLD Game Tree      You may be surprised to realize that you are able to identify who wins the following two games (despite not knowing the rules or what a position even looks like):    Think about the positions in the game above (one at a time). Can we determine if is winning, is winning, or if it is a draw. If so, how?    Look back at the Tic WLD Game Tree and decide the outcome of the game from EVERY position assuming optimal play! Mark any position where has a winning strategy with , any position where has a winning strategy with , and any position where neither player has a winning strategy with . Are there some positions that are more interesting to know this type for?     Formally prove (by using induction on how many layers are in the tree) that in every Combinatorial Game exactly one of the following holds: (You may assume that has the first move)    Louise has a winning strategy.   Richard has a winning strategy.    Both players have drawing strategies.      Think about the consequence of this theorem. What does it mean about combinatorial games? Can we know who will win before the first move is even taken?   There is a problem with our general solution to combinatorial games. Time and computing power are limited! Instead we might like to build strategies by taking advantage of rules or symmetries to give meaningful instructions that would tell a player what to do in any scenario rather that building a gigantic tree.   For each of the following games try to come up with an optimal strategy which can be described in words. Determine if has a winning strategy, has a winning strategy, or if the both have drawing strategies. Justify your answers.    Pick up stones with 7 stones.  Pick up stones with stones.  The game Pick Up Stones 2: Electric Boogaloo is a two player game where there are two piles of stones alternating turns. On each turn a player removes , , or stones. The player who picks up a last stone in either pile loses. Determine a strategy if the piles have and stones.  Pick Up Stones 2: Electric Boogaloo with stones in both piles.  Chomp on a by board.  Chomp on an by board.  Chomp on an by board.   We now notice a type of symmetry in chomp to develop strategy stealing . The idea is that if a second player could move to a winning position, the first player could have taken moves to get to that position.   Prove the following by contradiction:   For every rectangular position in chomp (except the by board) the first player has a winning strategy.    "
+  "body": " Combinatorial Games    A game is said to be a Combinatorial Game if it is a sequential two player game with   A set of possible positions (sometimes called states of the game)  A move rule indicating for each position, what positions can be moved to  A win rule indicating a set of terminal positions where the game ends in which each terminal position has an associated outcome (which player wins)  Both players have total knowledge of the position(s), move rule, and win rule during their turn      Which of the games in REFERENCE are Combinatorial Games (as we defined them) and which are not? Why?    The game of Tic is similar to tic tac toe, but is played on a 1 by 3 board. On a player's turn, they fill one empty square with their symbol, for the first player, and for the second player. A player wins if they get two consecutive squares filled with their symbols. Determine if any player has a winning strategy. Justify your answer.    Justifying that you have a winning strategy is a pain. Try to brainstorm a way to visualize the entirety of a game (that is all things that could have happened). Describe how you would create such a visualization, and then use it to visualize Tic.    Use your visualization of Tic to decide who has a winning strategy. Does your visualization give all of the information necessary to justify that a strategy is a winning strategy? What does a strategy look like in the context of your visualization?   When analyzing games, we would like to take a step back from looking at the actual game board. (Some games may look different, but play essentially the same way as we were discussing with what makes games ``the same.'')  As such, let us abstract the game tree slightly further than where we ended in class. A WLD Game Tree condenses the information of our game tree by suppressing the game board. For example, the WLD Game tree for Tic is as follows:   The WLD Game Tree for Tic      We can build on our tree by saying that sometimes (maybe always?) we know if a position is winning or not, and for whom! We will build on that in this assignment.   Draw onto the WLD tree below optimal strategies for and .    A WLD Game Tree      You may be surprised to realize that you are able to identify who wins the following two games (despite not knowing the rules or what a position even looks like):   Game Tree for an unknown game       Think about the positions in the game above (one at a time). Can we determine if is winning, is winning, or if it is a draw. If so, how?    Look back at the Tic WLD Game Tree and decide the outcome of the game from EVERY position assuming optimal play! Mark any position where has a winning strategy with , any position where has a winning strategy with , and any position where neither player has a winning strategy with . Are there some positions that are more interesting to know this type for?    Tic Game Tree       Formally prove (by using induction on how many layers are in the tree) that in every Combinatorial Game exactly one of the following holds: (You may assume that has the first move)    Louise has a winning strategy.   Richard has a winning strategy.    Both players have drawing strategies.      Think about the consequence of this theorem. What does it mean about combinatorial games? Can we know who will win before the first move is even taken?   There is a problem with our general solution to combinatorial games. Time and computing power are limited! Instead we might like to build strategies by taking advantage of rules or symmetries to give meaningful instructions that would tell a player what to do in any scenario rather that building a gigantic tree.   For each of the following games try to come up with an optimal strategy which can be described in words. Determine if has a winning strategy, has a winning strategy, or if the both have drawing strategies. Justify your answers.    Pick up stones with 7 stones.  Pick up stones with stones.  The game Pick Up Stones 2: Electric Boogaloo is a two player game where there are two piles of stones alternating turns. On each turn a player removes , , or stones. The player who picks up a last stone in either pile loses. Determine a strategy if the piles have and stones.  Pick Up Stones 2: Electric Boogaloo with stones in both piles.  Chomp on a by board.  Chomp on an by board.  Chomp on an by board.   We now notice a type of symmetry in chomp to develop strategy stealing . The idea is that if a second player could move to a winning position, the first player could have taken moves to get to that position.   Prove the following by contradiction:   For every rectangular position in chomp (except the by board) the first player has a winning strategy.    "
 },
 {
   "id": "CombGames-2",
@@ -127,11 +127,20 @@ var ptx_lunr_docs = [
   "body": "WLD Game Tree "
 },
 {
+  "id": "TicWLDGameTree",
+  "level": "2",
+  "url": "CombGames.html#TicWLDGameTree",
+  "type": "Figure",
+  "number": "2.7",
+  "title": "",
+  "body": " The WLD Game Tree for Tic     "
+},
+{
   "id": "CombGames-11",
   "level": "2",
   "url": "CombGames.html#CombGames-11",
   "type": "Question",
-  "number": "2.7",
+  "number": "2.8",
   "title": "",
   "body": " Draw onto the WLD tree below optimal strategies for and .  "
 },
@@ -140,16 +149,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CombGames.html#WLDGameTree",
   "type": "Figure",
-  "number": "2.8",
+  "number": "2.9",
   "title": "",
   "body": " A WLD Game Tree     "
+},
+{
+  "id": "WLDGameTree2",
+  "level": "2",
+  "url": "CombGames.html#WLDGameTree2",
+  "type": "Figure",
+  "number": "2.10",
+  "title": "",
+  "body": " Game Tree for an unknown game     "
 },
 {
   "id": "CombGames-15",
   "level": "2",
   "url": "CombGames.html#CombGames-15",
   "type": "Question",
-  "number": "2.9",
+  "number": "2.11",
   "title": "",
   "body": " Think about the positions in the game above (one at a time). Can we determine if is winning, is winning, or if it is a draw. If so, how?  "
 },
@@ -158,16 +176,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CombGames.html#CombGames-16",
   "type": "Question",
-  "number": "2.10",
+  "number": "2.12",
   "title": "",
   "body": " Look back at the Tic WLD Game Tree and decide the outcome of the game from EVERY position assuming optimal play! Mark any position where has a winning strategy with , any position where has a winning strategy with , and any position where neither player has a winning strategy with . Are there some positions that are more interesting to know this type for?  "
+},
+{
+  "id": "figTicGameTreeAgain",
+  "level": "2",
+  "url": "CombGames.html#figTicGameTreeAgain",
+  "type": "Figure",
+  "number": "2.13",
+  "title": "",
+  "body": " Tic Game Tree     "
 },
 {
   "id": "CombGames-18",
   "level": "2",
   "url": "CombGames.html#CombGames-18",
   "type": "Question",
-  "number": "2.11",
+  "number": "2.14",
   "title": "",
   "body": " Formally prove (by using induction on how many layers are in the tree) that in every Combinatorial Game exactly one of the following holds: (You may assume that has the first move)    Louise has a winning strategy.   Richard has a winning strategy.    Both players have drawing strategies.    "
 },
@@ -176,7 +203,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CombGames.html#CombGames-19",
   "type": "Question",
-  "number": "2.12",
+  "number": "2.15",
   "title": "",
   "body": " Think about the consequence of this theorem. What does it mean about combinatorial games? Can we know who will win before the first move is even taken?  "
 },
@@ -185,7 +212,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CombGames.html#CombGames-21",
   "type": "Question",
-  "number": "2.13",
+  "number": "2.16",
   "title": "",
   "body": " For each of the following games try to come up with an optimal strategy which can be described in words. Determine if has a winning strategy, has a winning strategy, or if the both have drawing strategies. Justify your answers.  "
 },
@@ -203,7 +230,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "CombGames.html#CombGames-24",
   "type": "Question",
-  "number": "2.14",
+  "number": "2.17",
   "title": "",
   "body": " Prove the following by contradiction:   For every rectangular position in chomp (except the by board) the first player has a winning strategy.   "
 },
@@ -214,7 +241,7 @@ var ptx_lunr_docs = [
   "type": "Chapter",
   "number": "3",
   "title": "Normal Play Games",
-  "body": " Normal Play Games  To understand a few questions that have previously arisen, we will make the following definition.   A combinatorial game is called a normal play game if the win rule is that the last player that can make a move wins.   Cut-Cake is a normal play game between two players Richard and Louise. Each position is a collection of uncut pieces of cake. Each piece of cake is rectangular and has dotted horizontal and vertical lines which show where the cake can be cut. On her turn, Louise can make one vertical cut. Richard can make one horizontal cut on his turns. (The last player to make a cut wins.)   Play several games of cut-cake on a by cake. Can you come up with a strategy? When can you tell that a game is over?   Normal Play games are more simple to analyze since the winning condition is the same for both players (and there are no draws). As such, we would like to build a tool to analyze them more robustly.   Try to develop notation to denote a position of cut-cake regardless of who's turn it is. What information do we need to know? What positions could we end up at? Use your representation to show a by position in cut-cake and all of the positions you can move to from this position.   The key property of a position in a normal play game is where each player can move to. For example, a board of cut cake has the following possible positions:  If Louise is set to move, she can create   one and one board  two boards   If Richard is set to move, he can create   One and one board   We develop the following Position Notation for normal play games using set notation. On the left hand side are the positions Louise could move to, and on the right hand side are the positions that Richard could move to.  PICTURE OF POSITION NOTATION \\includegraphics[width = \\textwidth]{Images\/PXL_20220907_154711388.jpg} (Sorry I got lazy with the picture)  For each of the following cut-cake positions, determine the types of the game: Current, Previous, L, or R.   Two boards and one board  One board  One board and one board  One board  Pick up Stones with stones.     Try to come up with general rules rules to determine the type of a position . When do I know that is type , , Current, or Previous? (Think about how we proved Zermelo's theorem: look at the positions we can move to and decide what the best thing each player can do is.)   We will now start to think of positions of games more like numbers to analyze them algebraically. In fact, we've already started thinking about doing that when we said that Pick Up Stones 2: Electric Boogaloo was like playing two games of Pick Up Stones added together.  In situations like this, we could say that Pick Up Stones 2 with and stones is the same as Pick Up Stones with stones Pick Up Stones with stones. The two games being added together are often called components of the game. In sums of games, on a player's turn they choose one component to play in and make one move in that game, then their turn ends. (Just like with Pick Up Stones 2)   For each of the games in , play the sum of that game plus Pick Up Stones with stones. Try to determine which type the game is.    For each of the following, play the sum of that game plus Pick Up Stones with stones. Determine which type the game is.   Two boards and one board  One board  One board and one board  One board  Pick up Stones with stones.    Pick up bricks is a game that is played like pick up stones, but the last brick is not poisoned. Instead pick up bricks is a normal play game (so the last player to be able to pick up a brick wins).   Determine the type for Pick up bricks with bricks. Then, for each of through above, play the sum of that game plus Pick up bricks with bricks. Determine which type the game is.    Make conjectures about how types interact with sums. Try to justify your thoughts. For example, the top left corner of this table should be filled in with your guess for what type a game would be if was type and was type . (Question 2 might lead to an interesting extension...)  \\vspace{.5in} \\resizebox{4.5in}{!}{   +  R  L  C  P    R            L            C            P           }  Domineering is a normal-play game played using some squares from a rectangular array. On Louise's turn, she may place a domino over two unoccupied squares. On Richard's turn, he may place a domino over two unoccupied squares. (The last player to make a move wins.)  Below is a valid game of domineering in which Richard wins:  PICTURE OF DOMINEERING \\includegraphics[width = 4in, angle = -2.3, origin = c]{Images\/domineeringex.pdf}  Determine the type of the following domineering positions:   One board  One board  One board  One board + One board  One board + One board     Prove the following:  If is type , then is the same type as .   It is finally time to answer a critical question. When are two games the same?   We say that two positions and in (possibly different) normal-play games are equivalent if for every position in any normal play game, the two positions and have the same type. We will write to indicate this.    Is the following domineering game above equivalent to pick-up bricks with one brick?     Is a game of domineering equivalent to a game of domineering?    We say that two positions and in (possibly different) normal-play games are equivalent if for every position in any normal play game, the two positions and have the same type. We will write to indicate this.    Use the definition of equivalent to prove the following (Hint: some of these proofs might be VERY short):   If , and are positions in normal-play games    .  If then .  If and then .      We want to explore the relationship between equivalence and type. Decide if the following are true. Justify your answers.   If and have the same type, then .  If , then and have the same type.    Theorem REFERENCE establishes that games are very special. The following explores this idea in an algebraic sense.   Prove the following:    If is type , then .  If and are type then .  Are any states different from (or not equivalent to) any other states?  Is there some number (under addition) that acts like states (under equivalence)? Write down your observations about states.   "
+  "body": " Normal Play Games  To understand a few questions that have previously arisen, we will make the following definition.   A combinatorial game is called a normal play game if the win rule is that the last player that can make a move wins.   Cut-Cake is a normal play game between two players Richard and Louise. Each position is a collection of uncut pieces of cake. Each piece of cake is rectangular and has dotted horizontal and vertical lines which show where the cake can be cut. On her turn, Louise can make one vertical cut. Richard can make one horizontal cut on his turns. (The last player to make a cut wins.)   Play several games of cut-cake on a by cake. Can you come up with a strategy? When can you tell that a game is over?   Normal Play games are more simple to analyze since the winning condition is the same for both players (and there are no draws). As such, we would like to build a tool to analyze them more robustly.   Try to develop notation to denote a position of cut-cake regardless of who's turn it is. What information do we need to know? What positions could we end up at? Use your representation to show a by position in cut-cake and all of the positions you can move to from this position.   The key property of a position in a normal play game is where each player can move to. For example, a board of cut cake has the following possible positions:  If Louise is set to move, she can create   one and one board  two boards   If Richard is set to move, he can create   One and one board   We develop the following Position Notation for normal play games using set notation. On the left hand side are the positions Louise could move to, and on the right hand side are the positions that Richard could move to.  PICTURE OF POSITION NOTATION \\includegraphics[width = \\textwidth]{Images\/PXL_20220907_154711388.jpg} (Sorry I got lazy with the picture)  For each of the following cut-cake positions, determine the types of the game: Current, Previous, L, or R.   Two boards and one board  One board  One board and one board  One board  Pick up Stones with stones.     Try to come up with general rules rules to determine the type of a position . When do I know that is type , , Current, or Previous? (Think about how we proved Zermelo's theorem: look at the positions we can move to and decide what the best thing each player can do is.)   We will now start to think of positions of games more like numbers to analyze them algebraically. In fact, we've already started thinking about doing that when we said that Pick Up Stones 2: Electric Boogaloo was like playing two games of Pick Up Stones added together.  In situations like this, we could say that Pick Up Stones 2 with and stones is the same as Pick Up Stones with stones Pick Up Stones with stones. The two games being added together are often called components of the game. In sums of games, on a player's turn they choose one component to play in and make one move in that game, then their turn ends. (Just like with Pick Up Stones 2)   For each of the games in , play the sum of that game plus Pick Up Stones with stones. Try to determine which type the game is.    For each of the following, play the sum of that game plus Pick Up Stones with stones. Determine which type the game is.   Two boards and one board  One board  One board and one board  One board  Pick up Stones with stones.    Pick up bricks is a game that is played like pick up stones, but the last brick is not poisoned. Instead pick up bricks is a normal play game (so the last player to be able to pick up a brick wins).   Determine the type for Pick up bricks with bricks. Then, for each of through above, play the sum of that game plus Pick up bricks with bricks. Determine which type the game is.    Make conjectures about how types interact with sums. Try to justify your thoughts. For example, the top left corner of this table should be filled in with your guess for what type a game would be if was type and was type . (Question 2 might lead to an interesting extension...)  \\vspace{.5in} \\resizebox{4.5in}{!}{   +  R  L  C  P    R            L            C            P           }  Domineering is a normal-play game played using some squares from a rectangular array. On Louise's turn, she may place a domino over two unoccupied squares. On Richard's turn, he may place a domino over two unoccupied squares. (The last player to make a move wins.)  Below is a valid game of domineering in which Richard wins:  PICTURE OF DOMINEERING \\includegraphics[width = 4in, angle = -2.3, origin = c]{Images\/domineeringex.pdf}  Determine the type of the following domineering positions:   One board  One board  One board  One board + One board  One board + One board     Prove the following:   If is type , then is the same type as .    It is finally time to answer a critical question. When are two games the same?   We say that two positions and in (possibly different) normal-play games are equivalent if for every position in any normal play game, the two positions and have the same type. We will write to indicate this.    Is the following domineering game above equivalent to pick-up bricks with one brick?     Is a game of domineering equivalent to a game of domineering?    We say that two positions and in (possibly different) normal-play games are equivalent if for every position in any normal play game, the two positions and have the same type. We will write to indicate this.    Use the definition of equivalent to prove the following (Hint: some of these proofs might be VERY short):   If , and are positions in normal-play games    .  If then .  If and then .      We want to explore the relationship between equivalence and type. Decide if the following are true. Justify your answers.   If and have the same type, then .  If , then and have the same type.    Theorem REFERENCE establishes that games are very special. The following explores this idea in an algebraic sense.   Prove the following:    If is type , then .  If and are type then .  Are any states different from (or not equivalent to) any other states?  Is there some number (under addition) that acts like states (under equivalence)? Write down your observations about states.   "
 },
 {
   "id": "NormalPlayGames-3",
@@ -340,7 +367,7 @@ var ptx_lunr_docs = [
   "type": "Question",
   "number": "3.11",
   "title": "",
-  "body": " Prove the following:  If is type , then is the same type as .  "
+  "body": " Prove the following:   If is type , then is the same type as .   "
 },
 {
   "id": "NormalPlayGames-31",
@@ -412,7 +439,7 @@ var ptx_lunr_docs = [
   "type": "Chapter",
   "number": "4",
   "title": "Impartial Combinatorial Games",
-  "body": " Impartial Combinatorial Games   A combinatorial game is said to be impartial if the move rule is the same for each player in every position.    Prove or disprove the following Claim:    Every position in an impartial game is one of the following:   Type C.  Type P.     Using the previous claim, describe how to determine the type of a position of an impartial game using position notation.   To better understand impartial games, we introduce the following game (as a reminder, you are NOT to look up this game online or use any resources other than our brains, the notes, or each other's brains to explore this game):  Nim is an impartial game in which a position consists of piles of stones of sizes . To make a move, a player removes one or more (up to all) stones from a chosen pile. The last player to take a stone wins.   Let's build an intuition on Nim. Determine the type of the following Nim positions. Justify your answers.    One pile of stones.  Two piles of stones.  A pile of stones and a pile of stones.  One pile with stones and one pile with stones with .  One pile with stone, one pile with stones, and one pile with stones.  One pile with stones, one pile with stones, and one pile with stones.  %THIS QUESTION WAS QUITE DIFFICULT: GIVE MORE GUIDANCE\/SCAFFOLDING  Nim is a relatively general game. Can it be used to describe games that we have played before?    Convert a game of Pick Up Stones with stones into a game of Nim.  Convert a game of Pick Up Stones with stones into a game of Nim.  Convert a game of Chomp into a game of Nim.   We established that positions act like in some way. We want to establish, what do positions look like in Nim. We will now define a new type of ``number'' to help us assess this.  A Nim pile with stones is said to have nimber  (read ``star n'').   Classify all nimbers that correspond to positions. Classify all nimbers that correspond to positions. Then try to assign a nimber to each of the games in Problem .    A Nim pile with stones is said to have nimber  (read ``star n'').   We would like to use nimbers to understand what a \"balanced\" game is. Let's take advantage of our idea of mirroring and split large groups into smaller groups that we can work with for balancing purposes. We introduce the following definition to decide how to break a game down into smaller pieces in a unique way.  [Binary Expansion] Let be a nonnegative integer. The binary expansion of is a representation of as a sum of distinct powers of two.  For example, the binary expansion of is as follows:    Find the binary expansions of the following numbers:                 Prove (by induction) that every nonnegative integer has a unique binary expansion. (Hint: Pull out the largest power of repeatedly.)   [Balanced] A position in Nim is said to be balanced if for every power of , the total number of subpiles of that size is even.   Determine the type of a balanced position in Nim. Justify your answer.    Consider the nim game which has one pile of size , one pile of size , one pile of size , and one pile of size .   Split each of these components into smaller groups based on their binary expansions. Is this position balanced?  Try to determine the winner of this game. Can you build a procedure that ensures that ``unbalanced'' games get ``balanced?''    We want to continue to explore our nim sum, and its relation to what type of game we are playing. To do this, we need to determine if\/when we have good moves. First we will prove a useful fact for finding a move.   Prove that for all non-negative integers , . (In particular, this means that a subgame of size is big enough to split into subgames of every power of two smaller than it.)    Determine if each position below is balanced, then if it is unbalanced find a move that balances the position. (Hint: It may be easier to see with binary representations\/nim sums... and we did the previous problem for a reason.)                    We now address a conjecture from before:  A position in nim is type P is and only if it is balanced.  We also introduce a new claim which is related (perhaps unintuitively) to our conjecture.  If are nonnegative integers and , then     Prove the Claim REFERENCE.  How is the claim related to our conjecture? Why is this claim so exciting to game theorists? What does it allow us to do?    We have:  If are nonnegative integers and , then   With this theorem, we have now proven that every nim game is equivalent to some nimber! We will now go beyond to show that every impartial game is equivalent to some nimber.  First, let us note that in impartial games, the position notation ( ) is much simpler since each player can make exactly the same moves. Namely the position notation of an impartial game can be simplified to since and have the same potential moves.  We need just one more tool before we are ready to prove ``the big one.''  For a set of nonnegative integers, we define the Minimal EXcluded value (abbreviated as MEX ) of to be the smallest nonnegative integer which is not in .  For example, the MEX of is , sometimes written . %Spend more time with MEX examples, if possible  We will translate the idea of MEX into nim by using nimbers. For each of the following, determine the impartial position notation for the following games of nim, then determine the (nim) MEX of the position notation.                     Finally, in the context of the theorem we just proved, how is MEX related to the equivalence?  %REFERENCED HOMEWORK PROBLEM: SCAFFOLD BETTER IN TEXTBOOK ALONE  Discuss the downsides and accomplishments of following theorem for us. Prove it (remember problem 4b on the homework, then tell a player how to make a move).   Let be a position in an impartial game. Suppose that for every . Then where is the MEX of the set .  We've made it to the grand-daddy of all Combinatorial Game Theory.  Use the above theorem and the fact that all type games are equivalent (hence equivalent to ) to prove the grand-daddy of all Combinatorial Game Theory theorems.   Prove the following (by induction on the number of layers in the game tree): [Note - You may assume the game is normal play if that makes analysis easier.]   [Sprague-Grundy] Every position in an impartial game is equivalent to a nimber.  Use the MEX theorem for the following question.   Find the nimber equivalent to each game of Pick Up Bricks on less than or equal to bricks. Then conjecture a way to determine the nimber of a Pick Up Bricks game on bricks.  %THIS IS TOO BIG, REDUCE TO SAY FIND NIMBERS FOR EACH CHOMP GAME UP TO 2 by 4 %SPEND TIME THINKING ABOUT HOW TO GET NON-NORMAL PLAY GAMES TO LOOK LIKE NORMAL PLAY (would anyone choose a losing move?)  Find the nimber equivalent to each game of chomp on to total bricks (such that the width is at least as big as the height).    Find a winning move in the following game if it exists, otherwise justify that there is no winning move:  ( game of chomp) (Pick up bricks on bricks)    Find the nimber equivalent to the game of chomp.    Find a winning move in the following game if it exists, otherwise justify that there is no winning move:  ( game of chomp) (Pick up bricks on bricks)       Chop is a normal play impartial game played on an array viewed as a plank that is secured only at the lower left corner. On each turn, a player must either make a horizontal or vertical cut (all the way across the plank), and then any piece no longer connected to the lower left corner falls off into the water. (The lower left square is connected to the ground and cannot fall into the water, so the terminal position for Chop is just a array that is the bottom left square.)  %SCAFFOLD BETTER BUILD UP TO THIS! For every prove that the game of chop is equivalent to .   Prove this by induction on with base case (so and )   "
+  "body": " Impartial Combinatorial Games   A combinatorial game is said to be impartial if the move rule is the same for each player in every position.    Prove or disprove the following Claim:    Every position in an impartial game is one of the following:   Type C.  Type P.     Using the previous claim, describe how to determine the type of a position of an impartial game using position notation.   To better understand impartial games, we introduce the following game (as a reminder, you are NOT to look up this game online or use any resources other than our brains, the notes, or each other's brains to explore this game):  Nim is an impartial game in which a position consists of piles of stones of sizes . To make a move, a player removes one or more (up to all) stones from a chosen pile. The last player to take a stone wins.   Let's build an intuition on Nim. Determine the type of the following Nim positions. Justify your answers.    One pile of stones.  Two piles of stones.  A pile of stones and a pile of stones.  One pile with stones and one pile with stones with .  One pile with stone, one pile with stones, and one pile with stones.  One pile with stones, one pile with stones, and one pile with stones.  %THIS QUESTION WAS QUITE DIFFICULT: GIVE MORE GUIDANCE\/SCAFFOLDING  Nim is a relatively general game. Can it be used to describe games that we have played before?    Convert a game of Pick Up Stones with stones into a game of Nim.  Convert a game of Pick Up Stones with stones into a game of Nim.  Convert a game of Chomp into a game of Nim.   We established that positions act like in some way. We want to establish, what do positions look like in Nim. We will now define a new type of ``number'' to help us assess this.  A Nim pile with stones is said to have nimber  (read ``star n'').   Classify all nimbers that correspond to positions. Classify all nimbers that correspond to positions. Then try to assign a nimber to each of the games in Problem .    A Nim pile with stones is said to have nimber  (read ``star n'').   We would like to use nimbers to understand what a \"balanced\" game is. Let's take advantage of our idea of mirroring and split large groups into smaller groups that we can work with for balancing purposes. We introduce the following definition to decide how to break a game down into smaller pieces in a unique way.  [Binary Expansion] Let be a nonnegative integer. The binary expansion of is a representation of as a sum of distinct powers of two.  For example, the binary expansion of is as follows:    Find the binary expansions of the following numbers:                 Prove (by induction) that every nonnegative integer has a unique binary expansion. (Hint: Pull out the largest power of repeatedly.)   [Balanced] A position in Nim is said to be balanced if for every power of , the total number of subpiles of that size is even.    Determine the type of a balanced position in Nim. Justify your answer.    Consider the nim game which has one pile of size , one pile of size , one pile of size , and one pile of size .   Split each of these components into smaller groups based on their binary expansions. Is this position balanced?  Try to determine the winner of this game. Can you build a procedure that ensures that ``unbalanced'' games get ``balanced?''    We want to continue to explore our nim sum, and its relation to what type of game we are playing. To do this, we need to determine if\/when we have good moves. First we will prove a useful fact for finding a move.   Prove that for all non-negative integers , . (In particular, this means that a subgame of size is big enough to split into subgames of every power of two smaller than it.)    Determine if each position below is balanced, then if it is unbalanced find a move that balances the position. (Hint: It may be easier to see with binary representations\/nim sums... and we did the previous problem for a reason.)                    We now address a conjecture from before:   A position in nim is type P is and only if it is balanced.   We also introduce a new claim which is related (perhaps unintuitively) to our conjecture.   If are nonnegative integers and , then      Prove Claim .  How is the claim related to our conjecture? Why is this claim so exciting to game theorists? What does it allow us to do?    We have:  If are nonnegative integers and , then   With this theorem, we have now proven that every nim game is equivalent to some nimber! We will now go beyond to show that every impartial game is equivalent to some nimber.  First, let us note that in impartial games, the position notation ( ) is much simpler since each player can make exactly the same moves. Namely the position notation of an impartial game can be simplified to since and have the same potential moves.  We need just one more tool before we are ready to prove ``the big one.''   For a set of nonnegative integers, we define the Minimal EXcluded value (abbreviated as MEX ) of to be the smallest nonnegative integer which is not in .   For example, the MEX of is , sometimes written . %Spend more time with MEX examples, if possible  We will translate the idea of MEX into nim by using nimbers. For each of the following, determine the impartial position notation for the following games of nim, then determine the (nim) MEX of the position notation.                     Finally, in the context of the theorem we just proved, how is MEX related to the equivalence?  %REFERENCED HOMEWORK PROBLEM: SCAFFOLD BETTER IN TEXTBOOK ALONE  Discuss the downsides and accomplishments of following theorem for us. Prove it (remember problem 4b on the homework, then tell a player how to make a move).   Let be a position in an impartial game. Suppose that for every . Then where is the MEX of the set .  We've made it to the grand-daddy of all Combinatorial Game Theory.  Use the above theorem and the fact that all type games are equivalent (hence equivalent to ) to prove the grand-daddy of all Combinatorial Game Theory theorems.   Prove the Sprague-Grundy Theorem (by induction on the number of layers in the game tree): [Note - You may assume the game is normal play if that makes analysis easier.]   [Sprague-Grundy] Every position in an impartial game is equivalent to a nimber.   Use the MEX Theorem to find the nimber equivalent to each game of Pick Up Bricks on less than or equal to bricks. Then conjecture a way to determine the nimber of a Pick Up Bricks game on bricks.  %THIS IS TOO BIG, REDUCE TO SAY FIND NIMBERS FOR EACH CHOMP GAME UP TO 2 by 4 %SPEND TIME THINKING ABOUT HOW TO GET NON-NORMAL PLAY GAMES TO LOOK LIKE NORMAL PLAY (would anyone choose a losing move?)  Find the nimber equivalent to each game of chomp on to total bricks (such that the width is at least as big as the height).    Find a winning move in the following game if it exists, otherwise justify that there is no winning move:  ( game of chomp) (Pick up bricks on bricks)      Find the nimber equivalent to the game of chomp.    Find a winning move in the following game if it exists, otherwise justify that there is no winning move:  ( game of chomp) (Pick up bricks on bricks)       Chop is a normal play impartial game played on an array viewed as a plank that is secured only at the lower left corner. On each turn, a player must either make a horizontal or vertical cut (all the way across the plank), and then any piece no longer connected to the lower left corner falls off into the water. (The lower left square is connected to the ground and cannot fall into the water, so the terminal position for Chop is just a array that is the bottom left square.)  %SCAFFOLD BETTER BUILD UP TO THIS! For every prove that the game of chop is equivalent to .   Prove this by induction on with base case (so and )   "
 },
 {
   "id": "ImpartialGames-2",
@@ -529,7 +556,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "4.13",
   "title": "",
-  "body": "[Balanced] A position in Nim is said to be balanced if for every power of , the total number of subpiles of that size is even. "
+  "body": "[Balanced] A position in Nim is said to be balanced if for every power of , the total number of subpiles of that size is even.  "
 },
 {
   "id": "ImpartialGames-24",
@@ -565,7 +592,7 @@ var ptx_lunr_docs = [
   "type": "Question",
   "number": "4.17",
   "title": "",
-  "body": " Determine if each position below is balanced, then if it is unbalanced find a move that balances the position. (Hint: It may be easier to see with binary representations\/nim sums... and we did the previous problem for a reason.)  "
+  "body": " Determine if each position below is balanced, then if it is unbalanced find a move that balances the position. (Hint: It may be easier to see with binary representations\/nim sums... and we did the previous problem for a reason.)                   "
 },
 {
   "id": "Conj-BalancedTypeP",
@@ -574,174 +601,174 @@ var ptx_lunr_docs = [
   "type": "Claim",
   "number": "4.18",
   "title": "",
-  "body": "A position in nim is type P is and only if it is balanced. "
+  "body": " A position in nim is type P is and only if it is balanced.  "
+},
+{
+  "id": "Claim-NimSumNimber",
+  "level": "2",
+  "url": "ImpartialGames.html#Claim-NimSumNimber",
+  "type": "Claim",
+  "number": "4.19",
+  "title": "",
+  "body": " If are nonnegative integers and , then   "
 },
 {
   "id": "ImpartialGames-33",
   "level": "2",
   "url": "ImpartialGames.html#ImpartialGames-33",
-  "type": "Claim",
-  "number": "4.19",
-  "title": "",
-  "body": "If are nonnegative integers and , then  "
-},
-{
-  "id": "ImpartialGames-34",
-  "level": "2",
-  "url": "ImpartialGames.html#ImpartialGames-34",
   "type": "Question",
   "number": "4.20",
   "title": "",
-  "body": "  Prove the Claim REFERENCE.  How is the claim related to our conjecture? Why is this claim so exciting to game theorists? What does it allow us to do?   "
+  "body": "  Prove Claim .  How is the claim related to our conjecture? Why is this claim so exciting to game theorists? What does it allow us to do?   "
 },
 {
-  "id": "ImpartialGames-36",
+  "id": "ImpartialGames-35",
   "level": "2",
-  "url": "ImpartialGames.html#ImpartialGames-36",
+  "url": "ImpartialGames.html#ImpartialGames-35",
   "type": "Theorem",
   "number": "4.21",
   "title": "",
   "body": "If are nonnegative integers and , then  "
 },
 {
-  "id": "ImpartialGames-38",
+  "id": "ImpartialGames-37",
   "level": "2",
-  "url": "ImpartialGames.html#ImpartialGames-38",
+  "url": "ImpartialGames.html#ImpartialGames-37",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "position notation of an impartial game "
 },
 {
-  "id": "ImpartialGames-40",
+  "id": "ImpartialGames-39",
   "level": "2",
-  "url": "ImpartialGames.html#ImpartialGames-40",
+  "url": "ImpartialGames.html#ImpartialGames-39",
   "type": "Definition",
   "number": "4.22",
   "title": "",
-  "body": "For a set of nonnegative integers, we define the Minimal EXcluded value (abbreviated as MEX ) of to be the smallest nonnegative integer which is not in . "
+  "body": " For a set of nonnegative integers, we define the Minimal EXcluded value (abbreviated as MEX ) of to be the smallest nonnegative integer which is not in .  "
 },
 {
-  "id": "ImpartialGames-42",
+  "id": "ImpartialGames-41",
   "level": "2",
-  "url": "ImpartialGames.html#ImpartialGames-42",
+  "url": "ImpartialGames.html#ImpartialGames-41",
   "type": "Question",
   "number": "4.23",
   "title": "",
   "body": " We will translate the idea of MEX into nim by using nimbers. For each of the following, determine the impartial position notation for the following games of nim, then determine the (nim) MEX of the position notation.                   "
 },
 {
-  "id": "ImpartialGames-43",
+  "id": "ImpartialGames-42",
   "level": "2",
-  "url": "ImpartialGames.html#ImpartialGames-43",
+  "url": "ImpartialGames.html#ImpartialGames-42",
   "type": "Question",
   "number": "4.24",
   "title": "",
   "body": " Finally, in the context of the theorem we just proved, how is MEX related to the equivalence?  "
 },
 {
-  "id": "ImpartialGames-44",
+  "id": "ImpartialGames-43",
   "level": "2",
-  "url": "ImpartialGames.html#ImpartialGames-44",
+  "url": "ImpartialGames.html#ImpartialGames-43",
   "type": "Question",
   "number": "4.25",
   "title": "",
   "body": " Discuss the downsides and accomplishments of following theorem for us. Prove it (remember problem 4b on the homework, then tell a player how to make a move).  "
 },
 {
-  "id": "ImpartialGames-45",
+  "id": "ImpartialGames-44",
   "level": "2",
-  "url": "ImpartialGames.html#ImpartialGames-45",
+  "url": "ImpartialGames.html#ImpartialGames-44",
   "type": "Theorem",
   "number": "4.26",
   "title": "",
   "body": "Let be a position in an impartial game. Suppose that for every . Then where is the MEX of the set . "
 },
 {
-  "id": "ImpartialGames-48",
+  "id": "ImpartialGames-47",
   "level": "2",
-  "url": "ImpartialGames.html#ImpartialGames-48",
+  "url": "ImpartialGames.html#ImpartialGames-47",
   "type": "Question",
   "number": "4.27",
   "title": "",
-  "body": " Prove the following (by induction on the number of layers in the game tree): [Note - You may assume the game is normal play if that makes analysis easier.]  "
+  "body": " Prove the Sprague-Grundy Theorem (by induction on the number of layers in the game tree): [Note - You may assume the game is normal play if that makes analysis easier.]  "
 },
 {
-  "id": "ImpartialGames-49",
+  "id": "ImpartialGames-48",
   "level": "2",
-  "url": "ImpartialGames.html#ImpartialGames-49",
+  "url": "ImpartialGames.html#ImpartialGames-48",
   "type": "Theorem",
   "number": "4.28",
   "title": "",
   "body": "[Sprague-Grundy] Every position in an impartial game is equivalent to a nimber. "
 },
 {
-  "id": "ImpartialGames-51",
+  "id": "ImpartialGames-49",
   "level": "2",
-  "url": "ImpartialGames.html#ImpartialGames-51",
+  "url": "ImpartialGames.html#ImpartialGames-49",
   "type": "Question",
   "number": "4.29",
   "title": "",
-  "body": " Find the nimber equivalent to each game of Pick Up Bricks on less than or equal to bricks. Then conjecture a way to determine the nimber of a Pick Up Bricks game on bricks.  "
+  "body": " Use the MEX Theorem to find the nimber equivalent to each game of Pick Up Bricks on less than or equal to bricks. Then conjecture a way to determine the nimber of a Pick Up Bricks game on bricks.  "
 },
 {
-  "id": "ImpartialGames-52",
+  "id": "ImpartialGames-50",
   "level": "2",
-  "url": "ImpartialGames.html#ImpartialGames-52",
+  "url": "ImpartialGames.html#ImpartialGames-50",
   "type": "Question",
   "number": "4.30",
   "title": "",
   "body": " Find the nimber equivalent to each game of chomp on to total bricks (such that the width is at least as big as the height).  "
 },
 {
-  "id": "ImpartialGames-53",
+  "id": "ImpartialGames-51",
   "level": "2",
-  "url": "ImpartialGames.html#ImpartialGames-53",
+  "url": "ImpartialGames.html#ImpartialGames-51",
   "type": "Question",
   "number": "4.31",
   "title": "",
-  "body": " Find a winning move in the following game if it exists, otherwise justify that there is no winning move:  "
+  "body": " Find a winning move in the following game if it exists, otherwise justify that there is no winning move:  ( game of chomp) (Pick up bricks on bricks)    "
 },
 {
-  "id": "ImpartialGames-59",
+  "id": "ImpartialGames-52",
   "level": "2",
-  "url": "ImpartialGames.html#ImpartialGames-59",
+  "url": "ImpartialGames.html#ImpartialGames-52",
   "type": "Question",
   "number": "4.32",
   "title": "",
   "body": " Find the nimber equivalent to the game of chomp.  "
 },
 {
-  "id": "ImpartialGames-60",
+  "id": "ImpartialGames-53",
   "level": "2",
-  "url": "ImpartialGames.html#ImpartialGames-60",
+  "url": "ImpartialGames.html#ImpartialGames-53",
   "type": "Question",
   "number": "4.33",
   "title": "",
   "body": " Find a winning move in the following game if it exists, otherwise justify that there is no winning move:  ( game of chomp) (Pick up bricks on bricks)    "
 },
 {
-  "id": "ImpartialGames-61",
+  "id": "ImpartialGames-54",
   "level": "2",
-  "url": "ImpartialGames.html#ImpartialGames-61",
+  "url": "ImpartialGames.html#ImpartialGames-54",
   "type": "Definition",
   "number": "4.34",
   "title": "",
   "body": "  Chop is a normal play impartial game played on an array viewed as a plank that is secured only at the lower left corner. On each turn, a player must either make a horizontal or vertical cut (all the way across the plank), and then any piece no longer connected to the lower left corner falls off into the water. (The lower left square is connected to the ground and cannot fall into the water, so the terminal position for Chop is just a array that is the bottom left square.)  "
 },
 {
-  "id": "ImpartialGames-62",
+  "id": "ImpartialGames-55",
   "level": "2",
-  "url": "ImpartialGames.html#ImpartialGames-62",
+  "url": "ImpartialGames.html#ImpartialGames-55",
   "type": "Theorem",
   "number": "4.35",
   "title": "",
   "body": "For every prove that the game of chop is equivalent to . "
 },
 {
-  "id": "ImpartialGames-63",
+  "id": "ImpartialGames-56",
   "level": "2",
-  "url": "ImpartialGames.html#ImpartialGames-63",
+  "url": "ImpartialGames.html#ImpartialGames-56",
   "type": "Question",
   "number": "4.36",
   "title": "",
